@@ -6,6 +6,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.smhrd.model.MemberDAO;
 import com.smhrd.model.MemberVO;
 
 public class LoginCon extends HttpServlet {
@@ -21,6 +22,16 @@ public class LoginCon extends HttpServlet {
 		System.out.println(id + pw);
 		
 		MemberVO vo = new MemberVO(id, pw);
+		
+		MemberDAO dao = new MemberDAO();
+		String name = dao.login(vo);
+		
+		if(name != null) {
+			System.out.println("로그인 성공" + name +"님 환영합니다");
+		}else {
+			System.out.println("로그인 실패");
+			
+		}
 		
 		
 		

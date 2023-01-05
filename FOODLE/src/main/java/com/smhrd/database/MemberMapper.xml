@@ -9,7 +9,9 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		insert into TBL_MEMBER values (#{mb_id}, #{mb_pw}, #{mb_name}, #{mb_email}, #{mb_phone}, #{mb_bloodtype}, #{mb_height}, #{mb_weight}, 'N', sysdate)
 	</insert>
 	
-	
+	<select id="login" parameterType="com.smhrd.model.MemberVO" resultType="String">
+		select MB_NAME from TBL_MEMBER where mb_id=#{mb_id} and mb_pw=#{mb_pw}
+	</select>
 	
 
 </mapper>

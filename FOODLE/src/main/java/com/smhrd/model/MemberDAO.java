@@ -39,5 +39,29 @@ public class MemberDAO {
 			
 		}
 		
+		public String login(MemberVO vo) {
+			
+			String loginName = null;
+			try {
+				
+				loginName = sqlSession.selectOne("com.smhrd.model.MemberDAO.login" ,vo);
+				// commit / rollback 생략
+				
+				
+			}catch(Exception e){
+				e.printStackTrace();
+			}finally {
+				sqlSession.close();
+			}
+			
+			return loginName;
+			
+		}
+			
+			
+		}
+		
+		
+		
 	
-}
+
