@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="css/login_style.css">
 </head>
 <body>
-	여긴 로그인
+
 	<form action="LoginCon" method="post">
 	<div class = "wrap">
         <img src = "img/l_bg.jpg">
