@@ -1,7 +1,7 @@
 package com.smhrd.model;
 
-public class VO {
-	
-	
+public class MemberDAO {
 
+	
+	
 }

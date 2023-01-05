@@ -3,10 +3,10 @@
 PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.smhrd.model.DAO">
+<mapper namespace="com.smhrd.model.MemberDAO">
 	
-	<insert id="insert" parameterType="com.smhrd.model.VO">
-		insert into webmember values (#{id}, #{pw}, #{name})
+	<insert id="insert" parameterType="com.smhrd.model.MemberVO">
+		insert into MB_ID values (#{id}, #{pw}, #{name})
 	</insert>
 	
 	
