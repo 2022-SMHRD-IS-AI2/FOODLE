@@ -6,6 +6,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.smhrd.model.MemberVO;
+
 public class JoinCon extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -20,11 +22,14 @@ public class JoinCon extends HttpServlet {
 		String mb_bloodtype = request.getParameter("mb_bloodtype");
 		String mb_height = request.getParameter("mb_height");
 		String mb_weight = request.getParameter("mb_weight");
-		String mb_recm = request.getParameter("mb_recm");
 		
+		String[] mb_recm = request.getParameterValues("recm");
 		
-		System.out.println(mb_id + mb_bloodtype);
+		System.out.println(mb_recm);
 		
+		MemberVO vo = new MemberVO(mb_id,mb_pw,mb_name,mb_email,mb_phone,mb_bloodtype,mb_height,mb_weight);
+		
+//		RecmVO r_vo = new RecmVO(mb_recm); // <- 관심 영양소는 별도로 관리
 		
 	}
 

@@ -6,6 +6,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.smhrd.model.MemberVO;
+
 public class LoginCon extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -17,6 +19,8 @@ public class LoginCon extends HttpServlet {
 		String pw = request.getParameter("PW");
 		
 		System.out.println(id + pw);
+		
+		MemberVO vo = new MemberVO(id, pw);
 		
 		
 		
