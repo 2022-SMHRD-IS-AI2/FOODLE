@@ -9,6 +9,12 @@
     <title>Document</title>
 </head>
 <body>
-
+	여긴 로그인
+	<form action="LoginCon" method="post">
+	ID : <input type="text" name="ID" placeholder="ID">
+	PW : <input type="text" name="PW" placeholder="PW">
+	<input type="submit" value="로그인">
+	</form>
+	<a href="Join.jsp"><button>회원가입</button></a>
 </body>
 </html>

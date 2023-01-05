@@ -13,7 +13,7 @@
 	  <div class = "wrap">
     <img src="img/m_bg.jpg">
     <div class = "m_logo">
-      <a href = "#">
+      <a href = "login.jsp">
         <img src="img/logo.png">
       </a>
     </div>
