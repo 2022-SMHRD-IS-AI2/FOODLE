@@ -4,4 +4,14 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+  	<servlet-name>LoginCon</servlet-name>
+  	<display-name>LoginCon</display-name>
+  	<description></description>
+  	<servlet-class>com.smhrd.controller.LoginCon</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>LoginCon</servlet-name>
+  	<url-pattern>/LoginCon</url-pattern>
+  </servlet-mapping>
 </web-app>
