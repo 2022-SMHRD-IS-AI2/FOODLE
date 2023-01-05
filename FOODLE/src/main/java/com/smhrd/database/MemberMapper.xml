@@ -5,8 +5,8 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 
 <mapper namespace="com.smhrd.model.MemberDAO">
 	
-	<insert id="insert" parameterType="com.smhrd.model.MemberVO">
-		insert into MB_ID values (#{id}, #{pw}, #{name})
+	<insert id="join" parameterType="com.smhrd.model.MemberVO">
+		insert into TBL_MEMBER values (#{mb_id}, #{mb_pw}, #{mb_name}, #{mb_email}, #{mb_phone}, #{mb_bloodtype}, #{mb_height}, #{mb_weight}, 'N', sysdate)
 	</insert>
 	
 	

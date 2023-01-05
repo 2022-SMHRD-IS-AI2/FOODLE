@@ -22,7 +22,9 @@
 			</select><br>
 	키 : <input type="text" name="mb_height" placeholder="키">cm<br>
 	몸무게 :  <input type="text" name="mb_weight" placeholder="몸무게">kg<br>
-	관심 영양소 :  탄수화물<input type="checkbox" name="recm" value="r_ch">
+	
+	
+	관심 영양소 :  탄수화물<input type="checkbox" name="recm" value="r_ch"> <% // <- 따로 관리 %>
 				단백질<input type="checkbox" name="recm" value="r_pro">
 				지방<input type="checkbox" name="recm" value="r_fat">
 				당류<input type="checkbox" name="recm" value="r_sugar">
