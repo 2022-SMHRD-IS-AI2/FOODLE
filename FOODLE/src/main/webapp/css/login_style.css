@@ -1,12 +1,13 @@
 @charset "UTF-8";
 
-
-.wrap{width: 100%; height: 100vh; overflow: hidden; position: relative;}
+.wrap{width: 100%; height: 100vh;
+    background: url("../img/l_bg_w.png") no-repeat center;
+    background-size: cover; overflow: hidden; position: relative;}
 .wrap>img{width: 100%; height: 100vh; opacity: 0.5;}
+input{border-radius:none; border:none; }
 
-#box{position: absolute; top:0; left:0; bottom:0; right:0;
-    margin:auto; width:600px; max-height: 600px;
-    padding: 120px; box-sizing: border-box;}
+#box{position: absolute; top:50%; left:50%;
+    margin-left: -230px; margin-top: -197.5px; max-height: 600px; box-sizing: border-box;}
 
 
 #box1{display: flex; justify-content: center; width: 350px; height: 200px;}
@@ -18,6 +19,18 @@
 #box4{margin-top: 10px;}
 .main_btn{width: 49%; height: 35px; border-radius: 5px; }
 
+
+.box_bg{background: rgba(255, 255, 255, .8); padding: 60px; border-radius: 15px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);}
+
+
+/* select */
+.nut_box{width: 100%;}
+
+
+
+/* 공통 css */
+.pl10{padding-left: 10px;}
 
 
 /* 공통 css */
