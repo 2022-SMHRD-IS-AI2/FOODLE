@@ -5,6 +5,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.smhrd.model.MemberDAO;
 import com.smhrd.model.MemberVO;
@@ -16,18 +17,28 @@ public class LoginCon extends HttpServlet {
 		
 		request.setCharacterEncoding("utf-8");
 		
-		String id = request.getParameter("ID"); // 값 받아오기
-		String pw = request.getParameter("PW");
+		String id = request.getParameter("id"); // 값 받아오기
+		String pw = request.getParameter("pw");
+		MemberVO client = null;
 		
 		System.out.println(id + pw);
 		
 		MemberVO vo = new MemberVO(id, pw);
 		
 		MemberDAO dao = new MemberDAO();
-		String name = dao.login(vo);
+		client = dao.login(vo); // 회원 정보 불러오기 <- MemberVO로 전부 불러옴
 		
-		if(name != null) {
-			System.out.println("로그인 성공" + name +"님 환영합니다");
+		if(client != null) { // 성공
+//			System.out.println("로그인 성공! " + name + "님 환영합니다");
+			client.getMb_name();
+			client.getMb_bloodtype();
+			client.getMb_height();
+			client.getMb_weight();
+			
+			HttpSession session = request.getSession();
+			
+			session.setAttribute(pw, session);
+			
 		}else {
 			System.out.println("로그인 실패");
 			

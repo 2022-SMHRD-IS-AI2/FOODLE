@@ -39,9 +39,9 @@ public class MemberDAO {
 			
 		}
 		
-		public String login(MemberVO vo) {
+		public MemberVO login(MemberVO vo) {
 			
-			String loginName = null;
+			MemberVO loginName = null;
 			try {
 				
 				loginName = sqlSession.selectOne("com.smhrd.model.MemberDAO.login" ,vo);
