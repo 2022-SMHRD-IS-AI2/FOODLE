@@ -31,7 +31,7 @@
                     <input type="submit" value="로그인" class="main_btn">
 	</form>
 					<input type="reset" value="회원가입" class="main_btn">
-                   
+                    
                 </div>
             </div>
         </div>

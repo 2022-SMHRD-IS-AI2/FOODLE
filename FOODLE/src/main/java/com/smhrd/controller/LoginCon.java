@@ -30,14 +30,16 @@ public class LoginCon extends HttpServlet {
 		
 		if(client != null) { // 성공
 //			System.out.println("로그인 성공! " + name + "님 환영합니다");
-			client.getMb_name();
-			client.getMb_bloodtype();
-			client.getMb_height();
-			client.getMb_weight();
+//			client.getMb_name();
+//			client.getMb_bloodtype();
+//			client.getMb_height();
+//			client.getMb_weight();
 			
-			HttpSession session = request.getSession();
+			HttpSession session = request.getSession(); // 세션 생성
 			
-			session.setAttribute(pw, session);
+			session.setAttribute("client", client); // 세션에 vo 담기
+			
+			response.sendRedirect("DashBoard.jsp");
 			
 		}else {
 			System.out.println("로그인 실패");
