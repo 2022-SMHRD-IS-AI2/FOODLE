@@ -14,7 +14,7 @@
 <body>
     <div class = "wrap">
 
-
+<form action="LoginCon" method="post">
         <div id="box">
             <div class="box_bg">
                 <div id="box1">
@@ -37,6 +37,9 @@
 
             </div>
         </div>
+
+</form>
+
 
     </div>
 </body>
