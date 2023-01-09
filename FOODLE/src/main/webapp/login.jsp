@@ -36,6 +36,7 @@
                     		<span style="color:red"> 로그인에 실패하셨습니다. </span> 
                     	
                     <% } %> --%>
+                    
                     <div id="box4" align="center">
                         <input type="submit" value="로그인" class="main_btn"> 
                         

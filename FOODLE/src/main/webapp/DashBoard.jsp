@@ -23,7 +23,7 @@
 	혈액형 <%=bloodtype %>
 	키 <%=height %>
 	
-	
+	<a href="Join.jsp"><button>회원가입</button></a>
 	
 </body>
 </html>

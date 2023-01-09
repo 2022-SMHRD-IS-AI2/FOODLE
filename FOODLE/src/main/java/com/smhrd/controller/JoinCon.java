@@ -46,6 +46,7 @@ public class JoinCon extends HttpServlet {
 			
 		}else {
 			System.out.println("가입 실패");
+			
 		}
 
 	}
