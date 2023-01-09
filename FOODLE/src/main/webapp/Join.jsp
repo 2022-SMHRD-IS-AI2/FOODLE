@@ -3,38 +3,95 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
+ <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/all_style.css">
+    <link rel="stylesheet" href="css/member_style.css">
+
 </head>
 <body>
-	<form action="JoinCon" method="post">
-	ID : <input type="text" name="mb_id" placeholder="아이디"><br>
-	PW : <input type="text" name="mb_pw" placeholder="비밀번호"><br>
-	PW확인 : <input type="text" name="pwConfirm" placeholder="비밀번호 확인"><br>
-	이름 : <input type="text" name="mb_name" placeholder="이름"><br>
-	이메일 : <input type="text" name="mb_email" placeholder="email"><br>
-	핸드폰번호 : <input type="text" name="mb_phone" placeholder="핸드폰 번호"><br>
-	혈액형 : <select name="mb_bloodtype">
-				<option>A</option>
-                <option>B</option>
-                <option>O</option>
-                <option>AB</option>
-			</select><br>
-	키 : <input type="text" name="mb_height" placeholder="키">cm<br>
-	몸무게 :  <input type="text" name="mb_weight" placeholder="몸무게">kg<br>
-	
-	
-	관심 영양소 :  탄수화물<input type="checkbox" name="recm" value="r_ch"> <% // <- 따로 관리 %>
-				단백질<input type="checkbox" name="recm" value="r_pro">
-				지방<input type="checkbox" name="recm" value="r_fat">
-				당류<input type="checkbox" name="recm" value="r_sugar">
-				나트륨<input type="checkbox" name="recm" value="r_sodium">
-				콜레스테롤<input type="checkbox" name="recm" value="r_col">
-				포화지방산<input type="checkbox" name="recm" value="r_fad">
-				트랜스지방산<input type="checkbox" name="recm" value="r_trans">
-				
-				
-	<input type="submit" value="가입하기">
-	</form>
+	 <div class = "wrap">
+
+        <form class="join_form" method="get" action="#">
+            <table class= "login">
+                <colgroup> 
+                    <col width="30%" /> 
+                    <col width="70%" /> 
+                </colgroup>
+                <tr>
+                    <td>ID : </td>
+                    <td><input type="text" placeholder="아이디를 입력해주세요."></td>
+                </tr>
+                <tr>
+                    <td>PW : </td>
+                    <td><input type="password" placeholder="비밀번호를 입력해주세요."></td>
+                </tr>
+                
+                <tr>
+                    <td>NAME : </td>
+                    <td><input type="text" placeholder="이름을 입력해주세요."></td>
+                </tr>
+
+                <tr >
+                    <td>PHONE : </td>
+                    <td><input type="text" placeholder="전화번호를 입력해주세요."></td>
+                </tr>
+    
+                <tr>
+                    <td class="mt15">GENDER : </td>
+                    <td class="gender mt15">
+                        <input class="check" type="radio" name="gender" value="man">
+                        <span>남</span>
+                        <input class="check" type="radio" name="gender" value="woman">
+                        <span>여</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>BLOODTYPE : </td>
+                    <td class="bloodtype">
+                            <input class="check" type="radio" name="bloodtype" value="A"> <span>A형</span>
+                            <input class="check" type="radio" name="bloodtype" value="B"> <span>B형</span>
+                            <input class="check" type="radio" name="bloodtype" value="O"> <span>O형</span>
+                            <input class="check" type="radio" name="bloodtype" value="AB"> <span>AB형</span>
+                    </td>
+                </tr> 
+                <tr >
+                    <td  >HEIGHT : </td>
+                    <td><input type="text" placeholder="키를 입력해주세요."></td>
+                </tr>
+                <tr >
+                    <td  >WEIGHT : </td>
+                    <td><input type="text" placeholder="몸무게를 입력해주세요."></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                    <select class="nut_box" name="nutrients">
+                        <option value="">관심 영양소</option>
+                        <option value="">탄수화물</option>
+                        <option value="">단백질</option>
+                        <option value="">지방</option>
+                        <option value="">당류</option>
+                        <option value="">나트륨</option>
+                        <option value="">콜레스테롤</option>
+                        <option value="">포화지방산</option>
+                        <option value="">트랜스지방</option>
+                    </select>
+                    </td>
+                </tr>
+        
+                <!-- 제출 -->
+                <tr >
+                    <td colspan="2" class="pr00" align="center">
+                        <input class="pl00" type="submit" value=" next > ">
+                    </td>
+                </tr>
+
+            
+            </table>
+        </form>
+        
+    </div>
 </body>
 </html>
