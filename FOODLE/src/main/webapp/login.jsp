@@ -10,8 +10,8 @@
     <link rel="stylesheet" href="css/all_style.css">
     <link rel="stylesheet" href="css/login_style.css">
     
-	<%String fail = (String)session.getAttribute("fail"); %>
-	<% if(fail == null) {fail = "notFail";}%>
+<%-- 	<%String fail = (String)session.getAttribute("fail"); %>
+	<% if(fail == null) {fail = "notFail";}%> --%>
 
 </head>
 <body>
@@ -31,11 +31,11 @@
                         <input class="login_input pl10" type="password" name="pw" placeholder="****" maxlength="10">
                     </div>
                     
-                    <% if(fail.equals("fail")) { %>
+                   <%--  <% if(fail.equals("fail")) { %>
                     
-                    		<span style="color:red"> 로그인에 실패하셨습니다. </span>
+                    		<span style="color:red"> 로그인에 실패하셨습니다. </span> 
                     	
-                    <% } %>
+                    <% } %> --%>
                     <div id="box4" align="center">
                         <input type="submit" value="로그인" class="main_btn"> 
                         

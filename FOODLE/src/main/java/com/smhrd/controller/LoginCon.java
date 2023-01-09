@@ -42,8 +42,8 @@ public class LoginCon extends HttpServlet {
 			
 		}else {
 			System.out.println("로그인 실패");
-			session.setAttribute("fail", "fail");
-			response.sendRedirect("login.jsp");
+//			session.setAttribute("fail", "fail");
+			response.sendRedirect("loginFail.jsp");
 		}
 		
 		
