@@ -13,5 +13,8 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		select * from TBL_MEMBER where mb_id=#{mb_id} and mb_pw=#{mb_pw}
 	</select>
 	
-
+	<select id="todayChart" parameterType="String">
+		select * from USER_FOOD where mb_id=#{mb_id} 
+	</select>
+	
 </mapper>
