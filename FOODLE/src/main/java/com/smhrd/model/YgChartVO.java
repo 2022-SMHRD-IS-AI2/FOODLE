@@ -13,18 +13,11 @@ import lombok.RequiredArgsConstructor;
 public class YgChartVO {
 		
 		@NonNull
-		private String f_name;
+		private String mb_id;
 		@NonNull
-		private String f_gram;
-		private String f_kcal;
-		private String f_ch;
-		private String f_pro;
-		private String f_fat;
-		private String f_sugar;
-		private String f_sodium;
-		private String f_col;
-		private String f_fad;
-		private String f_trans;
+		private String curr_wg;
+		private String date;
+	
 		
 		
 		
