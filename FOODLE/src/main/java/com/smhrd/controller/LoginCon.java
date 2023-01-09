@@ -20,6 +20,7 @@ public class LoginCon extends HttpServlet {
 		String id = request.getParameter("id"); // 값 받아오기
 		String pw = request.getParameter("pw");
 		MemberVO client = null;
+		HttpSession session = request.getSession(); ;  // 세션 생성
 		
 		System.out.println(id + pw);
 		
@@ -35,15 +36,14 @@ public class LoginCon extends HttpServlet {
 //			client.getMb_height();
 //			client.getMb_weight();
 			
-			HttpSession session = request.getSession(); // 세션 생성
-			
 			session.setAttribute("client", client); // 세션에 vo 담기
 			
 			response.sendRedirect("DashBoard.jsp");
 			
 		}else {
 			System.out.println("로그인 실패");
-			
+			session.setAttribute("fail", "fail");
+			response.sendRedirect("login.jsp");
 		}
 		
 		
