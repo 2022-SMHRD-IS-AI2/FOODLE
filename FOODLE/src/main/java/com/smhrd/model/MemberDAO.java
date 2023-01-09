@@ -57,9 +57,8 @@ public class MemberDAO {
 			return loginName;
 			
 		}
-			
-			
-		}
+		
+}
 		
 		
 		
