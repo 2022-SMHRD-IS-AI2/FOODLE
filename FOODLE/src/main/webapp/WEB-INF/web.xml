@@ -16,6 +16,18 @@
   	<description></description>
   	<servlet-class>com.smhrd.controller.JoinCon</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>BwChartCon</servlet-name>
+  	<display-name>BwChartCon</display-name>
+  	<description></description>
+  	<servlet-class>com.smhrd.controller.BwChartCon</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>YgChartCon</servlet-name>
+  	<display-name>YgChartCon</display-name>
+  	<description></description>
+  	<servlet-class>com.smhrd.controller.YgChartCon</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>LoginCon</servlet-name>
   	<url-pattern>/LoginCon</url-pattern>
@@ -23,5 +35,13 @@
   <servlet-mapping>
   	<servlet-name>JoinCon</servlet-name>
   	<url-pattern>/JoinCon</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>BwChartCon</servlet-name>
+  	<url-pattern>/BwChartCon</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>YgChartCon</servlet-name>
+  	<url-pattern>/YgChartCon</url-pattern>
   </servlet-mapping>
 </web-app>
