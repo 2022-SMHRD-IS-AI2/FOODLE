@@ -2,27 +2,98 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/DashBoard_style.css">
 </head>
 <body>
-	
-	대쉬보드 화면입니다~
-	
-	<%
+
+<%-- <%
 		MemberVO client = (MemberVO)session.getAttribute("client");
 		String name = client.getMb_name();
 		String bloodtype = client.getMb_bloodtype();
 		String height = client.getMb_height();
-	%>
-	
-	<%=name %>님 환영합니다.
-	혈액형 <%=bloodtype %>
-	키 <%=height %>
-	
-	<a href="Join.jsp"><button>회원가입</button></a>
-	<a href="daily_Weight.jsp"><button>몸무게 추가</button></a>
+	%> --%>
+
+    <div class="wrapper">
+        <!--Top menu -->
+        <div class="sidebar">
+           <!--profile image & text-->
+            <!--menu item-->
+            <div class="profile">
+                <br>
+                <h1>FOODER</h1> <br>
+                <h3>김진수</h3> <br>
+                <tr>
+                    <td>AGE</td>
+                    <td>32</td> <br>
+                    <td>HEIGHT</td>
+                    <td>185</td> <br>
+                    <td>WEIGHT</td>
+                    <td>90</td>
+                </tr>
+            </div>
+            <div class="search">
+                <input type="text" placeholder="검색어를 입력해주세요">
+                <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/icon/search.png">
+            </div>
+            <ul>
+                <li>
+                    <a href="#" class="active">
+                        <span class="icon"><i class="fas fa-home"></i></span>
+                        <span class="item">Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fas fa-desktop"></i></span>
+                        <span class="item">Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fas fa-user-friends"></i></span>
+                        <span class="item">회원 정보 조회 / 수정</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fas fa-chart-line"></i></span>
+                        <span class="item">몸무게 기록</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="fullscreen">
+        <div id="screen0"></div>
+        <div id="screen1">
+            <div id="screen1-1">
+            </div>
+            <div id="screen1-2">
+            </div>
+            <div id="screen1-3">
+            </div>
+        </div>
+        <div id="screen2">
+            <div id="screen2-1">
+            </div>
+            <div id="screen2-2">
+            </div>
+            <div id="screen2-3">
+            </div>
+            <div id="screen2-4">
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>
+
+	
