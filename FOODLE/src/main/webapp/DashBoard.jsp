@@ -55,7 +55,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="BwDashBoard.jsp">
                         <span class="icon"><i class="fas fa-desktop"></i></span>
                         <span class="item">Dashboard</span>
                     </a>

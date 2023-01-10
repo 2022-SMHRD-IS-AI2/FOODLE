@@ -29,4 +29,8 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		select * USER_FOOD where u_f_seq=#{u_f_seq}
 	</select>
 	
+	<select id="searchFood" parameterType="String" resultType="com.smhrd.model.BwChartVO">
+		select * from TBL_FOOD where f_name=#{f_name}
+	</select>
+	
 </mapper>

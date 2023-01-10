@@ -1,5 +1,7 @@
 package com.smhrd.model;
 
+import java.util.List;
+
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 
@@ -44,6 +46,22 @@ public class BwChartDAO {
 		return cnt;
 		
 	}
+	
+	public List<BwChartVO> searchFood(String f_name) {
+		List<BwChartVO> search = null;
+		
+		try {
+			
+			search = sqlSession.selectList("com.smhrd.model.MemberDAO.searchFood", f_name);
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally {
+			sqlSession.close();
+		}
+		return search;
+	}
+	
 	
 	
 	

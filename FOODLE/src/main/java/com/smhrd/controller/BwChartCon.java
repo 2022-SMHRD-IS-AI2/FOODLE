@@ -3,6 +3,7 @@ package com.smhrd.controller;
 import java.io.IOException;
 import java.util.List;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -18,26 +19,26 @@ public class BwChartCon extends HttpServlet {
 
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("UTF-8");
-		
 		HttpSession session = request.getSession();
-		MemberVO vo = (MemberVO)session.getAttribute("client");
+//		MemberVO client = (MemberVO)session.getAttribute("client");
+		String sr = request.getParameter("sr");
 		
-		int seq = 0;
-		String member = null;
+		MemberVO vo = new MemberVO();
+		BwChartDAO dao = new BwChartDAO();
 		
-		BwChartDAO dao = new BwChartDAO(); 
-		BwChartVO vo2 = new BwChartVO();
+		List<BwChartVO> name = dao.searchFood(sr);
 		
-		member = dao.todayChart(vo.getMb_id()); // 회원 아이디 값
+//		System.out.println(name);
 		
-		seq = (Integer)dao.userChart(vo2.getU_f_seq()); // 회원 시퀀스 값
+		String name1 = name.get(0).getF_name();
 		
-		if(member.equals(vo2.getU_f_seq())) {
-			System.out.println("데이터 불러오기 성공");
+		if(sr.equals(name1)) {
+			RequestDispatcher rd = request.getRequestDispatcher("BwDashBoard.jsp");
+			request.setAttribute("name", name);
+			rd.forward(request, response);
 		}else {
-			System.out.println("데이터 불러오기 실패");
+			System.out.println("노 식품");
 		}
-	
 	
 	}
 
