@@ -8,17 +8,15 @@
 </head>
 <body style="height: 100%; margin: 0">
   <div id="container" style="height: 100%"></div>
-  
-  
-  
-  <div id="container" style="height: 100%"></div>
+ 
 
   
   <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5.4.1/dist/echarts.min.js"></script>
-  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5.4.1/dist/echarts.min.js"></script>
-  <!-- Uncomment this line if you want to dataTool extension
-  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5.4.1/dist/extension/dataTool.min.js"></script>
-  -->
+	
+	
+  <!-- <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5.4.1/dist/extension/dataTool.min.js"></script>
+   -->
+  
   <!-- Uncomment this line if you want to use gl extension
   <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts-gl@2/dist/echarts-gl.min.js"></script>
   -->
@@ -95,8 +93,7 @@
 
     window.addEventListener('resize', myChart.resize);
     
-    //-------------------------------------------------------------------------------------------------
     
-  </script>
+  </script> 
 </body>
 </html>

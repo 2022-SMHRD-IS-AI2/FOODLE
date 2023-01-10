@@ -1,5 +1,7 @@
 package com.smhrd.model;
 
+import java.util.List;
+
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 
@@ -11,11 +13,11 @@ public class BwChartDAO {
 	// 아래 메소드들에서 사용할 수 있는 sqlSession 생성
 	SqlSession sqlSession = sqlSessionFactory.openSession(true);
 	
-	public String todayChart(String vo) {
-		String todayChart = null;
+	public List<String> todayChart(String vo) {
+		List<String> todayChart = null;
 		
 		try {
-			todayChart = sqlSession.selectOne("com.smhrd.BwChartDAO.todayChart", vo);
+			todayChart = sqlSession.selectList("com.smhrd.BwChartDAO.todayChart", vo);
 			
 		}catch(Exception e) {
 			e.printStackTrace();

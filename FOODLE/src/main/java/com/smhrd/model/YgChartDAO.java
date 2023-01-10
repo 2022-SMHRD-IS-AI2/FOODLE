@@ -15,6 +15,22 @@ public class YgChartDAO {
 	
 	public List<Integer> weight_chart(String id) {
 		
+		List<Integer> loginName = null;
+		
+		try {
+			
+			loginName = sqlSession.selectList("com.smhrd.model.MemberDAO.login" ,id);
+			// commit / rollback 생략
+			
+			
+		}catch(Exception e){
+			e.printStackTrace();
+		}finally {
+			sqlSession.close();
+		}
+		
+		
+		
 		
 		return null;
 	}
