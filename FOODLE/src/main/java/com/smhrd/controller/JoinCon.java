@@ -19,11 +19,12 @@ public class JoinCon extends HttpServlet {
 		String mb_pw = request.getParameter("mb_pw");
 		String pwConfirm = request.getParameter("pwConfirm"); // <- 중복 비밀번호 체크 알고리즘은 생각 좀 해봐야 할 듯
 		String mb_name = request.getParameter("mb_name");
-		String mb_email = request.getParameter("mb_email");
+//		String mb_email = request.getParameter("mb_email");
 		String mb_phone = request.getParameter("mb_phone");
 		String mb_bloodtype = request.getParameter("mb_bloodtype");
 		String mb_height = request.getParameter("mb_height");
 		String mb_weight = request.getParameter("mb_weight");
+		String mb_gender = request.getParameter("mb_gender");
 
 		String[] mb_recm = request.getParameterValues("recm");
 		
@@ -33,7 +34,7 @@ public class JoinCon extends HttpServlet {
 
 		System.out.println(mb_recm);
 
-		MemberVO vo = new MemberVO(mb_id, mb_pw, mb_name, mb_email, mb_phone, mb_bloodtype, mb_height, mb_weight);
+		MemberVO vo = new MemberVO(mb_id, mb_pw, mb_name, mb_phone, mb_bloodtype, mb_height, mb_weight, mb_gender);
 
 //		RecmVO r_vo = new RecmVO(mb_recm); // <- 관심 영양소는 별도로 관리
 

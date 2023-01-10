@@ -21,10 +21,11 @@ public class MemberVO {
 	@NonNull
 	private String mb_pw;
 	private String mb_name;
-	private String mb_email;
+//	private String mb_email;
 	private String mb_bloodtype;
 	private String mb_phone;
 	private String mb_height;
 	private String mb_weight;
+	private String mb_gender;
 
 }

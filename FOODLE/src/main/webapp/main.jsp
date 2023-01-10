@@ -13,10 +13,10 @@
 <body>
   <div class = "wrap">
     <img src="img/back2.jpg">
-     <a href = "login.html">
+     <a href = "login.jsp">
       <button class="btn1" type="button"> 로그인 </button>
      </a>
-     <a href="member.html">
+     <a href="join.jsp">
       <button class="btn2" type="button"> 회원가입 </button>
      </a>
     

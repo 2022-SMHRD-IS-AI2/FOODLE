@@ -22,52 +22,52 @@
                 </colgroup>
                 <tr>
                     <td>ID : </td>
-                    <td><input type="text" placeholder="아이디를 입력해주세요."></td>
+                    <td><input type="text" placeholder="아이디를 입력해주세요." name="mb_id"></td>
                 </tr>
                 <tr>
                     <td>PW : </td>
-                    <td><input type="password" placeholder="비밀번호를 입력해주세요."></td>
+                    <td><input type="password" placeholder="비밀번호를 입력해주세요." name="mb_pw"></td>
                 </tr>
                 
                 <tr>
                     <td>NAME : </td>
-                    <td><input type="text" placeholder="이름을 입력해주세요."></td>
+                    <td><input type="text" placeholder="이름을 입력해주세요." name="mb_name"></td>
                 </tr>
 
                 <tr >
                     <td>PHONE : </td>
-                    <td><input type="text" placeholder="전화번호를 입력해주세요."></td>
+                    <td><input type="text" placeholder="전화번호를 입력해주세요." name="mb_phone"></td>
                 </tr>
     
                 <tr>
                     <td class="mt15">GENDER : </td>
                     <td class="gender mt15">
-                        <input class="check" type="radio" name="gender" value="man">
+                        <input class="check" type="radio" name="mb_gender" value="man">
                         <span>남</span>
-                        <input class="check" type="radio" name="gender" value="woman">
+                        <input class="check" type="radio" name="mb_gender" value="woman">
                         <span>여</span>
                     </td>
                 </tr>
                 <tr>
                     <td>BLOODTYPE : </td>
                     <td class="bloodtype">
-                            <input class="check" type="radio" name="bloodtype" value="A"> <span>A형</span>
-                            <input class="check" type="radio" name="bloodtype" value="B"> <span>B형</span>
-                            <input class="check" type="radio" name="bloodtype" value="O"> <span>O형</span>
-                            <input class="check" type="radio" name="bloodtype" value="AB"> <span>AB형</span>
+                            <input class="check" type="radio" name="bloodtype" value="A" name="mb_bloodtype"> <span>A형</span>
+                            <input class="check" type="radio" name="bloodtype" value="B" name="mb_bloodtype"> <span>B형</span>
+                            <input class="check" type="radio" name="bloodtype" value="O" name="mb_bloodtype"> <span>O형</span>
+                            <input class="check" type="radio" name="bloodtype" value="AB" name="mb_bloodtype"> <span>AB형</span>
                     </td>
                 </tr> 
                 <tr >
                     <td  >HEIGHT : </td>
-                    <td><input type="text" placeholder="키를 입력해주세요."></td>
+                    <td><input type="text" placeholder="키를 입력해주세요." name="height"></td>
                 </tr>
                 <tr >
                     <td  >WEIGHT : </td>
-                    <td><input type="text" placeholder="몸무게를 입력해주세요."></td>
+                    <td><input type="text" placeholder="몸무게를 입력해주세요." name="weight"></td>
                 </tr>
                 <tr>
                     <td colspan="2">
-                    <select class="nut_box" name="nutrients">
+                    <select class="nut_box" name="recm">
                         <option value="">관심 영양소</option>
                         <option value="">탄수화물</option>
                         <option value="">단백질</option>
