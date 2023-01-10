@@ -1,10 +1,32 @@
 @charset "UTF-8";
 * {margin:0; padding:0;}
+@font-face {
+  font-family: 'LotteMartDream';
+  font-style: normal;
+  font-weight: 400;
+  src: url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamMedium.woff2') format('woff2'), url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamMedium.woff') format('woff');
+}
+@font-face {
+  font-family: 'LotteMartDream';
+  font-style: normal;
+  font-weight: 700;
+  src: url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamBold.woff2') format('woff2'), url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamBold.woff') format('woff');
+}
+@font-face {
+  font-family: 'LotteMartDream';
+  font-style: normal;
+  font-weight: 300;
+  src: url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamLight.woff2') format('woff2'), url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamLight.woff') format('woff');
+}
+.lottemartdream * {
+ font-family: 'LotteMartDream', sans-serif;
+}
 li{list-style: none;}
 a{color: inherit; text-decoration: none;} 
 button{border:none; border-radius:none;}
 input{border-radius:none;}
-input:focus{outline:none;}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+input:focus{outline:none;}   
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
 
 .wrap{width: 100%; height: 100vh; overflow: hidden; position: relative;}
 .wrap>img{width: 100%; height: 100vh; /* 배경 투명도 opacity: 0.5; */}
@@ -14,11 +36,13 @@ span.ments1 {
     position: absolute;
     width: 700px;
     height: 30px;
-    font-size: 5ch;
+    font-size: 5.5ch;
     bottom: 230px;
     left: 205px;
-    color: aliceblue;
-    font-weight: bold;
+    color: honeydew;
+    font-weight: 700;
+    font-family: 'LotteMartDream';
+    line-height: 57px;
   }
 
 span.ments2 {
@@ -26,10 +50,11 @@ span.ments2 {
     width: 500px;
     height: 30px;
     font-size: 3ch;
-    bottom: 100px;
+    bottom: 95px;
     left: 205px;
-    color: aliceblue;
-    font-weight: bold;
+    color: honeydew;
+    font-weight: 400;
+    font-family: 'LotteMartDream';
   }
 
 
@@ -53,7 +78,7 @@ button.btn1 {
     top: 35px;
     right: 185px;
     background-color: transparent;
-    color: aliceblue;
+    color: aliceblue;  
   }
 
   
