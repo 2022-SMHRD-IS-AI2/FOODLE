@@ -13,12 +13,16 @@
 </head>
 <body>
 
-<%-- <%
+ <%
 		MemberVO client = (MemberVO)session.getAttribute("client");
 		String name = client.getMb_name();
 		String bloodtype = client.getMb_bloodtype();
 		String height = client.getMb_height();
-	%> --%>
+		String weight = client.getMb_weight();
+		System.out.print(name);
+	%>
+
+
 
     <div class="wrapper">
         <!--Top menu -->
@@ -28,14 +32,14 @@
             <div class="profile">
                 <br>
                 <h1>FOODER</h1> <br>
-                <h3>김진수</h3> <br>
+                <h3><%=name %></h3> <br>
                 <tr>
-                    <td>AGE</td>
-                    <td>32</td> <br>
+                    <td>BLOODTYPE</td>
+                    <td><%=bloodtype %></td> <br>
                     <td>HEIGHT</td>
-                    <td>185</td> <br>
+                    <td><%=height %></td> <br>
                     <td>WEIGHT</td>
-                    <td>90</td>
+                    <td><%=weight %></td>
                 </tr>
             </div>
             <div class="search">
@@ -62,7 +66,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="daily_Weight.jsp">
                         <span class="icon"><i class="fas fa-chart-line"></i></span>
                         <span class="item">몸무게 기록</span>
                     </a>
