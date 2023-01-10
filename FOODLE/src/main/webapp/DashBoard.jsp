@@ -23,6 +23,6 @@
 	키 <%=height %>
 	
 	<a href="Join.jsp"><button>회원가입</button></a>
-	
+	<a href="daily_Weight.jsp"><button>몸무게 추가</button></a>
 </body>
 </html>
