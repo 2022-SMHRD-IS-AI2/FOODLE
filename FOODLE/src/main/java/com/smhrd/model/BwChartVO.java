@@ -26,6 +26,9 @@ public class BwChartVO {
 	private String f_fad;
 	private String f_trans;
 	
-	
+	private String u_f_seq;
+	private String f_seq;
+	private String u_f_dt;
+	private String mb_id;
 	
 }
