@@ -16,14 +16,7 @@ public class YgChartCon extends HttpServlet {
 
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-		HttpSession session = request.getSession();
-		MemberVO vo = (MemberVO)session.getAttribute("client");
-		String id = vo.getMb_id();
-		
-		YgChartDAO dao = new YgChartDAO();
-		
-		dao.weight_chart(id);
-		
+	
 		
 		
 		

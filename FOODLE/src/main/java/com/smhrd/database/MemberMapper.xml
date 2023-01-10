@@ -17,4 +17,12 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		select * from USER_FOOD where mb_id=#{mb_id} 
 	</select>
 	
+	<select id="weight_chart" resultType="com.smhrd.model.YgChartVO">
+   		select * from TBL_WEIGHT_DAILY where not(mb_id='admin')
+   </select>
+   
+   <select id="KcalChart" parameterType="com.smhrd.model.BwChartVO" resultType="com.smhrd.model.BwChartVO">
+		select * from TBL_MEMBER where mb_id=#{mb_id} and f_kcal=#{f_kcal}
+   </select>
+   
 </mapper>
