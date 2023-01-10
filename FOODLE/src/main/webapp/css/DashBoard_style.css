@@ -1,0 +1,174 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+*{
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body{
+    background: #f5f6fa;
+}
+
+.wrapper .sidebar{
+    background: rgb(93, 179, 1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 100%;
+    padding: 20px 0;
+    transition: all 0.5s ease;
+}
+
+.wrapper .sidebar .profile{
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.wrapper .sidebar .profile h1{
+    color: #ffffff;
+    margin: 10px 0 5px;
+}
+
+.wrapper .sidebar .profile h3{
+    color: #ffffff;
+    margin: 10px 0 5px;
+}
+
+.search {
+    position: relative;
+    width: 300px;
+  }
+  
+  input {
+    width: 100%;
+    border: 1px solid #bbb;
+    border-radius: 8px;
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+  
+  img {
+    position : absolute;
+    width: 17px;
+    top: 10px;
+    right: 12px;
+    margin: 0;
+  }
+
+.wrapper .sidebar .profile p{
+    color: rgb(206, 240, 253);
+    font-size: 14px;
+}
+
+.wrapper .sidebar ul li a{
+    display: block;
+    padding: 13px 30px;
+    border-bottom: 1px solid rgb(51, 97, 1);
+    color: rgb(241, 237, 237);
+    font-size: 18px;
+    position: relative;
+}
+
+.wrapper .sidebar ul li a .icon{
+    color: #dee4ec;
+    width: 30px;
+    display: inline-block;
+}
+
+.wrapper .sidebar ul li a:hover,
+.wrapper .sidebar ul li a.active{
+    color: rgb(103, 163, 39);
+
+    background:white;
+    border-right: 2px solid rgb(93, 179, 1);
+}
+
+.wrapper .sidebar ul li a:hover .icon,
+.wrapper .sidebar ul li a.active .icon{
+    color: rgb(103, 163, 39);
+}
+
+.wrapper .sidebar ul li a:hover:before,
+.wrapper .sidebar ul li a.active:before{
+    display: block;
+}
+
+/*  */
+
+#fullscreen{
+	width: 100%;
+	height: 969px;
+	background-color: grey;
+}
+#screen0{
+	width: 300px;
+	height: 969px;
+	background-color: black;
+	float: left;
+}
+#screen1{
+	width: 200px;
+	height: 600px;
+	background-color: black;
+	float: left;
+}
+/* 일일 영양분 */
+#screen1-1{
+	width: 770px;
+	height: 379px;
+	background-color: rgb(255, 0, 0);
+}
+/* 주간(당/나트륨/지방) */
+#screen1-2{
+	width: 770px;
+	height: 370px;
+	background-color: yellow;
+}
+/* 추천 식단 */
+#screen1-3{
+	width: 770px;
+	height: 200px;
+	background-color: rgb(255, 0, 149);
+}
+#screen2{
+    width: 770px;
+    height: 948px;
+	background-color: black;
+	float: left;
+    position: absolute;
+    top: 0; right: 0;
+}
+/* 칼로리(주간) */
+/* 2-1,2 위 여백 10 */
+#screen2-1{
+	width: 770px;
+	height: 189.5px;
+	background-color: blue;
+}
+/* 몸무게(주간) */
+#screen2-2{
+	width: 770px;
+	height: 189.5px;
+	background-color: green;
+}
+/* 검색 식품 영양분 */
+/* 2-3 위 여백 10 */
+#screen2-3{
+	width: 770px;
+	height: 370px;
+	background-color: rgb(177, 16, 209);
+}
+/* 건강 뉴스 */
+/* 2-4 위 아래 여백 10씩 */
+#screen2-4{
+	width: 770px;
+	height: 200px;
+	background-color: rgb(226, 169, 12);
+}
