@@ -13,12 +13,17 @@
 </head>
 <body>
 	 <div class = "wrap">
+	 <img src="img/back2.jpg">
 
         <form class="join_form" method="post" action="JoinCon">
+        
+        <div id="box">
+         <div class="box_bg">
+         
             <table class= "login">
                 <colgroup> 
-                    <col width="30%" /> 
-                    <col width="70%" /> 
+                    <col width="30%" > 
+                    <col width="70%" > 
                 </colgroup>
                 <tr>
                     <td>ID : </td>
@@ -88,8 +93,9 @@
                     </td>
                 </tr>
 
-            
-            </table>
+             </table>
+            </div>
+          </div>
         </form>
         
     </div>

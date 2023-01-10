@@ -16,6 +16,7 @@
 </head>
 <body>
     <div class = "wrap">
+    <img src="img/back2.jpg">
 
 <form action="LoginCon" method="post">
         <div id="box">
