@@ -14,7 +14,7 @@
 <body>
 	 <div class = "wrap">
 
-        <form class="join_form" method="get" action="#">
+        <form class="join_form" method="post" action="JoinCon">
             <table class= "login">
                 <colgroup> 
                     <col width="30%" /> 

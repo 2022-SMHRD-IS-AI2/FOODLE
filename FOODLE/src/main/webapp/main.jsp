@@ -16,7 +16,7 @@
      <a href = "login.jsp">
       <button class="btn1" type="button"> 로그인 </button>
      </a>
-     <a href="join.jsp">
+     <a href="Join.jsp">
       <button class="btn2" type="button"> 회원가입 </button>
      </a>
     
