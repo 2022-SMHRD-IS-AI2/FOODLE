@@ -7,5 +7,53 @@ input{border-radius:none;}
 input:focus{outline:none;}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
 
 .wrap{width: 100%; height: 100vh; overflow: hidden; position: relative;}
-.wrap>img{width: 100%; height: 100vh; opacity: 0.5;}
+.wrap>img{width: 100%; height: 100vh; /* 배경 투명도 opacity: 0.5; */}
 .m_logo img{position: absolute; top:0; left:0; bottom:0; right:0; margin:auto; width:1200px;}
+
+span.ments1 {
+    position: absolute;
+    width: 700px;
+    height: 30px;
+    font-size: 5ch;
+    bottom: 230px;
+    left: 205px;
+    color: aliceblue;
+    font-weight: bold;
+  }
+
+span.ments2 {
+    position: absolute;
+    width: 500px;
+    height: 30px;
+    font-size: 3ch;
+    bottom: 100px;
+    left: 205px;
+    color: aliceblue;
+    font-weight: bold;
+  }
+
+
+
+button.btn1 {
+    position: absolute;
+    width: 100px;
+    height: 30px;
+    font-size: 2.5ch;
+    top: 35px;
+    right: 335px;
+    background-color: transparent;
+    color: aliceblue;
+  }
+
+  button.btn2 {
+    position: absolute;
+    width: 120px;
+    height: 30px;
+    font-size: 2.5ch;
+    top: 35px;
+    right: 185px;
+    background-color: transparent;
+    color: aliceblue;
+  }
+
+  

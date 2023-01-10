@@ -13,6 +13,7 @@ public class YgChartDAO {
 	// 아래 메소드들에서 사용할 수 있는 sqlSession 생성
 	SqlSession sqlSession = sqlSessionFactory.openSession(true);
 		
+
 		public List<YgChartDAO> weight_chart() {
 			List<YgChartDAO> list = null;
 

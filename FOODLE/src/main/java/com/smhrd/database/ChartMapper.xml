@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.smhrd.model.MemberDAO">
+	
+	<select id="todayChart" parameterType="String">
+		select f_seq from USER_FOOD where mb_id=#{mb_id} 
+	</select> 
+	
+	<select id="todayChart" parameterType="String">
+		select u_f_dt from USER_FOOD where mb_id=#{mb_id} 
+	</select>
+	
+</mapper>
