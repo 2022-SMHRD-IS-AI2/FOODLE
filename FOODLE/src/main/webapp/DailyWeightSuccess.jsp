@@ -8,12 +8,10 @@
 </head>
 <body>
 
-	<form action="DailyWeightCon" method="post"> 
-	
-	<input type="text" name="weight">
-	<input type ="submit" value="입력">
-	
-	</form>
-	
+	<script>
+		alert('몸무게를 입력했습니다!')
+		location.href="DashBoard.jsp";
+	</script>
+
 </body>
 </html>

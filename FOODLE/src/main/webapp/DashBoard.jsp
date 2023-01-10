@@ -23,6 +23,8 @@
 		System.out.print(name);
 	%>
 
+
+
     <div class="wrapper">
         <!--Top menu -->
         <div class="sidebar">
@@ -65,7 +67,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="daily_Weight.jsp">
                         <span class="icon"><i class="fas fa-chart-line"></i></span>
                         <span class="item">몸무게 기록</span>
                     </a>
