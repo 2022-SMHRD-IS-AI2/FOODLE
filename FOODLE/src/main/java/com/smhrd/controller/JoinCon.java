@@ -15,6 +15,8 @@ public class JoinCon extends HttpServlet {
 	protected void service(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
+		request.setCharacterEncoding("utf-8");
+		
 		String mb_id = request.getParameter("mb_id");
 		String mb_pw = request.getParameter("mb_pw");
 		String pwConfirm = request.getParameter("pwConfirm"); // <- 중복 비밀번호 체크 알고리즘은 생각 좀 해봐야 할 듯
