@@ -11,7 +11,6 @@
 	
 	대쉬보드 화면입니다~
 	
-	
 	<%
 		MemberVO client = (MemberVO)session.getAttribute("client");
 		String name = client.getMb_name();

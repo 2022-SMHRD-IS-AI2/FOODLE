@@ -13,7 +13,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		select * from TBL_MEMBER where mb_id=#{mb_id} and mb_pw=#{mb_pw}
 	</select>
 	
-	<select id="todayChart" parameterType="String">
+	<select id="todayChart" parameterType="String" resultType="com.smhrd.model.BwChartVO">
 		select * from USER_FOOD where mb_id=#{mb_id} 
 	</select>
 	
@@ -25,4 +25,8 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		select * from TBL_MEMBER where mb_id=#{mb_id} and f_kcal=#{f_kcal}
    </select>
    
+	<select id="userChart" parameterType="String" resultType="com.smhrd.model.BwChartVO">
+		select * USER_FOOD where u_f_seq=#{u_f_seq}
+	</select>
+	
 </mapper>
