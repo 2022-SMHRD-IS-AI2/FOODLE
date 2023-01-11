@@ -62,7 +62,21 @@ public class BwChartDAO {
 		return search;
 	}
 	
-	
+	public int insertFood(BwChartVO vo) {
+			int cnt = 0;
+		try {
+			
+			cnt = sqlSession.insert("com.smhrd.model.MemberVO.insertFood", vo);
+			
+		}catch(Exception e) {
+			e.printStackTrace();
+		}finally {
+			sqlSession.close();
+		}
+		return cnt;
+	}
+
+
 	
 	
 	
