@@ -19,10 +19,14 @@ public class InsertFood extends HttpServlet {
 		HttpSession session = request.getSession();
 		MemberVO client = (MemberVO)session.getAttribute("client");
 		int f_seq = Integer.parseInt(request.getParameter("seq"));
+		
 //		String f_name = request.getParameter("name");
+		
 		String mb_id = client.getMb_id();
 		FoodVO vo = new FoodVO(f_seq,mb_id);
-		System.out.println(f_seq + mb_id);
+		
+//		System.out.println(f_seq + mb_id);
+		
 		BwChartDAO dao = new BwChartDAO();
 		
 		int cnt = dao.insertFood(vo);

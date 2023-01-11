@@ -7,6 +7,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import com.smhrd.model.FoodDAO;
+import com.smhrd.model.FoodVO;
 import com.smhrd.model.MemberVO;
 
 public class selectChartCon extends HttpServlet {
@@ -16,7 +18,13 @@ public class selectChartCon extends HttpServlet {
 
 	HttpSession session = request.getSession();
 	MemberVO client = (MemberVO)session.getAttribute("client");
-	client.getMb_id();
+	String mb_id = client.getMb_id();
+	
+	FoodVO vo = new FoodVO();
+	
+	FoodDAO dao = new FoodDAO();
+	dao.selectChart(vo);
+	
 	
 	
 	}
