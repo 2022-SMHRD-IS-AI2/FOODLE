@@ -56,19 +56,19 @@
                 <tr>
                     <td>BLOODTYPE : </td>
                     <td class="bloodtype">
-                            <input class="check" type="radio" name="bloodtype" value="A" name="mb_bloodtype"> <span>A형</span>
-                            <input class="check" type="radio" name="bloodtype" value="B" name="mb_bloodtype"> <span>B형</span>
-                            <input class="check" type="radio" name="bloodtype" value="O" name="mb_bloodtype"> <span>O형</span>
-                            <input class="check" type="radio" name="bloodtype" value="AB" name="mb_bloodtype"> <span>AB형</span>
+                            <input class="check" type="radio" name="mb_bloodtype" value="A"> <span>A형</span>
+                            <input class="check" type="radio" name="mb_bloodtype" value="B"> <span>B형</span>
+                            <input class="check" type="radio" name="mb_bloodtype" value="O"> <span>O형</span>
+                            <input class="check" type="radio" name="mb_bloodtype" value="AB"> <span>AB형</span>
                     </td>
                 </tr> 
                 <tr >
                     <td  >HEIGHT : </td>
-                    <td><input type="text" placeholder="키를 입력해주세요." name="height"></td>
+                    <td><input type="text" placeholder="키를 입력해주세요." name="mb_height"></td>
                 </tr>
                 <tr >
                     <td  >WEIGHT : </td>
-                    <td><input type="text" placeholder="몸무게를 입력해주세요." name="weight"></td>
+                    <td><input type="text" placeholder="몸무게를 입력해주세요." name="mb_weight"></td>
                 </tr>
                 <tr>
                     <td colspan="2">

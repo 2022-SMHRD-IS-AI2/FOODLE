@@ -38,6 +38,7 @@ public class LoginCon extends HttpServlet {
 			
 			session.setAttribute("client", client); // 세션에 vo 담기
 			
+//			response.sendRedirect("AllChartCon");
 			response.sendRedirect("DashBoard.jsp");
 			
 		}else {

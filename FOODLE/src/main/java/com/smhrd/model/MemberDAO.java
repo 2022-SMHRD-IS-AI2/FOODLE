@@ -21,11 +21,7 @@ public class MemberDAO {
 				// insert("실행할 sql 경로 정의", 넘겨 줄 값)
 				cnt = sqlSession.insert("com.smhrd.model.MemberDAO.join", vo);
 
-				if (cnt > 0) {
-					sqlSession.commit();
-				} else {
-					sqlSession.rollback();
-				}
+
 
 			} catch (Exception e) {
 				e.printStackTrace();
