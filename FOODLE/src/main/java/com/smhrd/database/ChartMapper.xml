@@ -19,7 +19,6 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
        and WEIGHT_REGDT between sysdate-7 and sysdate 
        order by WEIGHT_REGDT desc;         
     </select>
-
     
-
+    
 </mapper>
