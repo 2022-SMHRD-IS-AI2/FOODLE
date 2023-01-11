@@ -34,7 +34,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	</select>
 	
 	<insert id="insertFood" parameterType="com.smhrd.model.BwChartVO">
-		insert into TBL_USER_FOOD values (#{mb_id}, #{f_seq}, sysdate)
+		insert into TBL_USER_FOOD (f_seq, u_f_dt, mb_id) values (#{f_seq}, sysdate, #{mb_id} )
 	</insert>
 	
 </mapper>

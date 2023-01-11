@@ -13,7 +13,7 @@
  		String name = "";
  		List<BwChartVO> chart = (List<BwChartVO>)request.getAttribute("name");
  		if(chart != null){
- 			String seq = chart.get(0).getF_seq();
+ 			int seq = chart.get(0).getF_seq();
  			name = chart.get(0).getF_name();
  		}
  		
