@@ -20,6 +20,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<mappers>
 		<mapper resource="com/smhrd/database/MemberMapper.xml"/>
 		<mapper resource="com/smhrd/database/DailyWeightMapper.xml"/>
+		<mapper resource="com/smhrd/database/FoodMapper.xml"/>
 	</mappers>
 	
 </configuration>

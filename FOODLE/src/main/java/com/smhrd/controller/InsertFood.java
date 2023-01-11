@@ -8,7 +8,6 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import com.smhrd.model.BwChartDAO;
-import com.smhrd.model.BwChartVO;
 import com.smhrd.model.FoodVO;
 import com.smhrd.model.MemberVO;
 
@@ -23,7 +22,7 @@ public class InsertFood extends HttpServlet {
 //		String f_name = request.getParameter("name");
 		
 		String mb_id = client.getMb_id();
-		FoodVO vo = new FoodVO(f_seq,mb_id);
+		FoodVO vo = new FoodVO(f_seq, mb_id);
 		
 //		System.out.println(f_seq + mb_id);
 		

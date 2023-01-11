@@ -1,6 +1,8 @@
 package com.smhrd.controller;
 
 import java.io.IOException;
+import java.util.List;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -15,17 +17,31 @@ public class selectChartCon extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+		
+		// 추가한 식품 불러오기
+		
 	HttpSession session = request.getSession();
 	MemberVO client = (MemberVO)session.getAttribute("client");
 	String mb_id = client.getMb_id();
 	
-	FoodVO vo = new FoodVO();
+//	FoodVO vo = new FoodVO();
 	
 	FoodDAO dao = new FoodDAO();
-	dao.selectChart(vo);
+	List<FoodVO> name = dao.selectChart(mb_id);
+	int[]arr = new int[name.size()];
 	
 	
+	for(int i = 0; i < arr.length; i++) {
+		arr[i] = name.get(i).getF_seq();
+		
+	}
+	
+	if(name.get(0).getMb_id().equals(mb_id)) {
+		System.out.println("데이터 불러오기 성공");
+		System.out.println(arr[1]);
+	}else {
+		System.out.println("데이터 불러오기 실패");
+	}
 	
 	}
 

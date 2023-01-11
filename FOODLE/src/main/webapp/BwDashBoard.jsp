@@ -29,5 +29,12 @@
  	<%if(chart != null){ %>
  	<button><a href="InsertFood?seq=<%=chart.get(0).getF_seq() %>&name=<%=chart.get(0).getF_name() %>">추가하기</a></button>
  	<%} %>
+ 	
+ 	<%if(chart != null){ %>
+ 	<button><a href="selectChartCon">조회하기</a></button>
+ 	<%} %>
+ 	
+ 	
+ 	
 </body>
 </html>

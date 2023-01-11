@@ -1,5 +1,7 @@
 package com.smhrd.model;
 
+import java.util.List;
+
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 
@@ -10,11 +12,11 @@ public class FoodDAO {
 	SqlSessionFactory sqlSessionFactory = SqlSessionManager.getSqlSession();
 	SqlSession sqlSession = sqlSessionFactory.openSession(true); 
 	
-	public int selectChart(FoodVO vo) {
-		int cnt = 0;
+	public List<FoodVO> selectChart(String mb_id) {
+		List<FoodVO> cnt = null;
 		try {
 			
-			cnt = sqlSession.selectOne("com.smhrd.model.FoodDAO.selectChart", vo);
+			cnt = sqlSession.selectList("com.smhrd.model.FoodDAO.selectChart", mb_id);
 			
 		}catch(Exception e) {
 			e.printStackTrace();

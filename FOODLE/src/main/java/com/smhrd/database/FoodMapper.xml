@@ -5,7 +5,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 
 <mapper namespace="com.smhrd.model.FoodDAO">
 	
-	<select id="selectChart" parameterType="com.smhrd.model.FoodVO" resultType="com.smhrd.model.FoodVO">
+	<select id="selectChart" parameterType="String" resultType="com.smhrd.model.FoodVO">
 		select * from TBL_USER_FOOD where mb_id=#{mb_id} 
 	</select>
 	
