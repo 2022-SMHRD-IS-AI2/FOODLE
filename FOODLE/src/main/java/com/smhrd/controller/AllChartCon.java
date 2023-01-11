@@ -11,7 +11,7 @@ public class AllChartCon extends HttpServlet {
 
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		
+		System.out.println("안녕하세요올차트콘입니디");
 		
 		
 	}

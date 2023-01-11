@@ -17,7 +17,7 @@
  <%
 		MemberVO client = (MemberVO)session.getAttribute("client");
 		String name = client.getMb_name();
-		String bloodtype = client.getMb_bloodtype();
+		String gender = client.getMb_gender();
 		String height = client.getMb_height();
 		String weight = client.getMb_weight();
 		System.out.print(name);
@@ -35,8 +35,8 @@
                 <h1>FOODER</h1> <br>
                 <h3><%=name %></h3> <br>
                 <tr>
-                    <td>BLOODTYPE</td> <!-- 블러드 타입 gender로 바꾸기!! -->
-                    <td><%=bloodtype %></td> <br>
+                    <td>GENDER</td> <!-- 블러드 타입 gender로 바꾸기!! -->
+                    <td><%=gender %></td> <br>
                     <td>HEIGHT</td>
                     <td><%=height %></td> <br>
                     <td>WEIGHT</td>
