@@ -1,5 +1,3 @@
-<%@page import="org.apache.ibatis.reflection.SystemMetaObject"%>
-<%@page import="com.smhrd.model.MemberVO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -11,17 +9,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/all_style.css">
-    <link rel="stylesheet" href="css/DashBoard_style.css">
+    <link rel="stylesheet" href="css/search_style.css">
 </head>
 <body>
-<%--     <%
-    MemberVO client = (MemberVO)session.getAttribute("client");
-    String name = client.getMb_name();
-    String gender = client.getMb_gender();
-    String height = client.getMb_height();
-    String weight = client.getMb_weight();
-    System.out.print(name);
-    %> --%>
 
     <div class="wrapper">
         <!--Top menu -->
@@ -75,24 +65,68 @@
     </div>
 
     <div id="fullscreen">
-        <div id="screen0"></div>
+        <!-- <div id="screen0"></div> -->
+        <div id="screen">
+            <div class="search">
+                <input type="text" placeholder="검색어를 입력해주세요">
+                <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/icon/search.png">
+            </div>
+            <!-- <div id="screen-1">
+            </div> -->
+        </div>
         <div id="screen1">
-            <div id="screen1-1">
-            </div>
-            <div id="screen1-2">
-            </div>
-            <div id="screen1-3">
-            </div>
+            <!-- <div id="screen1-1">
+            </div> -->
+            <!-- <div id="screen1-2">
+            </div> -->
+            <!-- <div id="screen1-3">
+            </div> -->
         </div>
         <div id="screen2">
-            <div id="screen2-1">
-            </div>
-            <div id="screen2-2">
-            </div>
-            <div id="screen2-3">
-            </div>
-            <div id="screen2-4">
-            </div>
+            <table>
+                <tr>
+                    <td colspan="2">식품이름</td>
+                    <td colspan="2"></td>
+                </tr>
+                <tr>
+                    <th>1회제공량(g)</th>
+                    <td></td>
+                    <th>당류(g)</th>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>열량(kcal)</th>
+                    <td></td>
+                    <th>나트륨(mg)</th>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>탄수화물(g)</th>
+                    <td></td>
+                    <th>콜레스테롤(mg)</th>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>단백질(g)</th>
+                    <td></td>
+                    <th>포화지방산(g)</th>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>지방(g)</th>
+                    <td></td>
+                    <th>트랜스지방산(g)</th>
+                    <td></td>
+                </tr>
+            </table>
+            <!-- <div id="screen2-1">
+            </div> -->
+            <!-- <div id="screen2-2">
+            </div> -->
+            <!-- <div id="screen2-3">
+            </div> -->
+            <!-- <div id="screen2-4">
+            </div> -->
         </div>
     </div>
 

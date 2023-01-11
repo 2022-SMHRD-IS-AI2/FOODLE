@@ -1,0 +1,156 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+*{
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body{
+    background: #f5f6fa;
+}
+
+.wrapper .sidebar{
+    background: rgb(144 201 87);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 100%;
+    padding: 20px 0;
+    transition: all 0.5s ease;
+}
+
+.wrapper .sidebar .profile{
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.wrapper .sidebar .profile h1{
+    color: #ffffff;
+    margin: 10px 0 5px;
+}
+
+.wrapper .sidebar .profile h3{
+    color: #ffffff;
+    margin: 10px 0 5px;
+}
+
+.search {
+    position: relative;
+    width: 300px;
+  }
+  
+  input {
+    width: 100%;
+    border: 1px solid #bbb;
+    border-radius: 8px;
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+  
+  img {
+    position : absolute;
+    width: 17px;
+    top: 10px;
+    right: 12px;
+    margin: 0;
+  }
+
+.wrapper .sidebar .profile p{
+    color: rgb(206, 240, 253);
+    font-size: 14px;
+}
+
+.wrapper .sidebar ul li a{
+    display: block;
+    padding: 13px 30px;
+    border-bottom: 1px solid rgb(51, 97, 1);
+    color: rgb(241, 237, 237);
+    font-size: 18px;
+    position: relative;
+}
+
+.wrapper .sidebar ul li a .icon{
+    color: #dee4ec;
+    width: 30px;
+    display: inline-block;
+}
+
+.wrapper .sidebar ul li a:hover,
+.wrapper .sidebar ul li a.active{
+    color: rgb(55, 105, 1);
+
+    background:white;
+    border-right: 2px solid rgb(144 201 87);
+}
+
+.wrapper .sidebar ul li a:hover .icon,
+.wrapper .sidebar ul li a.active .icon{
+    color: rgb(55, 105, 1);
+}
+
+.wrapper .sidebar ul li a:hover:before,
+.wrapper .sidebar ul li a.active:before{
+    display: block;
+}
+
+/*  */
+
+#fullscreen{
+   width: 100%;
+   height: 969px;
+   background-color: rgb(235, 234, 234);
+}
+#screen0{
+   width: 300px;
+   height: 969px;
+   background-color: black;
+   float: left;
+}
+ table, th, td{border:1px solid black}
+ table{ 
+    border-collapse : collapse;
+    width: 1490px;
+    height: 100px;
+    top: 80px;
+    right: 30px;
+    position: fixed;
+    background-color: white;
+} /*이중선 제거*/
+ th,td{
+   width: 200px;
+   height: 83px;
+   text-align: center;
+   border: 3px solid darkgray;
+   
+   vertical-align: top;   /* 위 */
+   vertical-align: bottom;   /* 아래 */
+   vertical-align: middle;   /* 가운데 */
+}
+.up{
+    background-color: rgb(219, 218, 218);
+    font-size: 20px;
+}
+.down{
+    font-size: 20px;
+}
+.down input{
+    height: 50px;
+    border: none;
+    font-size: 20px;
+}
+
+/* 몸무게 변화 그래프 */
+#screen1-1{
+   width: 1490px;
+   height: 600px;
+   background-color: white;
+   bottom: 80px;
+   right: 30px;
+   position: fixed;
+}
