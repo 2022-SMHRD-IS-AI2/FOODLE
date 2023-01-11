@@ -42,9 +42,24 @@ public class AllChartCon extends HttpServlet {
 		for(int i = 0 ; i < weight.size() ; i++) {
 			YgChartVO weightVo = weight.get(i);
 			weiarr[i] = weightVo.getCurr_weight();
-			System.out.println(weiarr[i]);
+			System.out.println(weiarr[i]); // <- 2023-01-10 15:37:53 이런 개형으로 불러와짐
 		}
 
+	
+		
+		
+		
+		
+		
+		
+		String[] weidate = new String[weight.size()]; // 같은 사이즈의 배열 생성 
+
+		for(int i = 0 ; i < weight.size() ; i++) { // 날짜 뽑아내기
+			YgChartVO weightVo = weight.get(i);
+			weidate[i] = weightVo.getWeight_regdt();
+			System.out.println(weidate[i]);
+		}
+		
 		
 	}
 
