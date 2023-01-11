@@ -49,8 +49,9 @@ public class AllChartCon extends HttpServlet {
 		for(int i = 0 ; i < weight.size() ; i++) {
 			YgChartVO weightVo = weight.get(i);
 			weiarr[i] = weightVo.getCurr_weight();
-			System.out.println(weiarr[i]);
+			System.out.println(weiarr[i]); // <- 2023-01-10 15:37:53 이런 개형으로 불러와짐
 		}
+
 
 // ========================= 음식 조회(selectChartCon) ==================================
 	// 추가한 식품 불러오기
@@ -68,14 +69,16 @@ public class AllChartCon extends HttpServlet {
 	int[]arr = new int[name.size()]; // 불러온 정보 배열에 담기
 	
 	
-	for(int i = 0; i < arr.length; i++) {
+	for (int i = 0; i < arr.length; i++) {
 		arr[i] = name.get(i).getF_seq();
-	
-		
-		
-		
-		
-		
+	}
+
+	if (name.get(0).getMb_id().equals(mb_id)) {
+		System.out.println("데이터 불러오기 성공");
+		System.out.println(arr[0]);
+	} else {
+		System.out.println("데이터 불러오기 실패");
+	}
 		
 //		LocalDate[] weidate = new LocalDate[weight.size()]; // 같은 사이즈의 배열 생성 
 
@@ -90,14 +93,6 @@ public class AllChartCon extends HttpServlet {
 		
 		
 		
-	}
-	
-	if(name.get(0).getMb_id().equals(mb_id)) {
-			System.out.println("데이터 불러오기 성공");
-			System.out.println(arr[0]);
-	}else {
-		System.out.println("데이터 불러오기 실패");
-	}
 		
 // ============= 음식 검색기능 & 영양분 데이터 불러오기(BwChartCon) ==================================		
 	
@@ -122,7 +117,7 @@ public class AllChartCon extends HttpServlet {
 		System.out.println("노 식품");
 	}	
 	
-//========================= 음식 검색기능(InsertFood) ==================================
+//========================= 음식 데이터베이스 추가기능(InsertFood) ==================================
 	
 	session = request.getSession();
 	client = (MemberVO)session.getAttribute("client");
