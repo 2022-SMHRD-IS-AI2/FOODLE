@@ -22,6 +22,8 @@ public class selectChartCon extends HttpServlet {
 		
 	HttpSession session = request.getSession();
 	MemberVO client = (MemberVO)session.getAttribute("client");
+//	String sr = request.getParameter("sr");
+	
 	String mb_id = client.getMb_id();
 	
 //	FoodVO vo = new FoodVO();
@@ -37,8 +39,8 @@ public class selectChartCon extends HttpServlet {
 	}
 	
 	if(name.get(0).getMb_id().equals(mb_id)) {
-		System.out.println("데이터 불러오기 성공");
-		System.out.println(arr[1]);
+			System.out.println("데이터 불러오기 성공");
+			System.out.println(arr[0]);
 	}else {
 		System.out.println("데이터 불러오기 실패");
 	}

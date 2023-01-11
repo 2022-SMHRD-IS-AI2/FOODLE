@@ -11,7 +11,7 @@
 <body style="height: 100%; margin: 0">
  	<%
  		String name = "";
- 		List<BwChartVO> chart = (List<BwChartVO>)request.getAttribute("name");
+ 		List<BwChartVO> chart = (List<BwChartVO>)request.getAttribute("name1");
  		if(chart != null){
  			int seq = chart.get(0).getF_seq();
  			name = chart.get(0).getF_name();

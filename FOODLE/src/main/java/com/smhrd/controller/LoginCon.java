@@ -38,8 +38,8 @@ public class LoginCon extends HttpServlet {
 			
 			session.setAttribute("client", client); // 세션에 vo 담기
 			
-			response.sendRedirect("AllChartCon"); // < - 올차트컨으로 가기
-//			response.sendRedirect("DashBoard.jsp"); // <- 대시보드로 가기
+//			response.sendRedirect("AllChartCon"); // < - 올차트컨으로 가기
+			response.sendRedirect("DashBoard.jsp"); // <- 대시보드로 가기
 			
 		}else {
 			System.out.println("로그인 실패");
