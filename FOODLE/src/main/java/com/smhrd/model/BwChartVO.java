@@ -15,6 +15,7 @@ public class BwChartVO {
 	@NonNull
 	private String f_name;
 	@NonNull
+
 	private String f_gram;
 	private String f_kcal;
 	private String f_ch;
@@ -26,9 +27,9 @@ public class BwChartVO {
 	private String f_fad;
 	private String f_trans;
 	
-	private String u_f_seq;
-	private String f_seq;
-	private String u_f_dt;
-	private String mb_id;
+//	private String u_f_seq;
+	private Integer f_seq;
+//	private String u_f_dt;
+//	private String mb_id;
 	
 }

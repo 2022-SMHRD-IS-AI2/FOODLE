@@ -28,10 +28,8 @@ public class BwChartCon extends HttpServlet {
 		
 		List<BwChartVO> name = dao.searchFood(sr);
 		
-		System.out.println("여기");
-		
 		String name1 = name.get(0).getF_name();
-		System.out.println(name1);
+		
 		if(sr.equals(name1)) {
 			RequestDispatcher rd = request.getRequestDispatcher("BwDashBoard.jsp");
 			request.setAttribute("name", name);

@@ -6,7 +6,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 <mapper namespace="com.smhrd.model.MemberDAO">
 	
 	<insert id="join" parameterType="com.smhrd.model.MemberVO">
-		insert into TBL_MEMBER values (#{mb_id}, #{mb_pw}, #{mb_name}, "mb_email", #{mb_phone}, #{mb_bloodtype}, #{mb_height}, #{mb_weight}, 'N', sysdate, #{mb_gender})
+		insert into TBL_MEMBER values (#{mb_id}, #{mb_pw}, #{mb_name}, 'mb_email', #{mb_bloodtype}, #{mb_phone}, #{mb_height}, #{mb_weight}, 'N', sysdate, #{mb_gender})
 	</insert>
 	
 	<select id="login" parameterType="com.smhrd.model.MemberVO" resultType="com.smhrd.model.MemberVO">
@@ -34,7 +34,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	</select>
 	
 	<insert id="insertFood" parameterType="com.smhrd.model.BwChartVO">
-		insert into TBL_USER_FOOD values (#{mb_id}, #{f_seq}, sysdate)
+		insert into TBL_USER_FOOD (f_seq, u_f_dt, mb_id) values (#{f_seq}, sysdate, #{mb_id} )
 	</insert>
 	
 </mapper>

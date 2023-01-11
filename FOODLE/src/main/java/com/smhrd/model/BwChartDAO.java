@@ -62,11 +62,11 @@ public class BwChartDAO {
 		return search;
 	}
 	
-	public int insertFood(BwChartVO vo) {
+	public int insertFood(FoodVO vo) {
 			int cnt = 0;
 		try {
 			
-			cnt = sqlSession.insert("com.smhrd.model.MemberVO.insertFood", vo);
+			cnt = sqlSession.insert("com.smhrd.model.MemberDAO.insertFood", vo);
 			
 		}catch(Exception e) {
 			e.printStackTrace();
