@@ -35,7 +35,7 @@
                 <h1>FOODER</h1> <br>
                 <h3><%=name %></h3> <br>
                 <tr>
-                    <td>BLOODTYPE</td>
+                    <td>BLOODTYPE</td> <!-- 블러드 타입 gender로 바꾸기!! -->
                     <td><%=bloodtype %></td> <br>
                     <td>HEIGHT</td>
                     <td><%=height %></td> <br>
