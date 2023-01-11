@@ -1,3 +1,4 @@
+<%@page import="org.apache.ibatis.reflection.SystemMetaObject"%>
 <%@page import="java.util.List"%>
 <%@page import="com.smhrd.model.BwChartVO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
@@ -8,19 +9,25 @@
   <meta charset="utf-8">
 </head>
 <body style="height: 100%; margin: 0">
+ 	<%
+ 		String name = "";
+ 		List<BwChartVO> chart = (List<BwChartVO>)request.getAttribute("name");
+ 		if(chart != null){
+ 			String seq = chart.get(0).getF_seq();
+ 			name = chart.get(0).getF_name();
+ 		}
+ 		
+ 	%>
+ 	
  <form action="BwChartCon">
- 	<input type="text" name="sr">
+ 	<input type="text" name="sr" placeholder="<%=name %>">
  	<input type="submit" value="검색">
  	
  
  </form>
- 	<%
- 		List<BwChartVO> chart = (List<BwChartVO>)request.getAttribute("name");
- 		chart.get(0).getF_seq();
- 		chart.get(0).getF_name();
  	
- 	%>
- 	
- 	<button><a href="#?seq<%=chart.get(0).getF_seq() %>"></a></button>
+ 	<%if(chart != null){ %>
+ 	<button><a href="InsertFood?seq=<%=chart.get(0).getF_seq() %>&name=<%=chart.get(0).getF_name() %>">추가하기</a></button>
+ 	<%} %>
 </body>
 </html>
