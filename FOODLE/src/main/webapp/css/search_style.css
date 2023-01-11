@@ -1,5 +1,4 @@
 @charset "UTF-8";
-
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
 *{
@@ -107,112 +106,128 @@ body{
 	height: 969px;
 	background-color: rgb(235, 234, 234);
 }
-#screen0{
+/* #screen0{
 	width: 300px;
 	height: 969px;
 	background-color: black;
 	float: left;
+} */
+/* #screen{
+    margin-top: 0px;
+    position: fixed;
+    top: 80px;
+    right: 180px;
+	width: 1200px;
+	height: 80px;
+	background-color: black;
+	float: left;
+} */
+/* display: table; */
+#screen{
+    /* outline: 5px;
+    outline-style: double;
+    outline-color: black; */
+    border: 1px solid #bbb;
+    border-radius: 8px;
+    position: fixed;
+    top: 220px;
+    right: 230px;
+	width: 300px;
+	background-color: white;
 }
+.search {
+    position: relative;
+    width: 300px;
+  }
+  input {
+    width: 100%;
+    border: 1px solid #bbb;
+    border-radius: 8px;
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+  img {
+    position : absolute;
+    width: 17px;
+    top: 10px;
+    right: 12px;
+    margin: 0;
+  }
 /* #screen1{
-	width: 200px;
+    margin-top: 250px;
+	width: 770px;
 	height: 600px;
 	background-color: black;
 	float: left;
 } */
-/* 일일 영양분 */
-#screen1-1{
-    /* outline: 3px;
+#screen1{
+    /* outline: 5px;
     outline-style: double;
     outline-color: black; */
     position: fixed;
-    top: 18px;
-    right: 800px;
+    top: 200px;
+    right: 780px;
 	width: 750px;
-	height: 380px;
+	height: 600px;
 	background-color: white;
 }
-/* 주간(당/나트륨/지방) */
-#screen1-2{
-    /* outline: 3px;
-    outline-style: double;
-    outline-color: black; */
-    position: fixed;
-    top: 410px;
-    right: 800px;
-	width: 750px;
-	height: 350px;
-	background-color: white;
-}
-/* 추천 식단 */
-#screen1-3{
-    /* outline: 3px;
-    outline-style: double;
-    outline-color: black; */
-    position: fixed;
-    top: 773px;
-    right: 800px;
-	width: 750px;
-	height: 180px;
-	background-color: white;
-}
+/* #screen1-2{
+	width: 770px;
+	height: 370px;
+	background-color: yellow;
+} */
+/* #screen1-3{
+	width: 770px;
+	height: 200px;
+	background-color: rgb(255, 0, 149);
+} */
 /* #screen2{
+    margin-top: 250px;
     width: 770px;
-    height: 948px;
+    height: 600px;
 	background-color: black;
 	float: left;
     position: absolute;
     top: 0; right: 0;
 } */
-/* 칼로리(주간) */
 /* 2-1,2 위 여백 10 */
-#screen2-1{
-    /* outline: 3px;
+#screen2{
+    /* outline: 5px;
     outline-style: double;
     outline-color: black; */
     position: fixed;
-    top: 20px;
-    right: 22px;
-	width: 750px;
-	height: 180px;
+    top: 300px;
+    right: 40px;
+	width: 690px;
+	height: 500px;
 	background-color: white;
 }
-/* 몸무게(주간) */
-#screen2-2{
-    /* outline: 3px;
-    outline-style: double;
-    outline-color: black; */
-    position: fixed;
-    top: 215px;
-    right: 22px;
-	width: 750px;
-	height: 180px;
-	background-color: white;
-}
-/* 검색 식품 영양분 */
+/* #screen2-2{
+	width: 770px;
+	height: 189.5px;
+	background-color: green;
+} */
 /* 2-3 위 여백 10 */
-#screen2-3{
-    /* outline: 3px;
-    outline-style: double;
-    outline-color: black; */
-    position: fixed;
-    top: 410px;
-    right: 22px;
-	width: 750px;
-	height: 350px;
-	background-color: white;
-}
-/* 건강 뉴스 */
+/* #screen2-3{
+	width: 770px;
+	height: 370px;
+	background-color: rgb(177, 16, 209);
+} */
 /* 2-4 위 아래 여백 10씩 */
-#screen2-4{
-    /* outline: 3px;
-    outline-style: double;
-    outline-color: black; */
-    position: fixed;
-    top: 773px;
-    right: 22px;
-	width: 750px;
-	height: 180px;
-	background-color: white;
-}
-
-
+/* #screen2-4{
+	width: 770px;
+	height: 200px;
+	background-color: rgb(226, 169, 12);
+} */
+  table, th, td{border:1px solid black}
+  table{ border-collapse : collapse; } /*이중선 제거*/
+  th,td{
+    width: 200px;
+    height: 83px;
+    text-align: center;
+    border: 1px solid #000;
+    
+    vertical-align: top;   /* 위 */
+    vertical-align: bottom;   /* 아래 */
+    vertical-align: middle;   /* 가운데 */
+ }

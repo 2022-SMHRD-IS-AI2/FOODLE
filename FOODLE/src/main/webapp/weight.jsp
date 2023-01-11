@@ -1,5 +1,3 @@
-<%@page import="org.apache.ibatis.reflection.SystemMetaObject"%>
-<%@page import="com.smhrd.model.MemberVO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -11,17 +9,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/all_style.css">
-    <link rel="stylesheet" href="css/DashBoard_style.css">
+    <link rel="stylesheet" href="css/weight_style.css">
 </head>
 <body>
-<%--     <%
-    MemberVO client = (MemberVO)session.getAttribute("client");
-    String name = client.getMb_name();
-    String gender = client.getMb_gender();
-    String height = client.getMb_height();
-    String weight = client.getMb_weight();
-    System.out.print(name);
-    %> --%>
+
+
 
     <div class="wrapper">
         <!--Top menu -->
@@ -53,7 +45,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="BwDashBoard.jsp">
                         <span class="icon"><i class="fas fa-desktop"></i></span>
                         <span class="item">Dashboard</span>
                     </a>
@@ -65,7 +57,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="daily_Weight.jsp">
                         <span class="icon"><i class="fas fa-chart-line"></i></span>
                         <span class="item">몸무게 기록</span>
                     </a>
@@ -76,24 +68,34 @@
 
     <div id="fullscreen">
         <div id="screen0"></div>
-        <div id="screen1">
+
+        <div>
+        <table>
+        <tr class="up">
+            <th>입력 날짜</th>
+            <th>입력 체중(kg)</th>
+            <th>신장(cm)</th>
+            <th>BMI 지수</th>
+        </tr>
+        <tr class="down">
+            <td>
+                <input type="date">
+            </td>
+            <td>
+                <input type="text" placeholder="체중을 입력해주세요">
+            </td>
+            <td>
+                <input type="text" placeholder="신장을 입력해주세요">
+            </td>
+            <td>18.5</td>
+        </tr>
+        </table>
+        </div>
             <div id="screen1-1">
             </div>
-            <div id="screen1-2">
-            </div>
-            <div id="screen1-3">
-            </div>
+
         </div>
-        <div id="screen2">
-            <div id="screen2-1">
-            </div>
-            <div id="screen2-2">
-            </div>
-            <div id="screen2-3">
-            </div>
-            <div id="screen2-4">
-            </div>
-        </div>
+
     </div>
 
 </body>
