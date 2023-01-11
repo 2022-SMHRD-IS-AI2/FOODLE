@@ -13,11 +13,13 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		select u_f_dt from USER_FOOD where mb_id=#{mb_id} 
 	</select>
 	
-	<select id="YG" resultType="com.smhrd.model.연경연습VO"> <!-- 아이디랑 리절트타입 수정 해야함!!!! -->
+	<select id="YG" resultType="com.smhrd.model.MemberVO"> <!-- 아이디랑 리절트타입 수정 해야함!!!! -->
         select * from tbl_weight_daily
        where mb_id=#{mb_id} 
        and WEIGHT_REGDT between sysdate-7 and sysdate 
        order by WEIGHT_REGDT desc;         
     </select>
-	
+
+    
+
 </mapper>
