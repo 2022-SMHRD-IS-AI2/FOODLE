@@ -33,6 +33,18 @@ public class DailyWeightDAO {
 		return cnt;
 		
 	}
-	
+	public void selectWeight(DailyWeightVO vo) {
+		
+		try {
+			
+			
+			
+		}catch(Exception e) {
+			e.printStackTrace();
+		}finally {
+			
+		}
+		
+	}
 	
 }
