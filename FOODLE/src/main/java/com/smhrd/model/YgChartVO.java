@@ -1,5 +1,7 @@
 package com.smhrd.model;
 
+import java.time.LocalDate;
+
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -15,7 +17,7 @@ public class YgChartVO {
 		private int weight_seq;
 		@NonNull
 		private int curr_weight;
-		private String weight_regdt;
+		private LocalDate weight_regdt;
 		@NonNull
 		private String mb_id;
 	

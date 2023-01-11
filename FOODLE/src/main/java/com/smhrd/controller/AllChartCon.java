@@ -1,6 +1,7 @@
 package com.smhrd.controller;
 
 import java.io.IOException;
+import java.time.LocalDate;
 import java.util.List;
 
 import javax.servlet.ServletException;
@@ -52,13 +53,17 @@ public class AllChartCon extends HttpServlet {
 		
 		
 		
-		String[] weidate = new String[weight.size()]; // 같은 사이즈의 배열 생성 
+		LocalDate[] weidate = new LocalDate[weight.size()]; // 같은 사이즈의 배열 생성 
 
 		for(int i = 0 ; i < weight.size() ; i++) { // 날짜 뽑아내기
 			YgChartVO weightVo = weight.get(i);
 			weidate[i] = weightVo.getWeight_regdt();
 			System.out.println(weidate[i]);
 		}
+		
+		LocalDate now = LocalDate.now();
+		System.out.println(now);
+		
 		
 		
 	}
