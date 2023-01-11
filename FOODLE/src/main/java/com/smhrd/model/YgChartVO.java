@@ -12,11 +12,12 @@ import lombok.RequiredArgsConstructor;
 @Getter // getter메
 public class YgChartVO {
 		
+		private int weight_seq;
+		@NonNull
+		private int curr_weight;
+		private String weight_regdt;
 		@NonNull
 		private String mb_id;
-		@NonNull
-		private String curr_wg;
-		private String date;
 	
 		
 		

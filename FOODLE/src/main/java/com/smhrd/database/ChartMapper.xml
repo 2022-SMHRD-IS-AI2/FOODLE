@@ -3,10 +3,10 @@
 PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.smhrd.model.MemberDAO">
+<mapper namespace="com.smhrd.model.YgChartDAO">
 	
-	<select id="todayChart" parameterType="String">
-		select f_seq from USER_FOOD where mb_id=#{mb_id} 
+	<select id="weightChart" parameterType="String" resultType="com.smhrd.model.YgChartVO">
+		select * from tbl_weight_daily where mb_id=#{mb_id} <!-- 뭄무게 불러오는 쿼리문 돈터치!!  -인성-  -->
 	</select> 
 	
 	<select id="todayChart" parameterType="String">

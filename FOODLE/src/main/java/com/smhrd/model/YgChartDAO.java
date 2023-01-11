@@ -13,20 +13,25 @@ public class YgChartDAO {
 	// 아래 메소드들에서 사용할 수 있는 sqlSession 생성
 	SqlSession sqlSession = sqlSessionFactory.openSession(true);
 		
-
-		public List<YgChartDAO> weight_chart() {
-			List<YgChartDAO> list = null;
+		
+		public List<YgChartVO> weightChart(String mb_id) { // 몸무게 차트 불러오는 메소드
+			List<YgChartVO> WeightList = null;
 
 			try {
-				list = sqlSession.selectList("com.smhrd.model.YgChartDAO.weight_chart");
+				WeightList = sqlSession.selectList("com.smhrd.model.YgChartDAO.weightChart", mb_id);
 				
 			} catch (Exception e) {
 				e.printStackTrace();
 			} finally {
 				sqlSession.close();
 			}
-			return list;
+			return WeightList;
 		}
+		
+		
+		
+		
+		
 		
 		public String KcalChart(BwChartVO vo) {
 			String KcalChart = null;
@@ -42,6 +47,8 @@ public class YgChartDAO {
 			return KcalChart;
 			
 		}
+		
+		
 		
 }
 
