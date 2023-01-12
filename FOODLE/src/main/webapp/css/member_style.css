@@ -33,7 +33,7 @@ table{
 input{border-radius:none; border: 1px solid #000;}
 
 
-.join_form{position: absolute; top:0; left:0; bottom:0; right:0; font-size: 1.2em;
+.join_form{position: absolute; top:0; left:0; bottom:0; right:0; font-size: 17px;
     margin:auto; width:500px; max-height: 550px;
     padding: 50px 20px; /* 나중에 지우기 border: 1px solid #dedede; */}
 
