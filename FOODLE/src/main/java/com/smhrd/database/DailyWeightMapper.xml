@@ -8,7 +8,4 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<insert id="weight" parameterType="com.smhrd.model.DailyWeightVO">
 		insert into tbl_weight_daily (curr_weight, weight_regdt, mb_id) values (#{curr_weight}, sysdate, #{mb_id})
 	</insert>
-	
-	
-	
 </mapper>

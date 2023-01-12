@@ -48,6 +48,22 @@ public class YgChartDAO {
 			
 		}
 		
+		public List<Integer> dailyIngre (String mb_id) {
+			List<Integer> d_f_seq = null;
+			
+			try {
+				d_f_seq = sqlSession.selectList("com.smhrd.YgChartDAO.d_f_seq", mb_id);
+				
+			}catch(Exception e) {
+				e.printStackTrace();
+			}finally {
+				sqlSession.close();
+			}
+			
+			return d_f_seq;
+			
+		}
+		
 		
 		
 }

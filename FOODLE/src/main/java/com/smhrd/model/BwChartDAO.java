@@ -76,10 +76,28 @@ public class BwChartDAO {
 		return cnt;
 	}
 
+	
+	public List<BwChartVO> dailyKcal(String mb_id) { // 일간 칼로리 그래프
+		
+		List<BwChartVO> dK = null;
+		
+		try {
+			
+			dK = sqlSession.selectList("com.smhrd.model.MemberDAO.searchFood", mb_id);
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally {
+			sqlSession.close();
+		}
+		return dK;
+	}
+		
+	}
 
 	
 	
 	
 	
 	
-}
+

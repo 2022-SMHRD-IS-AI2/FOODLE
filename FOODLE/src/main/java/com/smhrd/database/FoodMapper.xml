@@ -6,8 +6,23 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 <mapper namespace="com.smhrd.model.FoodDAO">
 	
 	<select id="selectChart" parameterType="String" resultType="com.smhrd.model.FoodVO">
-		select * from TBL_USER_FOOD where mb_id=#{mb_id} 
+      select * from TBL_USER_FOOD where mb_id=#{mb_id} 
+   </select>
+	
+		<select id="dfChart" parameterType="String" resultType="com.smhrd.model.BwChartVO">
+		select * 
+    from tbl_food
+    where f_seq = (
+            select f_seq <!-- 이중 쿼리문 시작 -->
+            from TBL_USER_FOOD
+            where u_f_dt = (
+                select max(u_f_dt) <!-- 이중이중쿼리문 시작 -->
+                from TBL_USER_FOOD 
+                where mb_id=#{mb_id}
+                )
+            )
 	</select>
+	
 	
 	
 </mapper>
