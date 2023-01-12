@@ -13,6 +13,7 @@
 
 body{
     background: #f5f6fa;
+    /* height: 100%; */
 }
 
 .wrapper .sidebar{
@@ -214,5 +215,9 @@ body{
 	height: 180px;
 	background-color: white;
 }
+
+
+
+
 
 

@@ -64,6 +64,13 @@ input{border-radius:none; border: 1px solid #000;}
 
 .nut_box{display: flex; justify-content: center; width: 100%; height: 35px; margin: 0 auto;}
 
+.pl00:hover {
+    background: rgba(96,96,0,0.5);
+    color: white;
+    transition: all 0.5s;
+}
+
+
 
 
 

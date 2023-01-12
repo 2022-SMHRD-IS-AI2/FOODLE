@@ -17,6 +17,11 @@ input{border-radius:none; border:none; }
 #box4{margin-top: 10px;}
 .main_btn{width: 49%; height: 35px; border-radius: 5px; cursor: pointer;}
 
+.main_btn:hover {
+    background: rgba(96,96,0,0.5);
+    color: white;
+    transition: all 0.5s;
+}
 
 .box_bg{background: rgba(255, 255, 255, .8); padding: 60px; border-radius: 15px;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);}
