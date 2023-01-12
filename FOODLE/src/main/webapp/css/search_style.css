@@ -226,6 +226,7 @@ body{
     height: 83px;
     text-align: center;
     border: 1px solid #000;
+    font-weight: 900;
     
     vertical-align: top;   /* 위 */
     vertical-align: bottom;   /* 아래 */

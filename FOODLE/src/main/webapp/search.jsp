@@ -89,33 +89,33 @@
                     <td colspan="2"></td>
                 </tr>
                 <tr>
-                    <th>1회제공량(g)</th>
+                    <td>1회제공량(g)</td>
                     <td></td>
-                    <th>당류(g)</th>
-                    <td></td>
-                </tr>
-                <tr>
-                    <th>열량(kcal)</th>
-                    <td></td>
-                    <th>나트륨(mg)</th>
+                    <td>당류(g)</td>
                     <td></td>
                 </tr>
                 <tr>
-                    <th>탄수화물(g)</th>
+                    <td>열량(kcal)</td>
                     <td></td>
-                    <th>콜레스테롤(mg)</th>
-                    <td></td>
-                </tr>
-                <tr>
-                    <th>단백질(g)</th>
-                    <td></td>
-                    <th>포화지방산(g)</th>
+                    <td>나트륨(mg)</td>
                     <td></td>
                 </tr>
                 <tr>
-                    <th>지방(g)</th>
+                    <td>탄수화물(g)</td>
                     <td></td>
-                    <th>트랜스지방산(g)</th>
+                    <td>콜레스테롤(mg)</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>단백질(g)</td>
+                    <td></td>
+                    <td>포화지방산(g)</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>지방(g)</td>
+                    <td></td>
+                    <td>트랜스지방산(g)</td>
                     <td></td>
                 </tr>
             </table>
