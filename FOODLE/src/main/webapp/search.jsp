@@ -85,37 +85,37 @@
         <div id="screen2">
             <table>
                 <tr>
-                    <td colspan="2">식품이름</td>
+                    <td colspan="2"  class="name">식품이름</td>
                     <td colspan="2"></td>
                 </tr>
                 <tr>
-                    <td>1회제공량(g)</td>
+                    <td  class="name">1회제공량(g)</td>
                     <td></td>
-                    <td>당류(g)</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>열량(kcal)</td>
-                    <td></td>
-                    <td>나트륨(mg)</td>
+                    <td  class="name">당류(g)</td>
                     <td></td>
                 </tr>
                 <tr>
-                    <td>탄수화물(g)</td>
+                    <td  class="name">열량(kcal)</td>
                     <td></td>
-                    <td>콜레스테롤(mg)</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>단백질(g)</td>
-                    <td></td>
-                    <td>포화지방산(g)</td>
+                    <td  class="name">나트륨(mg)</td>
                     <td></td>
                 </tr>
                 <tr>
-                    <td>지방(g)</td>
+                    <td  class="name">탄수화물(g)</td>
                     <td></td>
-                    <td>트랜스지방산(g)</td>
+                    <td  class="name">콜레스테롤(mg)</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td  class="name">단백질(g)</td>
+                    <td></td>
+                    <td  class="name">포화지방산(g)</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td  class="name">지방(g)</td>
+                    <td></td>
+                    <td  class="name">트랜스지방산(g)</td>
                     <td></td>
                 </tr>
             </table>
