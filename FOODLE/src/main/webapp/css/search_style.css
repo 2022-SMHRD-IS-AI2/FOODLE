@@ -227,8 +227,13 @@ body{
     text-align: center;
     border: 1px solid #000;
     font-weight: 900;
+    border: 3px solid darkgray;
     
     vertical-align: top;   /* 위 */
     vertical-align: bottom;   /* 아래 */
     vertical-align: middle;   /* 가운데 */
  }
+   .name{
+    background-color: rgb(219, 218, 218);
+    font-size: 20px;
+  }
