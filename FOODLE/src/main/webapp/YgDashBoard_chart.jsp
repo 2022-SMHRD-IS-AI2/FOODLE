@@ -19,9 +19,6 @@
    int ww = 80;
 	%>
  
- 
- 
-<form action="DailyWeightCon" method="post">
 <script>
   new Chart(document.getElementById("line-chart"), {
     type: 'line',
@@ -44,7 +41,7 @@
   });
  
 </script>
-</form>
+
 
 </body>
 </html>
