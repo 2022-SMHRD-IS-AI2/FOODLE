@@ -71,6 +71,16 @@ button.btn1 {
     font-family: 'LotteMartDream';
    cursor: pointer;
   }
+  
+ button.btn1:hover {
+  color: rgba(124, 245, 87, 0.938);
+  transition: all 0.5s;
+}
+
+button.btn2:hover {
+  color: rgba(124, 245, 87, 0.938);
+  transition: all 0.5s; 
+}
 
   button.btn2 {
     position: absolute;
