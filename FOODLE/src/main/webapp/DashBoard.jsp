@@ -20,7 +20,8 @@
     String gender = client.getMb_gender();
     String height = client.getMb_height();
     String weight = client.getMb_weight();
-    System.out.print(name);
+    String ingredient = client.getMb_fav_ingredient();
+    System.out.print(ingredient);
     %> 
 
     <div class="wrapper">

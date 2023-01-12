@@ -22,7 +22,6 @@ public class LoginCon extends HttpServlet {
 		MemberVO client = null;
 		HttpSession session = request.getSession(); ;  // 세션 생성
 		
-		System.out.println(id + pw);
 		
 		MemberVO vo = new MemberVO(id, pw);
 		

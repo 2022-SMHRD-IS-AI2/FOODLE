@@ -28,15 +28,14 @@ public class JoinCon extends HttpServlet {
 		String mb_weight = request.getParameter("mb_weight");
 		String mb_gender = request.getParameter("mb_gender");
 
-		String[] mb_recm = request.getParameterValues("recm");
+		String mb_fav_ingredient = request.getParameter("fav_ingredient"); // <- 선호 영양소
 		
 		
 		
 		
 
-		System.out.println(mb_recm);
 
-		MemberVO vo = new MemberVO(mb_id, mb_pw, mb_name, mb_bloodtype, mb_phone, mb_height, mb_weight, mb_gender);
+		MemberVO vo = new MemberVO(mb_id, mb_pw, mb_name, mb_bloodtype, mb_phone, mb_height, mb_weight, mb_gender,mb_fav_ingredient);
 
 //		RecmVO r_vo = new RecmVO(mb_recm); // <- 관심 영양소는 별도로 관리
 

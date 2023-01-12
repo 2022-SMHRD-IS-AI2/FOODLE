@@ -72,16 +72,16 @@
                 </tr>
                 <tr>
                     <td colspan="2">
-                    <select class="nut_box" name="recm">
-                        <option value="">관심 영양소</option>
-                        <option value="">탄수화물</option>
-                        <option value="">단백질</option>
-                        <option value="">지방</option>
-                        <option value="">당류</option>
-                        <option value="">나트륨</option>
-                        <option value="">콜레스테롤</option>
-                        <option value="">포화지방산</option>
-                        <option value="">트랜스지방</option>
+                    <select class="nut_box" name="fav_ingredient">
+                        <option value="none">관심 영양소</option>
+                        <option value="f_ch">탄수화물</option>
+                        <option value="f_pro">단백질</option>
+                        <option value="f_fat">지방</option>
+                        <option value="f_sugar">당류</option>
+                        <option value="f_sodium">나트륨</option>
+                        <option value="f_col">콜레스테롤</option>
+                        <option value="f_fad">포화지방산</option>
+                        <option value="f_trans">트랜스지방</option>
                     </select>
                     </td>
                 </tr>
