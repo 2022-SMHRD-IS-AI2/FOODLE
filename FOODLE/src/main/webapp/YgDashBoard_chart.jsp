@@ -1,3 +1,7 @@
+<%@page import="com.smhrd.model.DailyWeightVO"%>
+<%@page import="com.smhrd.model.YgChartVO"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -10,15 +14,22 @@
     <title>chart js</title>
 </head>
 <body>
-    <<canvas id="line-chart" width="300" height="250"></canvas>
+    <canvas id="line-chart" width="150px" height="100px"></canvas>
+ <%
+   int ww = 80;
+	%>
+ 
+ 
+ 
+<form action="DailyWeightCon" method="post">
 <script>
   new Chart(document.getElementById("line-chart"), {
     type: 'line',
     data: {
-      labels: [1500,1600,1700,1750,1800,1850,1900,1950,1999,2050],
+      labels: [<%=ww %>] ,
       datasets: [{ 
           data: [86,114,106,106,107,111,133,221,783,2478],
-          label: "Africa",
+          label: "몸무게",
           borderColor: "#3e95cd",
           fill: false
         }
@@ -31,6 +42,9 @@
       }
     }
   });
+ 
 </script>
+</form>
+
 </body>
 </html>
