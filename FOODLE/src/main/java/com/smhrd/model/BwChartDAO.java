@@ -77,13 +77,13 @@ public class BwChartDAO {
 	}
 
 	
-	public List<BwChartVO> dailyKcal(String mb_id) { // 일간 칼로리 그래프
+	public List<DailyChartVO> dailyKcal(String mb_id) { // 일간 칼로리 그래프
 		
-		List<BwChartVO> dK = null;
+		List<DailyChartVO> dK = null;
 		
 		try {
 			
-			dK = sqlSession.selectList("com.smhrd.model.MemberDAO.searchFood", mb_id);
+			dK = sqlSession.selectList("com.smhrd.model.FoodDAO.searchKcal", mb_id);
 			
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -92,7 +92,29 @@ public class BwChartDAO {
 		}
 		return dK;
 	}
+	
 		
+	public List<DailyChooseVO> chooseNut(ChooseNutVO ChooseNutVO) { // 일간 선호영양분 그래프
+		
+		List<DailyChooseVO> dailyChoose = null;
+		
+		try {
+			
+			dailyChoose = sqlSession.selectList("com.smhrd.model.FoodDAO.chooseNut", ChooseNutVO);
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally {
+			sqlSession.close();
+		}
+		return dailyChoose;
+	}
+	
+	
+	
+	
+	
+	
 	}
 
 	

@@ -23,11 +23,11 @@ public class FoodDAO {
 		}finally {
 			sqlSession.close();
 		}
-		return eat_food; // <- mb_id가 섭취한 식품을 리스트<> 형태로 리턴
+		return eat_food;
 	}
 
-	public FoodVO dfChart(String mb_id) {
-		FoodVO eat_food = null;
+	public BwChartVO dfChart(String mb_id) {
+		BwChartVO eat_food = null;
 		try {
 			
 			eat_food = sqlSession.selectOne("com.smhrd.model.FoodDAO.dfChart", mb_id);
