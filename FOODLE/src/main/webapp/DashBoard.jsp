@@ -10,8 +10,7 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script
-	src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
 <title>Document</title>
 <link rel="stylesheet" href="css/all_style.css">
 <link rel="stylesheet" href="css/DashBoard_style.css">
@@ -77,40 +76,168 @@
 	<div id="fullscreen">
 		<div id="screen0"></div>
 		<div id="screen1">
-			<div id="screen1-1">
+			<!-- 1. 일일영양분(내가먹은거/권장영양분)-->
+			<div id="screen1-1"> 
+			<canvas id="1-1" width = "720px" height="350px"></canvas>
+		
+			<script> 
+			    new Chart(document.getElementById("1-1"), {
+			    type: 'bar',
+			    data: {
+			      labels: ["탄수화물(g)", "단백질(g)", "지방(g)", "당류(g)", "나트륨(g)", "콜레스테롤(g)", "포화지방산(g)", "트랜스지방산(g)" ] ,
+			      datasets: [{ 
+			          data: [60, 20, 32, 50, 70, 90],
+			        
+			          label: "일일 영양분",
+			          borderColor: "#3e95cd",
+			          fill: false
+			        },
+			        {
+			        data: [60, 20, 32, 50, 70, 90],
+				    label: "권장 영양분",
+				    borderColor: "#3e95cd",
+				    fill: false	
+			        }
+			      ]
+			    },
+			    options: {
+			      title: {
+			        display: true,
+			        text: '일일 영양성분 그래프'
+			      }
+			    }
+			  });
+			</script>
 			</div>
-			<div id="screen1-2"></div>
-			<div id="screen1-3"></div>
+			<div id="screen1-2">
+			<!-- 1-2. 주간 관심 영양소 그래프(EX.당, 나트륨,,, 택1)-->
+			<canvas id="1-2" width = "720px" height="320px"></canvas>
+			<script>
+		    	new Chart(document.getElementById("1-2"), {
+			    type: 'line',
+			    data: {
+			      labels: ["1일", "2일","3일","4일","5일","6일","7일"] ,
+			      datasets: [{ 
+			          data: [60, 20, 32, 50, 70, 90, 70, 88],
+			          label: "관심 영양소",
+			          borderColor: "#3e95cd",
+			          fill: false
+			        }
+			      ]
+			    },
+			    options: {
+			      title: {
+			        display: true,
+			        text: '주간 관심 영양소 그래프'
+			      }
+			    }
+			  });
+			</script>	
+			</div>
+			<div id="screen1-3">
+			<!-- 1-3. 추천 식단 -->
+			</div>
 		</div>
 		<div id="screen2">
-			<div id="screen2-1"></div>
-			<div id="screen2-2"></div>
-			<div id="screen2-3">
-			<canvas id="2-3" width = "700px" height="330px"></canvas>
+			<div id="screen2-1">
+			<!-- 2-1. 주간 칼로리-->
+			<canvas id="2-1" width = "720px" height="150px"></canvas>
 			<script>
-  new Chart(document.getElementById("2-3"), {
-    type: 'bar',
-    data: {
-      labels: [<%=ww %>] ,
-      datasets: [{ 
-          data: [60, 20, 32, 50, 70, 90, 70, 88],
-          label: "몸무게",
-          borderColor: "#3e95cd",
-          fill: false
-        }
-      ]
-    },
-    options: {
-      title: {
-        display: true,
-        text: '주간 몸무게 그래프'
-      }
-    }
-  });
- 
-</script>
-</div>
-			<div id="screen2-4"></div>
+		    	new Chart(document.getElementById("2-1"), {
+			    type: 'line',
+			    data: {
+			      labels: ["1일", "2일","3일","4일","5일","6일","7일"] ,
+			      datasets: [{ 
+			          data: [60, 20, 32, 50, 70, 90, 70, 88],
+			          label: "칼로리",
+			          borderColor: "#3e95cd",
+			          fill: false
+			        }
+			      ]
+			    },
+			    options: {
+			      title: {
+			        display: true,
+			        text: '주간 칼로리 그래프'
+			      }
+			    }
+			  });
+			</script>	
+			</div>
+			<div id="screen2-2">
+			<!-- 2-2. 주간 몸무게-->
+			<canvas id="2-2" width = "720px" height="150px"></canvas>
+			<script> 
+			    new Chart(document.getElementById("2-2"), {
+			    type: 'line',
+			    data: {
+			      labels: ["1일", "2일","3일","4일","5일","6일","7일"] ,
+			      datasets: [{ 
+			          data: [65.4, 62.5, 60.1, 59.5, 58.0, 57.5, 57.0],
+			          label: "몸무게",
+			          borderColor: "#3e95cd",
+			          fill: false
+			        }
+			      ]
+			    },
+			    options: {
+			      title: {
+			        display: true,
+			        text: '주간 몸무게 그래프'
+			      }
+			    }
+			  });
+			</script>
+			</div>
+			<div id="screen2-3">
+				<!-- 2-3. 검색 식품 영양분-->
+				<canvas id="2-3" width = "720px" height="320px"></canvas>
+					<script> 
+						const ctx = document.getElementById("2-3").getContext('2d');
+						const myChart = new Chart(ctx, {
+					    type: 'bar',
+					    data: {
+					        labels: ["탄수화물(g)", "단백질(g)", "지방(g)", "당류(g)", "나트륨(g)", "콜레스테롤(g)", "포화지방산(g)", "트랜스지방산(g)"],
+					        datasets: [{
+					            label: '검색 식품 영양 성분',
+					            data: [10, 19, 6, 5, 2, 3, 50, 30],
+					            backgroundColor: [
+					                'rgba(255, 99, 132, 0.2)',
+					                'rgba(54, 162, 235, 0.2)',
+					                'rgba(255, 206, 86, 0.2)',
+					                'rgba(75, 192, 192, 0.2)',
+					                'rgba(153, 102, 255, 0.2)',
+					                'rgba(255, 159, 64, 0.2)'
+					            ],
+					            borderColor: [
+					                'rgba(255, 99, 132, 1)',
+					                'rgba(54, 162, 235, 1)',
+					                'rgba(255, 206, 86, 1)',
+					                'rgba(75, 192, 192, 1)',
+					                'rgba(153, 102, 255, 1)',
+					                'rgba(255, 159, 64, 1)'
+					            ],
+					            
+					            borderWidth: 1
+					        }]
+					    },
+					    options: {
+					    	 title: {
+					    	        display: true,
+					    	        text: '검색 식품 영양 성분'
+					    	      },
+					        scales: {
+					            y: {
+					                beginAtZero: true
+					            }
+					        }
+					    }
+					});
+					</script>
+				</div>
+			<div id="screen2-4">
+			<!-- 2-4. 건강 뉴스-->
+			</div>
 		</div>
 	</div>
 

@@ -37,9 +37,14 @@ public class LoginCon extends HttpServlet {
 			
 			session.setAttribute("client", client); // 세션에 vo 담기
 			
+<<<<<<< HEAD
 			response.sendRedirect("AllChartCon"); // < - 올차트컨으로 가기
 //			response.sendRedirect("DashBoard.jsp"); // <- 대시보드로 가기
 //			response.sendRedirect("BwDashBoard.jsp"); // <- 식품추가로 가기
+=======
+//			response.sendRedirect("AllChartCon"); // < - 올차트컨으로 가기
+			response.sendRedirect("DashBoard.jsp"); // <- 대시보드로 가기
+>>>>>>> branch 'master1' of https://github.com/2022-SMHRD-IS-AI2/FOODLE.git
 			
 		}else {
 			System.out.println("로그인 실패");
