@@ -75,59 +75,53 @@
       	}
       }
     // 일일 섭취 변수선언  
-    int dailyE_C_ch = 0; // 탄수화물
-	int dailyE_C_pro = 0; // 단백질
-	int dailyE_C_fat = 0; // 지방
-	int dailyE_C_sugar = 0; // 당
-	int dailyE_C_sodium = 0; // 나트륨
-	int dailyE_C_col = 0; // 콜레스테롤
-	int dailyE_C_fad = 0; // 포화지방
-	int dailyE_C_trans = 0; // 트랜스지방
+    float dailyE_C_ch = 0; // 탄수화물
+    float dailyE_C_pro = 0; // 단백질
+    float dailyE_C_fat = 0; // 지방
+    float dailyE_C_sugar = 0; // 당
+    float dailyE_C_sodium = 0; // 나트륨
+    float dailyE_C_col = 0; // 콜레스테롤
+    float dailyE_C_fad = 0; // 포화지방
+    float dailyE_C_trans = 0; // 트랜스지방
       
       
       if(dailyE_C != null){ // 일일섭취 영양분 풀기
-    		dailyE_C_ch = Integer.parseInt(dailyE_C.getF_ch()); // 탄수화물
-    		dailyE_C_pro = Integer.parseInt(dailyE_C.getF_ch()); // 단백질
-    		dailyE_C_fat = Integer.parseInt(dailyE_C.getF_ch()); // 지방
-    		dailyE_C_sugar = Integer.parseInt(dailyE_C.getF_ch()); // 당
-    		dailyE_C_sodium = Integer.parseInt(dailyE_C.getF_ch()); // 나트륨
-    		dailyE_C_col = Integer.parseInt(dailyE_C.getF_ch()); // 콜레스테롤
-    		dailyE_C_fad = Integer.parseInt(dailyE_C.getF_ch()); // 포화지방
-    		dailyE_C_trans = Integer.parseInt(dailyE_C.getF_ch()); // 트랜스지방
+    		dailyE_C_ch = Float.parseFloat(dailyE_C.getF_ch()); // 탄수화물
+    		dailyE_C_pro = Float.parseFloat(dailyE_C.getF_ch()); // 단백질
+    		dailyE_C_fat = Float.parseFloat(dailyE_C.getF_ch()); // 지방
+    		dailyE_C_sugar = Float.parseFloat(dailyE_C.getF_ch()); // 당
+    		dailyE_C_sodium = Float.parseFloat(dailyE_C.getF_ch()); // 나트륨
+    		dailyE_C_col = Float.parseFloat(dailyE_C.getF_ch()); // 콜레스테롤
+    		dailyE_C_fad = Float.parseFloat(dailyE_C.getF_ch()); // 포화지방
+    		dailyE_C_trans = Float.parseFloat(dailyE_C.getF_ch()); // 트랜스지방
       		
       }
     // 최근 섭취 식품 변수선언  
-    int eat_C_ch = 0; // 탄수화물
-	int eat_C_pro = 0; // 단백질
-	int eat_C_fat = 0; // 지방
-	int eat_C_sugar = 0; // 당
-	int eat_C_sodium = 0; // 나트륨
-	int eat_C_col = 0; // 콜레스테롤
-	int eat_C_fad = 0; // 포화지방
-	int eat_C_trans = 0; // 트랜스지방
+    float eat_C_ch = 0; // 탄수화물
+    float eat_C_pro = 0; // 단백질
+    float eat_C_fat = 0; // 지방
+    float eat_C_sugar = 0; // 당
+    float eat_C_sodium = 0; // 나트륨
+    float eat_C_col = 0; // 콜레스테롤
+    float eat_C_fad = 0; // 포화지방
+    float eat_C_trans = 0; // 트랜스지방
       
       
       if(eat_C != null){ // 일일섭취 영양분 풀기
-    	  	eat_C_ch = Integer.parseInt(dailyE_C.getF_ch()); // 탄수화물
-    	  	eat_C_pro = Integer.parseInt(dailyE_C.getF_ch()); // 단백질
-    	  	eat_C_fat = Integer.parseInt(dailyE_C.getF_ch()); // 지방
-    	  	eat_C_sugar = Integer.parseInt(dailyE_C.getF_ch()); // 당
-    	  	eat_C_sodium = Integer.parseInt(dailyE_C.getF_ch()); // 나트륨
-    	  	eat_C_col = Integer.parseInt(dailyE_C.getF_ch()); // 콜레스테롤
-    	  	eat_C_fad = Integer.parseInt(dailyE_C.getF_ch()); // 포화지방
-    	  	eat_C_trans = Integer.parseInt(dailyE_C.getF_ch()); // 트랜스지방
+    	  	eat_C_ch = Float.parseFloat(dailyE_C.getF_ch()); // 탄수화물
+    	  	eat_C_pro = Float.parseFloat(dailyE_C.getF_pro()); // 단백질
+    	  	eat_C_fat = Float.parseFloat(dailyE_C.getF_fat()); // 지방
+    	  	eat_C_sugar = Float.parseFloat(dailyE_C.getF_sugar()); // 당
+    	  	eat_C_sodium = Float.parseFloat(dailyE_C.getF_sodium()); // 나트륨
+    	  	eat_C_col = Float.parseFloat(dailyE_C.getF_col()); // 콜레스테롤
+    	  	eat_C_fad = Float.parseFloat(dailyE_C.getF_fad()); // 포화지방
+    	  	eat_C_trans = Float.parseFloat(dailyE_C.getF_trans()); // 트랜스지방
       		
       }
       
        
  	// 2-3 :  검색바 관련 세팅
-    String f_name = "검색어를 입력해 주세요";
- 	List<BwChartVO> chart = (List<BwChartVO>)request.getAttribute("name");
- 		if(chart != null){
- 			int seq = chart.get(0).getF_seq();
- 			name = chart.get(0).getF_name();
- 		}
-    
+  
     %>
 
 	<div class="wrapper">
@@ -224,7 +218,7 @@
 			    data: {
 			      labels: ["<%=daily_Cl[0][0] %>", "<%=daily_Cl[1][0] %>","<%=daily_Cl[2][0] %>","<%=daily_Cl[3][0] %>","<%=daily_Cl[4][0] %>","<%=daily_Cl[5][0] %>","<%=daily_Cl[6][0] %>"] ,
 			      datasets: [{ 
-			          data: [<%=Integer.parseInt(daily_Cl[0][1]) %>, <%=Integer.parseInt(daily_Cl[1][1]) %>, <%=Integer.parseInt(daily_Cl[2][1]) %>, <%=Integer.parseInt(daily_Cl[3][1]) %>, <%=Integer.parseInt(daily_Cl[4][1]) %>, <%=Integer.parseInt(daily_Cl[5][1]) %>, <%=Integer.parseInt(daily_Cl[6][1]) %>],
+			          data: [<%=Float.parseFloat(daily_Cl[0][1]) %>, <%=Float.parseFloat(daily_Cl[1][1]) %>, <%=Float.parseFloat(daily_Cl[2][1]) %>, <%=Float.parseFloat(daily_Cl[3][1]) %>, <%=Float.parseFloat(daily_Cl[4][1]) %>, <%=Float.parseFloat(daily_Cl[5][1]) %>, <%=Float.parseFloat(daily_Cl[6][1]) %>],
 			          label: "<%=choosenut %>",
 			          borderColor: "#3e95cd",
 			          fill: false
@@ -254,7 +248,7 @@
 			    data: {
 			      labels: ["<%=kcal_Cl[0][0] %>", "<%=kcal_Cl[1][0] %>","<%=kcal_Cl[2][0] %>","<%=kcal_Cl[3][0] %>","<%=kcal_Cl[4][0] %>","<%=kcal_Cl[5][0] %>","<%=kcal_Cl[6][0] %>"] ,
 			      datasets: [{ 
-			          data: [<%=Integer.parseInt(kcal_Cl[0][1]) %>, <%=Integer.parseInt(kcal_Cl[1][1]) %>, <%=Integer.parseInt(kcal_Cl[2][1]) %>, <%=Integer.parseInt(kcal_Cl[3][1]) %>, <%=Integer.parseInt(kcal_Cl[4][1]) %>, <%=Integer.parseInt(kcal_Cl[5][1]) %>, <%=Integer.parseInt(kcal_Cl[6][1]) %>],
+			          data: [<%=Float.parseFloat(kcal_Cl[0][1]) %>, <%=Float.parseFloat(kcal_Cl[1][1]) %>, <%=Float.parseFloat(kcal_Cl[2][1]) %>, <%=Float.parseFloat(kcal_Cl[3][1]) %>, <%=Float.parseFloat(kcal_Cl[4][1]) %>, <%=Float.parseFloat(kcal_Cl[5][1]) %>, <%=Float.parseFloat(kcal_Cl[6][1]) %>],
 			          label: "칼로리",
 			          borderColor: "#3e95cd",
 			          fill: false
@@ -279,7 +273,7 @@
 			    data: {
 			      labels: ["<%=weight_Cl[0][0] %>", "<%=weight_Cl[1][0] %>","<%=weight_Cl[2][0] %>","<%=weight_Cl[3][0] %>","<%=weight_Cl[4][0] %>","<%=weight_Cl[5][0] %>","<%=weight_Cl[6][0] %>"] ,
 			      datasets: [{ 
-			          data: [<%=Integer.parseInt(weight_Cl[0][1]) %>, <%=Integer.parseInt(weight_Cl[1][1]) %>, <%=Integer.parseInt(weight_Cl[2][1]) %>, <%=Integer.parseInt(weight_Cl[3][1]) %>, <%=Integer.parseInt(weight_Cl[4][1]) %>, <%=Integer.parseInt(weight_Cl[5][1]) %>, <%=Integer.parseInt(weight_Cl[6][1]) %>],
+			          data: [<%=Float.parseFloat(weight_Cl[0][1]) %>, <%=Float.parseFloat(weight_Cl[1][1]) %>, <%=Float.parseFloat(weight_Cl[2][1]) %>, <%=Float.parseFloat(weight_Cl[3][1]) %>, <%=Float.parseFloat(weight_Cl[4][1]) %>, <%=Float.parseFloat(weight_Cl[5][1]) %>, <%=Float.parseFloat(weight_Cl[6][1]) %>],
 			          label: "몸무게",
 			          borderColor: "#3e95cd",
 			          fill: false
