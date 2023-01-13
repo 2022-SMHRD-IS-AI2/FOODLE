@@ -40,8 +40,9 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
    </select> <!-- 일별 섭취한 칼로리 쿼리문 -->
    
 	
-		<select id="chooseNut" parameterType="com.smhrd.model.ChooseNutVO" resultType="com.smhrd.model.DailyChooseVO">
-    SELECT B.u_f_dt, sum( A.#{mb_fav_ingrident}) as f_choosenut
+	
+	<select id="chooseNut" parameterType="com.smhrd.model.ChooseNutVO" resultType="com.smhrd.model.DailyChooseVO">
+    SELECT B.u_f_dt, sum( A.${mb_fav_ingredient}) as f_ChooseNut
     FROM TBL_FOOD A 
        , ( 
              select to_char(u_f_dt,'yymmdd') as u_f_dt, f_seq
@@ -52,5 +53,17 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
  	WHERE A.F_SEQ = B.F_SEQ 
  	group by B.u_f_dt
    </select> <!-- 일별 섭취한 선호영양분 -->
+   
+   <select id="dailyeat" parameterType="String" resultType="com.smhrd.model.DailyEatVO">
+    SELECT sum(f_ch) as f_ch, sum(f_pro) as f_pro, sum(f_fat) as f_fat, sum(f_sugar) as f_sugar, sum(f_sodium) as f_sodium, sum(f_col) as f_col, sum(f_fad) as f_fad, sum(f_trans) as f_trans
+    FROM TBL_FOOD A 
+       , ( 
+             select f_seq
+                         from TBL_USER_FOOD
+                        where mb_id=#{mb_id}
+                          and to_char(u_f_dt,'yymmdd') = to_char(sysdate,'yymmdd')                      
+        ) B 
+ 	WHERE A.F_SEQ = B.F_SEQ 
+   </select> <!-- 일일영양소! -->
    
 </mapper>

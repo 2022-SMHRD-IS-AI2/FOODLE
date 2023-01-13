@@ -41,4 +41,25 @@ public class FoodDAO {
 	}
 	
 	
+	public DailyEatVO dailyeat(String mb_id) {
+		
+		SqlSession sqlSession = sqlSessionFactory.openSession(true); 
+		
+		DailyEatVO daily = null;
+		
+		try {
+			
+			daily = sqlSession.selectOne("com.smhrd.model.FoodDAO.dailyeat", mb_id);
+			
+		}catch(Exception e) {
+			e.printStackTrace();
+		}finally {
+			sqlSession.close();
+		}
+		return daily;
+		
+		
+	}
+	
+	
 }
