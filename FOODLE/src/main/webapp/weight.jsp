@@ -95,7 +95,7 @@
         </table>
         </div>
             <div id="screen1-1">
-            <canvas id="2-2" width = "1440px" height="570px"></canvas>
+            <canvas id="2-2" width = "1050px" height="570px"></canvas>
 			<script> 
 			    new Chart(document.getElementById("2-2"), {
 			    type: 'line',
