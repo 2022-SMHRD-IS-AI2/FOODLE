@@ -164,13 +164,14 @@
 			        
 			          label: "일일 영양분",
 			          borderColor: "#3e95cd",
-			          fill: false
+			          fill: true,
+			          borderWidth: 1
 			        },
 			        {
 			        data: [60, 20, 32, 50, 70, 90],
 				    label: "권장 영양분",
-				    borderColor: "#3e95cd",
-				    	
+				    fill: true,
+				   
 			        }
 			      ]
 			    },
