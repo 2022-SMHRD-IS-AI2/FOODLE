@@ -1,3 +1,5 @@
+<%@page import="org.apache.ibatis.reflection.SystemMetaObject"%>
+<%@page import="com.smhrd.model.MemberVO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -7,6 +9,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
     <title>Document</title>
     <link rel="stylesheet" href="css/all_style.css">
     <link rel="stylesheet" href="css/search_style.css">
@@ -75,6 +78,29 @@
             </div> -->
         </div>
         <div id="screen1">
+        	<canvas id="1-1" width = "700px" height="570px"></canvas>
+		
+			<script> 
+			    new Chart(document.getElementById("1-1"), {
+			    type: 'bar',
+			    data: {
+			      labels: ["탄수화물(g)", "단백질(g)", "지방(g)", "당류(g)", "나트륨(g)", "콜레스테롤(g)", "포화지방산(g)", "트랜스지방산(g)" ] ,
+			      datasets: [{ 
+			          data: [60, 20, 32, 50, 70, 90],
+			          label: "일일영양분",
+			          borderColor: "#3e95cd",
+			          fill: false
+			        }
+			      ]
+			    },
+			    options: {
+			      title: {
+			        display: true,
+			        text: '주간 몸무게 그래프'
+			      }
+			    }
+			  });
+			</script>
             <!-- <div id="screen1-1">
             </div> -->
             <!-- <div id="screen1-2">

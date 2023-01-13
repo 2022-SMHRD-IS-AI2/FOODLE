@@ -1,3 +1,5 @@
+<%@page import="org.apache.ibatis.reflection.SystemMetaObject"%>
+<%@page import="com.smhrd.model.MemberVO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -7,6 +9,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
     <title>Document</title>
     <link rel="stylesheet" href="css/all_style.css">
     <link rel="stylesheet" href="css/weight_style.css">
@@ -92,6 +95,28 @@
         </table>
         </div>
             <div id="screen1-1">
+            <canvas id="2-2" width = "1440px" height="570px"></canvas>
+			<script> 
+			    new Chart(document.getElementById("2-2"), {
+			    type: 'line',
+			    data: {
+			      labels: [1,2,3,4,5,6,7,8] ,
+			      datasets: [{ 
+			          data: [60, 20, 32, 50, 70, 90, 70, 88],
+			          label: "몸무게",
+			          borderColor: "#3e95cd",
+			          fill: false
+			        }
+			      ]
+			    },
+			    options: {
+			      title: {
+			        display: true,
+			        text: '주간 몸무게 그래프'
+			      }
+			    }
+			  });
+			</script>
             </div>
 
         </div>
