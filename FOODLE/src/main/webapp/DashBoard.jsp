@@ -120,8 +120,13 @@
       }
       
        
- 	// 2-3 :  검색식품 영양 성분 그래프 값(임시)
-    int ww =80;
+ 	// 2-3 :  검색바 관련 세팅
+    String f_name = "검색어를 입력해 주세요";
+ 	List<BwChartVO> chart = (List<BwChartVO>)request.getAttribute("name");
+ 		if(chart != null){
+ 			int seq = chart.get(0).getF_seq();
+ 			name = chart.get(0).getF_name();
+ 		}
     
     %>
 
@@ -148,8 +153,11 @@
 				</tr>
 			</div>
 			<div class="search">
-				<input type="text" placeholder="검색어를 입력해주세요"> <img
+			<form action="BwChartCon">
+				<input type="text" name="sr" placeholder="<%=name %>"> <img
 					src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/icon/search.png">
+					<input type="submit" value="검색">
+			</form>
 			</div>
 			<ul>
 				<li><a href="#" class="active"> <span class="icon"><i

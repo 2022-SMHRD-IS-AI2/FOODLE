@@ -35,8 +35,11 @@
                 </tr>
             </div>
             <div class="search">
-                <input type="text" placeholder="검색어를 입력해주세요">
+                <form action="BwChartCon">
+ 				<input type="text" name="sr" placeholder="">
+ 				<input type="submit" value="검색">
                 <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/icon/search.png">
+                 </form>
             </div>
             <ul>
                 <li>
