@@ -91,10 +91,10 @@
 					<td><%=gender %></td>
 					<br>
 					<td>HEIGHT</td>
-					<td><%=height %></td>
+					<td><%=height %> cm</td>
 					<br>
 					<td>WEIGHT</td>
-					<td><%=weight %></td>
+					<td><%=weight %> kg</td>
 				</tr>
 			</div>
 			<div class="search">
@@ -124,7 +124,7 @@
 		<div id="screen1">
 			<!-- 1. 일일영양분(내가먹은거/권장영양분)-->
 			<div id="screen1-1"> 
-			<canvas id="1-1" width = "720px" height="350px"></canvas>
+			<canvas id="1-1" width = "700px" height="350px" margin ="auto"></canvas>
 		
 			<script> 
 			    new Chart(document.getElementById("1-1"), {
@@ -157,7 +157,7 @@
 			</div>
 			<div id="screen1-2">
 			<!-- 1-2. 주간 관심 영양소 그래프(EX.당, 나트륨,,, 택1)-->
-			<canvas id="1-2" width = "720px" height="320px"></canvas>
+			<canvas id="1-2" width = "720px" height="320px"  margin ="auto"></canvas>
 			<script>
 		    	new Chart(document.getElementById("1-2"), {
 			    type: 'line',
@@ -187,7 +187,7 @@
 		<div id="screen2">
 			<div id="screen2-1">
 			<!-- 2-1. 주간 칼로리-->
-			<canvas id="2-1" width = "720px" height="150px"></canvas>
+			<canvas id="2-1" width = "720px" height="150px"  margin ="auto"></canvas>
 			<script>
 		    	new Chart(document.getElementById("2-1"), {
 			    type: 'line',
@@ -212,7 +212,7 @@
 			</div>
 			<div id="screen2-2">
 			<!-- 2-2. 주간 몸무게-->
-			<canvas id="2-2" width = "720px" height="150px"></canvas>
+			<canvas id="2-2" width = "720px" height="150px"  margin ="auto"></canvas>
 			<script> 
 			    new Chart(document.getElementById("2-2"), {
 			    type: 'line',
@@ -237,7 +237,7 @@
 			</div>
 			<div id="screen2-3">
 				<!-- 2-3. 검색 식품 영양분-->
-				<canvas id="2-3" width = "720px" height="320px"></canvas>
+				<canvas id="2-3" width = "720px" height="320px"  margin ="auto"></canvas>
 					<script> 
 						const ctx = document.getElementById("2-3").getContext('2d');
 						const myChart = new Chart(ctx, {
@@ -248,20 +248,24 @@
 					            label: '검색 식품 영양 성분',
 					            data: [10, 19, 6, 5, 2, 3, 50, 30],
 					            backgroundColor: [
-					                'rgba(255, 99, 132, 0.2)',
-					                'rgba(54, 162, 235, 0.2)',
-					                'rgba(255, 206, 86, 0.2)',
+					            	'rgba(255, 99, 132, 0.2)',
+					                'rgba(255, 159, 64, 0.2)',
+					                'rgba(255, 205, 86, 0.2)',
 					                'rgba(75, 192, 192, 0.2)',
+					                'rgba(54, 162, 235, 0.2)',
 					                'rgba(153, 102, 255, 0.2)',
-					                'rgba(255, 159, 64, 0.2)'
-					            ],
-					            borderColor: [
-					                'rgba(255, 99, 132, 1)',
-					                'rgba(54, 162, 235, 1)',
-					                'rgba(255, 206, 86, 1)',
-					                'rgba(75, 192, 192, 1)',
-					                'rgba(153, 102, 255, 1)',
-					                'rgba(255, 159, 64, 1)'
+					                'rgba(95, 213, 16, 0.2)',
+					                'rgba(97, 126, 255, 0.2)',
+					              ],
+					              borderColor: [
+					                'rgb(255, 99, 132)',
+					                'rgb(255, 159, 64)',
+					                'rgb(255, 205, 86)',
+					                'rgb(75, 192, 192)',
+					                'rgb(54, 162, 235)',
+					                'rgb(153, 102, 255)',
+					                'rgb(95, 213, 16)',
+					                'rgb(97, 126, 255)'
 					            ],
 					            
 					            borderWidth: 1
