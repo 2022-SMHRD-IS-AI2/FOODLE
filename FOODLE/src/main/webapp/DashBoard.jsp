@@ -76,8 +76,9 @@
 	<div id="fullscreen">
 		<div id="screen0"></div>
 		<div id="screen1">
-			<div id="screen1-1">
-			<canvas id="1-1" width = "700px" height="300px"></canvas>
+			<!-- 1. 일일영양분(내가먹은거/권장영양분)-->
+			<div id="screen1-1"> 
+			<canvas id="1-1" width = "720px" height="350px"></canvas>
 		
 			<script> 
 			    new Chart(document.getElementById("1-1"), {
@@ -95,14 +96,14 @@
 			    options: {
 			      title: {
 			        display: true,
-			        text: '주간 몸무게 그래프'
+			        text: '일일 영양성분 그래프'
 			      }
 			    }
 			  });
 			</script>
 			</div>
 			<div id="screen1-2">
-			<canvas id="1-2" width = "700px" height="320px"></canvas>
+			<canvas id="1-2" width = "720px" height="320px"></canvas>
 			<script>
 		    	new Chart(document.getElementById("1-2"), {
 			    type: 'line',
@@ -129,7 +130,7 @@
 		</div>
 		<div id="screen2">
 			<div id="screen2-1">
-			<canvas id="2-1" width = "700px" height="150px"></canvas>
+			<canvas id="2-1" width = "720px" height="150px"></canvas>
 			<script>
 		    	new Chart(document.getElementById("2-1"), {
 			    type: 'line',
@@ -153,14 +154,14 @@
 			</script>	
 			</div>
 			<div id="screen2-2">
-			<canvas id="2-2" width = "700px" height="150px"></canvas>
+			<canvas id="2-2" width = "720px" height="150px"></canvas>
 			<script> 
 			    new Chart(document.getElementById("2-2"), {
 			    type: 'line',
 			    data: {
-			      labels: [1,2,3,4,5,6,7,8] ,
+			      labels: [1,2,3,4,5,6,7] ,
 			      datasets: [{ 
-			          data: [60, 20, 32, 50, 70, 90, 70, 88],
+			          data: [65.4, 62.5, 60.1, 59.5, 58.0, 57.5, 57.0],
 			          label: "몸무게",
 			          borderColor: "#3e95cd",
 			          fill: false
@@ -177,7 +178,7 @@
 			</script>
 			</div>
 			<div id="screen2-3">
-				<canvas id="2-3" width = "700px" height="300px"></canvas>
+				<canvas id="2-3" width = "720px" height="320px"></canvas>
 					<script> 
 						const ctx = document.getElementById("2-3").getContext('2d');
 						const myChart = new Chart(ctx, {
