@@ -1,3 +1,10 @@
+<%@page import="java.time.LocalDate"%>
+<%@page import="com.smhrd.model.DailyEatVO"%>
+<%@page import="com.smhrd.model.DailyChooseVO"%>
+<%@page import="com.smhrd.model.DailyChartVO"%>
+<%@page import="com.smhrd.model.BwChartVO"%>
+<%@page import="com.smhrd.model.YgChartVO"%>
+<%@page import="java.util.List"%>
 <%@page import="com.smhrd.model.ChartMasterVO"%>
 <%@page import="org.apache.ibatis.reflection.SystemMetaObject"%>
 <%@page import="com.smhrd.model.MemberVO"%>
@@ -28,6 +35,66 @@
     
       ChartMasterVO mvo = (ChartMasterVO)request.getAttribute("mvo");
       
+      List<DailyChooseVO>  daily_C = mvo.getDailyc(); // 일간 선택한 영양소
+      DailyEatVO dailyE_C = mvo.getDailyeat(); // 일일섭취 영양소
+      List<DailyChartVO> kcal_C = mvo.getDailykcal(); // 일간 섭취 칼로리
+      BwChartVO eat_C = mvo.getEat_food(); // 최근 섭취한 식품
+      List<YgChartVO> weight_C = mvo.getWeight(); // 몸무게
+      
+      String[][] daily_Cl = {{"","0"},{"","0"},{"","0"},{"","0"},{"","0"},{"","0"},{"","0"}}; // 일간 선호영양소 담을 리스트
+      String[][] kcal_Cl = {{"","0"},{"","0"},{"","0"},{"","0"},{"","0"},{"","0"},{"","0"}}; // 일간 섭취 칼로리 담을 리스트
+      String[][] weight_Cl = {{"","0"},{"","0"},{"","0"},{"","0"},{"","0"},{"","0"},{"","0"}}; // 일간 몸무게 담을 리스트
+      int cnt = 0;
+      if(daily_C != null){
+      	for(DailyChooseVO i : daily_C){ // 이중행렬에 일간 선호영양소 담음
+    	  
+    	  	daily_Cl[cnt][0] = i.getU_f_dt(); // 첫번째값 날짜
+    	  	daily_Cl[cnt][1] = Integer.toString(i.getF_choosenut()); // 두번째값 수치
+    	 	cnt++;
+      	}
+      cnt = 0;
+      }
+      
+      if(kcal_C != null){
+      	for(DailyChartVO i : kcal_C){ // 이중행렬에 일간 섭취칼로리 담음
+    	  
+    		kcal_Cl[cnt][0] = i.getU_f_dt(); // 첫번째값 날짜
+    		kcal_Cl[cnt][1] = Integer.toString(i.getF_kcal()); // 두번째값 수치
+    	  	cnt++;
+      	}
+      cnt = 0;
+      }
+      
+      
+      if(weight_C != null){
+      	for(YgChartVO i : weight_C){ // 이중행렬에 일간 몸무게 담음
+    		weight_Cl[cnt][0] = i.getWeight_regdt().toString(); // 첫번째값 날짜
+    	  	weight_Cl[cnt][1] = Integer.toString(i.getCurr_weight()); // 두번째값 수치
+    	  	cnt++;
+      	}
+      }
+    // 변수선언  
+    int dailyE_C_ch = 0; // 탄수화물
+	int dailyE_C_pro = 0; // 단백질
+	int dailyE_C_fat = 0; // 지방
+	int dailyE_C_sugar = 0; // 당
+	int dailyE_C_sodium = 0; // 나트륨
+	int dailyE_C_col = 0; // 콜레스테롤
+	int dailyE_C_fad = 0; // 포화지방
+	int dailyE_C_trans = 0; // 트랜스지방
+      
+      
+      if(dailyE_C != null){ // 일일섭취 영양분 풀기
+    		dailyE_C_ch = Integer.parseInt(dailyE_C.getF_ch()); // 탄수화물
+    		dailyE_C_pro = Integer.parseInt(dailyE_C.getF_ch()); // 단백질
+    		dailyE_C_fat = Integer.parseInt(dailyE_C.getF_ch()); // 지방
+    		dailyE_C_sugar = Integer.parseInt(dailyE_C.getF_ch()); // 당
+    		dailyE_C_sodium = Integer.parseInt(dailyE_C.getF_ch()); // 나트륨
+    		dailyE_C_col = Integer.parseInt(dailyE_C.getF_ch()); // 콜레스테롤
+    		dailyE_C_fad = Integer.parseInt(dailyE_C.getF_ch()); // 포화지방
+    		dailyE_C_trans = Integer.parseInt(dailyE_C.getF_ch()); // 트랜스지방
+      		
+      }
       
        
  	// 2-3 :  검색식품 영양 성분 그래프 값(임시)
@@ -92,7 +159,8 @@
 			    data: {
 			      labels: ["탄수화물(g)", "단백질(g)", "지방(g)", "당류(g)", "나트륨(g)", "콜레스테롤(g)", "포화지방산(g)", "트랜스지방산(g)" ] ,
 			      datasets: [{ 
-			          data: [60, 20, 32, 50, 70, 90],
+			           data: [<%=dailyE_C_ch %>, <%=dailyE_C_pro %>, <%=dailyE_C_fat %>, <%=dailyE_C_sugar %>, <%=dailyE_C_sodium %>, <%=dailyE_C_col %>, <%=dailyE_C_fad %>, <%=dailyE_C_trans %>], 
+			          /* data: [60,60,60,60,60,60], */
 			        
 			          label: "일일 영양분",
 			          borderColor: "#3e95cd",
@@ -102,7 +170,7 @@
 			        data: [60, 20, 32, 50, 70, 90],
 				    label: "권장 영양분",
 				    borderColor: "#3e95cd",
-				    fill: false	
+				    	
 			        }
 			      ]
 			    },
