@@ -190,7 +190,9 @@ public class AllChartCon extends HttpServlet {
 	
 	ChartMasterVO mvo = new ChartMasterVO(weight, eat_food, dailyKcal, dailyc, dailyeat);
 	
-	
+	RequestDispatcher rd = request.getRequestDispatcher("DashBoard.jsp");
+	request.setAttribute("mvo", mvo);
+	rd.forward(request, response);
 	
 	
 	}

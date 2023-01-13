@@ -1,3 +1,4 @@
+<%@page import="com.smhrd.model.ChartMasterVO"%>
 <%@page import="org.apache.ibatis.reflection.SystemMetaObject"%>
 <%@page import="com.smhrd.model.MemberVO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
@@ -18,12 +19,17 @@
 <body>
 	<%
     MemberVO client = (MemberVO)session.getAttribute("client");
+	
     String name = client.getMb_name();
     String gender = client.getMb_gender();
     String height = client.getMb_height();
     String weight = client.getMb_weight();
        System.out.print(name);
     
+      ChartMasterVO mvo = (ChartMasterVO)request.getAttribute("mvo");
+      
+      
+       
  	// 2-3 :  검색식품 영양 성분 그래프 값(임시)
     int ww =80;
     
