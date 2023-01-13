@@ -120,14 +120,58 @@
 		    }
 		});
 		</script>
-			
-			</script>
 			</div>
-			<div id="screen1-2"></div>
+			<div id="screen1-2">
+			<canvas id="1-2" width = "700px" height="320px"></canvas>
+			<script>
+		    	new Chart(document.getElementById("1-2"), {
+			    type: 'line',
+			    data: {
+			      labels: [<%=ww %>] ,
+			      datasets: [{ 
+			          data: [60, 20, 32, 50, 70, 90, 70, 88],
+			          label: "관심 영양소",
+			          borderColor: "#3e95cd",
+			          fill: false
+			        }
+			      ]
+			    },
+			    options: {
+			      title: {
+			        display: true,
+			        text: '주간 관심 영양소 그래프'
+			      }
+			    }
+			  });
+			</script>	
+			</div>
 			<div id="screen1-3"></div>
 		</div>
 		<div id="screen2">
-			<div id="screen2-1"></div>
+			<div id="screen2-1">
+			<canvas id="2-1" width = "700px" height="150px"></canvas>
+			<script>
+		    	new Chart(document.getElementById("2-1"), {
+			    type: 'line',
+			    data: {
+			      labels: [<%=ww %>] ,
+			      datasets: [{ 
+			          data: [60, 20, 32, 50, 70, 90, 70, 88],
+			          label: "칼로리",
+			          borderColor: "#3e95cd",
+			          fill: false
+			        }
+			      ]
+			    },
+			    options: {
+			      title: {
+			        display: true,
+			        text: '주간 칼로리 그래프'
+			      }
+			    }
+			  });
+			</script>	
+			</div>
 			<div id="screen2-2">
 			<canvas id="2-2" width = "700px" height="150px"></canvas>
 			<script> 
