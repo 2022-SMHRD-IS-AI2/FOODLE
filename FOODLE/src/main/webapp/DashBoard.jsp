@@ -136,13 +136,13 @@
 				<h3><%=name %></h3>
 				<br>
 				<tr>
-					<td>GENDER</td>
+					<td>성별</td>
 					<td><%=gender %></td>
 					<br>
-					<td>HEIGHT</td>
+					<td>키</td>
 					<td><%=height %> cm</td>
 					<br>
-					<td>WEIGHT</td>
+					<td>몸무게</td>
 					<td><%=weight %> kg</td>
 				</tr>
 			</div>
@@ -185,17 +185,23 @@
 			      labels: ["탄수화물(g)", "단백질(g)", "지방(g)", "당류(g)", "나트륨(g)", "콜레스테롤(g)", "포화지방산(g)", "트랜스지방산(g)" ] ,
 			      datasets: [{ 
 			           data: [<%=dailyE_C_ch %>, <%=dailyE_C_pro %>, <%=dailyE_C_fat %>, <%=dailyE_C_sugar %>, <%=dailyE_C_sodium %>, <%=dailyE_C_col %>, <%=dailyE_C_fad %>, <%=dailyE_C_trans %>], 
-			          /* data: [60,60,60,60,60,60], */
+			        
 			        
 			          label: "일일 영양분",
-			          borderColor: "#3e95cd",
+			         /*  borderColor: "#3e95cd",*/
+			          backgroundColor: 'rgba(60, 149, 205, 0.2)',
+			          borderColor: 'rgb(201, 203, 207)',
 			          fill: true,
 			          borderWidth: 1
 			        },
 			        {
 			        data: [60, 20, 32, 50, 70, 90],
 				    label: "권장 영양분",
+				    backgroundColor: 'rgba(201, 203, 207, 0.2)',
+			        borderColor: 'rgba(201, 203, 207)',
 				    fill: true,
+				    borderWidth: 1
+				    
 				   
 			        }
 			      ]
@@ -250,7 +256,7 @@
 			      datasets: [{ 
 			          data: [<%=Float.parseFloat(kcal_Cl[0][1]) %>, <%=Float.parseFloat(kcal_Cl[1][1]) %>, <%=Float.parseFloat(kcal_Cl[2][1]) %>, <%=Float.parseFloat(kcal_Cl[3][1]) %>, <%=Float.parseFloat(kcal_Cl[4][1]) %>, <%=Float.parseFloat(kcal_Cl[5][1]) %>, <%=Float.parseFloat(kcal_Cl[6][1]) %>],
 			          label: "칼로리",
-			          borderColor: "#3e95cd",
+			           borderColor: "#3e95cd",
 			          fill: false
 			        }
 			      ]
