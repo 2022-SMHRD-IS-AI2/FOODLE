@@ -50,8 +50,9 @@ public class AllChartCon extends HttpServlet {
 		// 몸무게가 스트링? 추후에 조절해야 할 수 있음 조절함
 		
 		
-		 for(int i = 0 ; i < weight.size() ; i++) { YgChartVO weightVo =
-		 weight.get(i); weiarr[i] = weightVo.getCurr_weight();
+		 for(int i = 0 ; i < weight.size() ; i++) { 
+			 YgChartVO weightVo = weight.get(i); 
+			 weiarr[i] = weightVo.getCurr_weight();
 		 } // <- 2023-01-10 15:37:53 이런 개형으로 불러와짐 
 		 
 		System.out.println("몸무게 차트임" + weiarr[0]);

@@ -1,3 +1,10 @@
+<%@page import="java.time.LocalDate"%>
+<%@page import="com.smhrd.model.DailyEatVO"%>
+<%@page import="com.smhrd.model.DailyChooseVO"%>
+<%@page import="com.smhrd.model.DailyChartVO"%>
+<%@page import="com.smhrd.model.BwChartVO"%>
+<%@page import="com.smhrd.model.YgChartVO"%>
+<%@page import="java.util.List"%>
 <%@page import="com.smhrd.model.ChartMasterVO"%>
 <%@page import="org.apache.ibatis.reflection.SystemMetaObject"%>
 <%@page import="com.smhrd.model.MemberVO"%>
@@ -27,6 +34,39 @@
        System.out.print(name);
     
       ChartMasterVO mvo = (ChartMasterVO)request.getAttribute("mvo");
+      
+      List<DailyChooseVO>  daily_C = mvo.getDailyc(); // 일간 선택한 영양소
+      DailyEatVO dailyE_C = mvo.getDailyeat(); // 일일섭취 영양소
+      List<DailyChartVO> kcal_C = mvo.getDailykcal(); // 일간 섭취 칼로리
+      BwChartVO eat_C = mvo.getEat_food(); // 최근 섭취한 식품
+      List<YgChartVO> weight_C = mvo.getWeight(); // 몸무게
+      
+      String[][] daily_Cl = {{"","0"},{"","0"},{"","0"},{"","0"},{"","0"},{"","0"},{"","0"}}; // 일간 선호영양소 담을 리스트
+      String[][] kcal_Cl = {{"","0"},{"","0"},{"","0"},{"","0"},{"","0"},{"","0"},{"","0"}}; // 일간 섭취 칼로리 담을 리스트
+      String[][] weight_Cl = {{"","0"},{"","0"},{"","0"},{"","0"},{"","0"},{"","0"},{"","0"}}; // 일간 몸무게 담을 리스트
+      int cnt = 0;
+      for(DailyChooseVO i : daily_C){ // 이중행렬에 일간 선호영양소 담음
+    	  
+    	  daily_Cl[cnt][0] = i.getU_f_dt(); // 첫번째값 날짜
+    	  daily_Cl[cnt][1] = Integer.toString(i.getF_choosenut()); // 두번째값 수치
+    	  cnt++;
+      }
+      cnt = 0;
+      for(DailyChartVO i : kcal_C){ // 이중행렬에 일간 섭취칼로리 담음
+    	  
+    	  kcal_Cl[cnt][0] = i.getU_f_dt(); // 첫번째값 날짜
+    	  kcal_Cl[cnt][1] = Integer.toString(i.getF_kcal()); // 두번째값 수치
+    	  cnt++;
+      }
+      cnt = 0;
+      for(YgChartVO i : weight_C){ // 이중행렬에 일간 섭취칼로리 담음
+    	 // weight_Cl[cnt][0] = LocalDate. i.getWeight_regdt(); // 첫번째값 날짜
+    	  //weight_Cl[cnt][1] = Integer.toString(i.getF_kcal()); // 두번째값 수치
+    	  //cnt++;
+      }
+      
+      
+      
       
       
        
