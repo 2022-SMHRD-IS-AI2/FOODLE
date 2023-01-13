@@ -31,6 +31,7 @@
     String gender = client.getMb_gender();
     String height = client.getMb_height();
     String weight = client.getMb_weight();
+    String choosenut = client.getMb_fav_ingredient();
        System.out.print(name);
     
       ChartMasterVO mvo = (ChartMasterVO)request.getAttribute("mvo");
@@ -73,7 +74,7 @@
     	  	cnt++;
       	}
       }
-    // 변수선언  
+    // 일일 섭취 변수선언  
     int dailyE_C_ch = 0; // 탄수화물
 	int dailyE_C_pro = 0; // 단백질
 	int dailyE_C_fat = 0; // 지방
@@ -93,6 +94,28 @@
     		dailyE_C_col = Integer.parseInt(dailyE_C.getF_ch()); // 콜레스테롤
     		dailyE_C_fad = Integer.parseInt(dailyE_C.getF_ch()); // 포화지방
     		dailyE_C_trans = Integer.parseInt(dailyE_C.getF_ch()); // 트랜스지방
+      		
+      }
+    // 최근 섭취 식품 변수선언  
+    int eat_C_ch = 0; // 탄수화물
+	int eat_C_pro = 0; // 단백질
+	int eat_C_fat = 0; // 지방
+	int eat_C_sugar = 0; // 당
+	int eat_C_sodium = 0; // 나트륨
+	int eat_C_col = 0; // 콜레스테롤
+	int eat_C_fad = 0; // 포화지방
+	int eat_C_trans = 0; // 트랜스지방
+      
+      
+      if(eat_C != null){ // 일일섭취 영양분 풀기
+    	  	eat_C_ch = Integer.parseInt(dailyE_C.getF_ch()); // 탄수화물
+    	  	eat_C_pro = Integer.parseInt(dailyE_C.getF_ch()); // 단백질
+    	  	eat_C_fat = Integer.parseInt(dailyE_C.getF_ch()); // 지방
+    	  	eat_C_sugar = Integer.parseInt(dailyE_C.getF_ch()); // 당
+    	  	eat_C_sodium = Integer.parseInt(dailyE_C.getF_ch()); // 나트륨
+    	  	eat_C_col = Integer.parseInt(dailyE_C.getF_ch()); // 콜레스테롤
+    	  	eat_C_fad = Integer.parseInt(dailyE_C.getF_ch()); // 포화지방
+    	  	eat_C_trans = Integer.parseInt(dailyE_C.getF_ch()); // 트랜스지방
       		
       }
       
@@ -190,10 +213,10 @@
 		    	new Chart(document.getElementById("1-2"), {
 			    type: 'line',
 			    data: {
-			      labels: ["1일", "2일","3일","4일","5일","6일","7일"] ,
+			      labels: ["<%=daily_Cl[0][0] %>", "<%=daily_Cl[1][0] %>","<%=daily_Cl[2][0] %>","<%=daily_Cl[3][0] %>","<%=daily_Cl[4][0] %>","<%=daily_Cl[5][0] %>","<%=daily_Cl[6][0] %>"] ,
 			      datasets: [{ 
-			          data: [60, 20, 32, 50, 70, 90, 70, 88],
-			          label: "관심 영양소",
+			          data: [<%=Integer.parseInt(daily_Cl[0][1]) %>, <%=Integer.parseInt(daily_Cl[1][1]) %>, <%=Integer.parseInt(daily_Cl[2][1]) %>, <%=Integer.parseInt(daily_Cl[3][1]) %>, <%=Integer.parseInt(daily_Cl[4][1]) %>, <%=Integer.parseInt(daily_Cl[5][1]) %>, <%=Integer.parseInt(daily_Cl[6][1]) %>],
+			          label: "<%=choosenut %>",
 			          borderColor: "#3e95cd",
 			          fill: false
 			        }
@@ -220,9 +243,9 @@
 		    	new Chart(document.getElementById("2-1"), {
 			    type: 'line',
 			    data: {
-			      labels: ["1일", "2일","3일","4일","5일","6일","7일"] ,
+			      labels: ["<%=kcal_Cl[0][0] %>", "<%=kcal_Cl[1][0] %>","<%=kcal_Cl[2][0] %>","<%=kcal_Cl[3][0] %>","<%=kcal_Cl[4][0] %>","<%=kcal_Cl[5][0] %>","<%=kcal_Cl[6][0] %>"] ,
 			      datasets: [{ 
-			          data: [60, 20, 32, 50, 70, 90, 70, 88],
+			          data: [<%=Integer.parseInt(kcal_Cl[0][1]) %>, <%=Integer.parseInt(kcal_Cl[1][1]) %>, <%=Integer.parseInt(kcal_Cl[2][1]) %>, <%=Integer.parseInt(kcal_Cl[3][1]) %>, <%=Integer.parseInt(kcal_Cl[4][1]) %>, <%=Integer.parseInt(kcal_Cl[5][1]) %>, <%=Integer.parseInt(kcal_Cl[6][1]) %>],
 			          label: "칼로리",
 			          borderColor: "#3e95cd",
 			          fill: false
@@ -245,9 +268,9 @@
 			    new Chart(document.getElementById("2-2"), {
 			    type: 'line',
 			    data: {
-			      labels: ["1일", "2일","3일","4일","5일","6일","7일"] ,
+			      labels: ["<%=weight_Cl[0][0] %>", "<%=weight_Cl[1][0] %>","<%=weight_Cl[2][0] %>","<%=weight_Cl[3][0] %>","<%=weight_Cl[4][0] %>","<%=weight_Cl[5][0] %>","<%=weight_Cl[6][0] %>"] ,
 			      datasets: [{ 
-			          data: [65.4, 62.5, 60.1, 59.5, 58.0, 57.5, 57.0],
+			          data: [<%=Integer.parseInt(weight_Cl[0][1]) %>, <%=Integer.parseInt(weight_Cl[1][1]) %>, <%=Integer.parseInt(weight_Cl[2][1]) %>, <%=Integer.parseInt(weight_Cl[3][1]) %>, <%=Integer.parseInt(weight_Cl[4][1]) %>, <%=Integer.parseInt(weight_Cl[5][1]) %>, <%=Integer.parseInt(weight_Cl[6][1]) %>],
 			          label: "몸무게",
 			          borderColor: "#3e95cd",
 			          fill: false
@@ -274,7 +297,7 @@
 					        labels: ["탄수화물(g)", "단백질(g)", "지방(g)", "당류(g)", "나트륨(g)", "콜레스테롤(g)", "포화지방산(g)", "트랜스지방산(g)"],
 					        datasets: [{
 					            label: '검색 식품 영양 성분',
-					            data: [10, 19, 6, 5, 2, 3, 50, 30],
+					            data: [<%=eat_C_ch %>, <%=eat_C_pro %>, <%=eat_C_fat %>, <%=eat_C_sugar %>, <%=eat_C_sodium %>, <%=eat_C_col %>, <%=eat_C_fad %>, <%=eat_C_trans %>],
 					            backgroundColor: [
 					            	'rgba(255, 99, 132, 0.2)',
 					                'rgba(255, 159, 64, 0.2)',
