@@ -13,6 +13,9 @@ import javax.servlet.http.HttpSession;
 
 import com.smhrd.model.BwChartDAO;
 import com.smhrd.model.BwChartVO;
+import com.smhrd.model.ChooseNutVO;
+import com.smhrd.model.DailyChartVO;
+import com.smhrd.model.DailyChooseVO;
 import com.smhrd.model.FoodDAO;
 import com.smhrd.model.FoodVO;
 import com.smhrd.model.MemberVO;
@@ -44,17 +47,17 @@ public class AllChartCon extends HttpServlet {
 		int[] weiarr = new int[weight.size()]; // 같은 사이즈의 배열 생성 
 		// 몸무게가 스트링? 추후에 조절해야 할 수 있음 조절함
 		
+		
+		 for(int i = 0 ; i < weight.size() ; i++) { YgChartVO weightVo =
+		 weight.get(i); weiarr[i] = weightVo.getCurr_weight();
+		 } // <- 2023-01-10 15:37:53 이런 개형으로 불러와짐 
+		 
+		System.out.println("몸무게 차트임" + weiarr[1]);
 //		dao.chart2(id);
 //		dao.chart3(id);
 //		dao.chart4(id);
 //		dao.chart5(id);
 
-		
-		for(int i = 0 ; i < weight.size() ; i++) {
-			YgChartVO weightVo = weight.get(i);
-			weiarr[i] = weightVo.getCurr_weight();
-			System.out.println(weiarr[i]); // <- 2023-01-10 15:37:53 이런 개형으로 불러와짐
-		}
 
 
 // ========================= 마지막으로 섭취한 식품 조회(selectChartCon) ==================================
@@ -69,7 +72,7 @@ public class AllChartCon extends HttpServlet {
 	
 	// 회원이 입력한 정보를 아이디 기준으로 불러오기 
 	FoodDAO food_dao = new FoodDAO();
-	FoodVO eat_food = food_dao.dfChart(mb_id); //	아예 여기서 제일 마지막으로 섭취한 식품을 불러온다면???
+	BwChartVO eat_food = food_dao.dfChart(mb_id); //	아예 여기서 제일 마지막으로 섭취한 식품을 불러온다면???
 	// eat_food에 가장 최근섭취한 식품 정보 담겨있음 vo형태
 	
 	
@@ -96,15 +99,21 @@ public class AllChartCon extends HttpServlet {
 		
 //		LocalDate now = LocalDate.now();
 //		System.out.println(now);
-		
-		
+	System.out.println(eat_food.getF_kcal());
+	System.out.println("마지막 섭취 식품임");
 		
 		
 // ============= 일간 칼로리 ==================================		
 	
 
 		BwChartDAO bwdao = new BwChartDAO(); //보원차트로 감
-		bwdao.dailyKcal(mb_id);
+		List<DailyChartVO> dailyKcal = bwdao.dailyKcal(mb_id); // 여기 일별 칼로리 섭취량에 대한 리스트
+		
+		
+		int a = dailyKcal.get(0).getF_kcal();
+		
+		System.out.println(a);
+		
 	
 	
 	
@@ -129,9 +138,18 @@ public class AllChartCon extends HttpServlet {
 //	}else {
 //		System.out.println("노 식품");
 //	}	
+		System.out.println("일간 칼로리임");
+//========================= 일간 당나지(선택한 영양소) ==================================
 	
-//========================= 일간 당나지 ==================================
-	
+		String mb_fav_ingrident = client.getMb_fav_ingredient();
+		ChooseNutVO choosevo = new ChooseNutVO(mb_fav_ingrident, mb_id);
+		
+		List<DailyChooseVO> dailyc = bwdao.chooseNut(choosevo);
+		
+		System.out.println(dailyc.get(0).getF_choosenut());
+		
+		
+		
 //	int f_seq = Integer.parseInt(request.getParameter("seq"));
 //	
 ////	String f_name = request.getParameter("name");
@@ -151,7 +169,7 @@ public class AllChartCon extends HttpServlet {
 //		System.out.println("추가 실패");
 //		response.sendRedirect("BwDashBoard.jsp");
 //	}
-	
+		System.out.println("일간당나지임");
 //========================= 일일섭취영양분 ==================================	
 	
 //	여긴 일일 영양소

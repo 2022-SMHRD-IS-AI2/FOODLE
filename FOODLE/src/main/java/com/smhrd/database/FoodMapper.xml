@@ -8,8 +8,11 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<select id="selectChart" parameterType="String" resultType="com.smhrd.model.FoodVO">
       select * from TBL_USER_FOOD where mb_id=#{mb_id} 
    </select>
+   
+   
+   
 	
-		<select id="dfChart" parameterType="String" resultType="com.smhrd.model.BwChartVO">
+	<select id="dfChart" parameterType="String" resultType="com.smhrd.model.BwChartVO">
 		select * 
     from tbl_food
     where f_seq = (
@@ -21,8 +24,33 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
                 where mb_id=#{mb_id}
                 )
             )
-	</select>
+	</select> <!-- 마지막으로 섭취한 식품 조회 -->
 	
+	<select id="searchKcal" parameterType="String" resultType="com.smhrd.model.DailyChartVO">
+    SELECT B.u_f_dt, sum( A.F_KCAL) as f_kcal
+    FROM TBL_FOOD A 
+       , ( 
+             select to_char(u_f_dt,'yymmdd') as u_f_dt, f_seq
+                         from TBL_USER_FOOD
+                        where mb_id=#{mb_id}
+                          and u_f_dt between sysdate-7 and sysdate                       
+        ) B 
+ 	WHERE A.F_SEQ = B.F_SEQ 
+ 	group by B.u_f_dt
+   </select> <!-- 일별 섭취한 칼로리 쿼리문 -->
+   
 	
-	
+		<select id="chooseNut" parameterType="com.smhrd.model.ChooseNutVO" resultType="com.smhrd.model.DailyChooseVO">
+    SELECT B.u_f_dt, sum( A.#{mb_fav_ingrident}) as f_choosenut
+    FROM TBL_FOOD A 
+       , ( 
+             select to_char(u_f_dt,'yymmdd') as u_f_dt, f_seq
+                         from TBL_USER_FOOD
+                        where mb_id=#{mb_id}
+                          and u_f_dt between sysdate-7 and sysdate                       
+        ) B 
+ 	WHERE A.F_SEQ = B.F_SEQ 
+ 	group by B.u_f_dt
+   </select> <!-- 일별 섭취한 선호영양분 -->
+   
 </mapper>
