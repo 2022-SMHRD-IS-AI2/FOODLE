@@ -120,8 +120,6 @@
 		    }
 		});
 		</script>
-			
-			</script>
 			</div>
 			<div id="screen1-2"></div>
 			<div id="screen1-3"></div>
