@@ -116,7 +116,7 @@
 		    	new Chart(document.getElementById("1-2"), {
 			    type: 'line',
 			    data: {
-			      labels: [<%=ww %>] ,
+			      labels: ["1일", "2일","3일","4일","5일","6일","7일"] ,
 			      datasets: [{ 
 			          data: [60, 20, 32, 50, 70, 90, 70, 88],
 			          label: "관심 영양소",
