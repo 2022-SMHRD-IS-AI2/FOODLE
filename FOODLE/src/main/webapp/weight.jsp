@@ -85,10 +85,10 @@
                 <input type="date">
             </td>
             <td>
-                <input type="text" placeholder="체중을 입력해주세요">
+                <input type="text" placeholder="체중을 입력해주세요.">
             </td>
             <td>
-                <input type="text" placeholder="신장을 입력해주세요">
+                <input type="text" placeholder="신장을 입력해주세요.">
             </td>
             <td>18.5</td>
         </tr>
