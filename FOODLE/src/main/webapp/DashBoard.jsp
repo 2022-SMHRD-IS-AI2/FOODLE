@@ -87,9 +87,16 @@
 			      labels: ["탄수화물(g)", "단백질(g)", "지방(g)", "당류(g)", "나트륨(g)", "콜레스테롤(g)", "포화지방산(g)", "트랜스지방산(g)" ] ,
 			      datasets: [{ 
 			          data: [60, 20, 32, 50, 70, 90],
-			          label: "일일영양분",
+			        
+			          label: "일일 영양분",
 			          borderColor: "#3e95cd",
 			          fill: false
+			        },
+			        {
+			        data: [60, 20, 32, 50, 70, 90],
+				    label: "권장 영양분",
+				    borderColor: "#3e95cd",
+				    fill: false	
 			        }
 			      ]
 			    },
@@ -204,6 +211,7 @@
 					                'rgba(153, 102, 255, 1)',
 					                'rgba(255, 159, 64, 1)'
 					            ],
+					            
 					            borderWidth: 1
 					        }]
 					    },
