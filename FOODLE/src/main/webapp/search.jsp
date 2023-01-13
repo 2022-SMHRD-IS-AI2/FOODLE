@@ -26,11 +26,11 @@
                 <h1>FOODER</h1> <br>
                 <h3>김진수</h3> <br>
                 <tr>
-                    <td>GENDER</td>
+                    <td>성별</td>
                     <td>man</td> <br>
-                    <td>HEIGHT</td>
+                    <td>키</td>
                     <td>185</td> <br>
-                    <td>WEIGHT</td>
+                    <td>몸무게</td>
                     <td>90</td>
                 </tr>
             </div>
