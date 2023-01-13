@@ -193,7 +193,7 @@
 			        data: [60, 20, 32, 50, 70, 90],
 				    label: "권장 영양분",
 				    borderColor: "#3e95cd",
-				    fill: false	
+				    	
 			        }
 			      ]
 			    },
