@@ -131,6 +131,8 @@ body{
 	width: 750px;
 	height: 380px;
 	background-color: white;
+	padding : 20px;
+	border-radius : 10px;
 }
 /* 주간(당/나트륨/지방) */
 #screen1-2{
@@ -143,6 +145,8 @@ body{
 	width: 750px;
 	height: 350px;
 	background-color: white;
+	padding : 20px;
+	border-radius : 10px;
 }
 /* 추천 식단 */
 #screen1-3{
@@ -155,6 +159,8 @@ body{
 	width: 750px;
 	height: 180px;
 	background-color: white;
+	padding : 20px;
+	border-radius : 10px;
 }
 /* #screen2{
     width: 770px;
@@ -176,6 +182,8 @@ body{
 	width: 750px;
 	height: 180px;
 	background-color: white;
+	padding : 20px;
+	border-radius : 10px;
 }
 /* 몸무게(주간) */
 #screen2-2{
@@ -188,6 +196,8 @@ body{
 	width: 750px;
 	height: 180px;
 	background-color: white;
+	padding : 20px;
+	border-radius : 10px;
 }
 /* 검색 식품 영양분 */
 /* 2-3 위 여백 10 */
@@ -201,6 +211,8 @@ body{
 	width: 750px;
 	height: 350px;
 	background-color: white;
+	padding : 20px;
+	border-radius : 10px;
 }
 /* 건강 뉴스 */
 /* 2-4 위 아래 여백 10씩 */
@@ -214,6 +226,8 @@ body{
 	width: 750px;
 	height: 180px;
 	background-color: white;
+	padding : 20px;
+	border-radius : 10px;
 }
 
 
