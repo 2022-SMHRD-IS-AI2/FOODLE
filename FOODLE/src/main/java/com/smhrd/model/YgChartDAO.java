@@ -19,7 +19,7 @@ public class YgChartDAO {
 
 			try {
 				WeightList = sqlSession.selectList("com.smhrd.model.YgChartDAO.weightChart", mb_id);
-				
+				// 차트매퍼로 이동함
 			} catch (Exception e) {
 				e.printStackTrace();
 			} finally {

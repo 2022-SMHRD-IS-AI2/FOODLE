@@ -26,6 +26,7 @@ public class MemberVO {
 	private String mb_phone;
 	private String mb_height;
 	private String mb_weight;
+	
 	private String mb_gender;
 	private String mb_fav_ingredient;
 

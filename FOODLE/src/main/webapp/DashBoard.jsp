@@ -19,6 +19,7 @@
 <body>
 	<%
     MemberVO client = (MemberVO)session.getAttribute("client");
+	
     String name = client.getMb_name();
     String gender = client.getMb_gender();
     String height = client.getMb_height();

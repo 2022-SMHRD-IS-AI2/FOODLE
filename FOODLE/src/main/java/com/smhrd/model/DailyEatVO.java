@@ -9,9 +9,16 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Getter // getter메
 
-public class ChooseNutVO {
-
-	private String mb_fav_ingredient;
-	private String mb_id;
+public class DailyEatVO {
+	
+	private String f_ch;
+	private String f_pro;
+	private String f_fat;
+	private String f_sugar;
+	private String f_sodium;
+	private String f_col;
+	private String f_fad;
+	private String f_trans;
+	
 
 }

@@ -95,7 +95,7 @@ public class BwChartDAO {
 	
 		
 	public List<DailyChooseVO> chooseNut(ChooseNutVO ChooseNutVO) { // 일간 선호영양분 그래프
-		
+		SqlSession sqlSession = sqlSessionFactory.openSession(true);
 		List<DailyChooseVO> dailyChoose = null;
 		
 		try {
