@@ -110,6 +110,7 @@
 			</script>
 			</div>
 			<div id="screen1-2">
+			<!-- 1-2. 주간 관심 영양소 그래프(EX.당, 나트륨,,, 택1)-->
 			<canvas id="1-2" width = "720px" height="320px"></canvas>
 			<script>
 		    	new Chart(document.getElementById("1-2"), {
@@ -133,16 +134,19 @@
 			  });
 			</script>	
 			</div>
-			<div id="screen1-3"></div>
+			<div id="screen1-3">
+			<!-- 1-3. 추천 식단 -->
+			</div>
 		</div>
 		<div id="screen2">
 			<div id="screen2-1">
+			<!-- 2-1. 주간 칼로리-->
 			<canvas id="2-1" width = "720px" height="150px"></canvas>
 			<script>
 		    	new Chart(document.getElementById("2-1"), {
 			    type: 'line',
 			    data: {
-			      labels: [<%=ww %>] ,
+			      labels: ["1일", "2일","3일","4일","5일","6일","7일"] ,
 			      datasets: [{ 
 			          data: [60, 20, 32, 50, 70, 90, 70, 88],
 			          label: "칼로리",
@@ -161,12 +165,13 @@
 			</script>	
 			</div>
 			<div id="screen2-2">
+			<!-- 2-2. 주간 몸무게-->
 			<canvas id="2-2" width = "720px" height="150px"></canvas>
 			<script> 
 			    new Chart(document.getElementById("2-2"), {
 			    type: 'line',
 			    data: {
-			      labels: [1,2,3,4,5,6,7] ,
+			      labels: ["1일", "2일","3일","4일","5일","6일","7일"] ,
 			      datasets: [{ 
 			          data: [65.4, 62.5, 60.1, 59.5, 58.0, 57.5, 57.0],
 			          label: "몸무게",
@@ -185,6 +190,7 @@
 			</script>
 			</div>
 			<div id="screen2-3">
+				<!-- 2-3. 검색 식품 영양분-->
 				<canvas id="2-3" width = "720px" height="320px"></canvas>
 					<script> 
 						const ctx = document.getElementById("2-3").getContext('2d');
@@ -229,7 +235,9 @@
 					});
 					</script>
 				</div>
-			<div id="screen2-4"></div>
+			<div id="screen2-4">
+			<!-- 2-4. 건강 뉴스-->
+			</div>
 		</div>
 	</div>
 
