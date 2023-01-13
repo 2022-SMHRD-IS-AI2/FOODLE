@@ -32,7 +32,7 @@ public class BwChartCon extends HttpServlet {
 //		System.out.println(name1);
 		
 		if(sr.equals(name1)) {
-			RequestDispatcher rd = request.getRequestDispatcher("BwDashBoard.jsp");
+			RequestDispatcher rd = request.getRequestDispatcher("DashBoard.jsp");
 			request.setAttribute("name", name);
 			rd.forward(request, response);
 		}else {
