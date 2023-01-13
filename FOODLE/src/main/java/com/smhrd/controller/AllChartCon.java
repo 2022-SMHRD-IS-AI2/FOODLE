@@ -46,16 +46,16 @@ public class AllChartCon extends HttpServlet {
 		
 		List<YgChartVO> weight = ygdao.weightChart(mb_id); // 몸무게 데이터 불러움 
 //		연경DAO-> ChartMapper 순으로 이동함
-		int[] weiarr = new int[weight.size()]; // 같은 사이즈의 배열 생성 
+		//int[] weiarr = new int[weight.size()]; // 같은 사이즈의 배열 생성 
 		// 몸무게가 스트링? 추후에 조절해야 할 수 있음 조절함
 		
 		
-		 for(int i = 0 ; i < weight.size() ; i++) { 
-			 YgChartVO weightVo = weight.get(i); 
-			 weiarr[i] = weightVo.getCurr_weight();
-		 } // <- 2023-01-10 15:37:53 이런 개형으로 불러와짐 
-		 
-		System.out.println("몸무게 차트임" + weiarr[0]);
+		// for(int i = 0 ; i < weight.size() ; i++) { 
+			// YgChartVO weightVo = weight.get(i); 
+			// weiarr[i] = weightVo.getCurr_weight();
+		// } // <- 2023-01-10 15:37:53 이런 개형으로 불러와짐 
+		// 
+		//System.out.println("몸무게 차트임" + weiarr[0]);
 //		dao.chart2(id);
 //		dao.chart3(id);
 //		dao.chart4(id);
@@ -104,8 +104,8 @@ public class AllChartCon extends HttpServlet {
 		
 //		LocalDate now = LocalDate.now();
 //		System.out.println(now);
-	System.out.println(eat_food.getF_kcal());
-	System.out.println("마지막 섭취 식품임");
+	//System.out.println(eat_food.getF_kcal());
+	//System.out.println("마지막 섭취 식품임");
 		
 		
 // ============= 일간 칼로리 ==================================		
@@ -115,9 +115,9 @@ public class AllChartCon extends HttpServlet {
 		List<DailyChartVO> dailyKcal = bwdao.dailyKcal(mb_id); // 여기 일별 칼로리 섭취량에 대한 리스트
 //		보원차트DAO -> 푸드매퍼
 		
-		int a = dailyKcal.get(0).getF_kcal();
+		//int a = dailyKcal.get(0).getF_kcal();
 		
-		System.out.println(a);
+		//System.out.println(a);
 		
 	
 	
@@ -154,7 +154,7 @@ public class AllChartCon extends HttpServlet {
 		
 		List<DailyChooseVO> dailyc = bwdao.chooseNut(choosevo);
 		// 보원차트DAO로 가서 푸드매퍼로 감
-		System.out.println(dailyc.get(0).getF_choosenut());
+		//System.out.println(dailyc.get(0).getF_choosenut());
 		
 		
 		
@@ -183,7 +183,7 @@ public class AllChartCon extends HttpServlet {
 	
 		DailyEatVO dailyeat = food_dao.dailyeat(mb_id);
 		
-		System.out.println(dailyeat.getF_ch());
+		//System.out.println(dailyeat.getF_ch());
 		// foodDAO로 감
 //	여긴 일일 영양소
 	
