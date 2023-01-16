@@ -91,7 +91,7 @@
 
           
            <div id="screen1-0">
-           <h1 id = "head">2023.01.13 ~ 2023.01.20 <!-- *** 표현식으로 바꿔주세요! -->
+           <h1 id = "head">2023.01.16 ~ 2023.01.22 <!-- *** 표현식으로 바꿔주세요! -->
            				   <br>몸무게 변화</h1>
             <div id="screen1-1">
             <canvas id="2-2" width = "1500px" height="600px"></canvas>
@@ -99,10 +99,9 @@
 			    new Chart(document.getElementById("2-2"), {
 			    type: 'line',
 			    data: {
-			      labels: ["<%-- <%=weight_Cl[0][0] %>", "<%=weight_Cl[1][0] %>","<%=weight_Cl[2][0] %>","<%=weight_Cl[3][0] %>","<%=weight_Cl[4][0] %>","<%=weight_Cl[5][0] %>","<%=weight_Cl[6][0] %>" --%>] ,
+			      labels: ["1/16", "1/17", "1/18", "1/19", "1/20", "1/21", "1/22"] , /* !! 표현식으로 바꿔주세요!!*/
 			      datasets: [{ 
-			          data: [<%-- <%=Float.parseFloat(weight_Cl[0][1]) %>, <%=Float.parseFloat(weight_Cl[1][1]) %>, <%=Float.parseFloat(weight_Cl[2][1]) %>, <%=Float.parseFloat(weight_Cl[3][1]) %>, 
-			                 <%=Float.parseFloat(weight_Cl[4][1]) %>, <%=Float.parseFloat(weight_Cl[5][1]) %>, <%=Float.parseFloat(weight_Cl[6][1]) %> --%>],
+			          data: [50, 52, 53, 54, 55, 56, 58], /* !! 표현식으로 바꿔주세요!!*/
 			          label: "몸무게",
 			          borderColor: "#3e95cd",
 			          fill: false
