@@ -27,14 +27,17 @@
                 <br>
                 <h1>FOODER</h1> <br>
                 <h3>김진수</h3> <br>
-                <tr>
+                <!-- <tr>
                     <td>성별</td>
                     <td>man</td> <br>
                     <td>키</td>
                     <td>185</td> <br>
                     <td>몸무게</td>
                     <td>90</td>
-                </tr>
+                </tr> -->
+                <div class = "p_1"><a>성별    </a></div>
+				<div class = "p_1"><a>신장     cm</a></div>
+				<div class = "p_1"><a>몸무게    kg</a></div>
             </div>
             <div class="search">
                 <input type="text" placeholder="검색어를 입력해주세요">

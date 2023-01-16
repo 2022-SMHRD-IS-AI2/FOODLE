@@ -1,6 +1,12 @@
 @charset "UTF-8";
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@font-face {
+    font-family: 'LINESeedKR-Bd';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/LINESeedKR-Bd.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
 
 *{
     list-style: none;
@@ -8,7 +14,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Open Sans', sans-serif;
+   /*  font-family: 'Open Sans', sans-serif; */
+    font-family: 'LINESeedKR-Bd';
 }
 
 body{
@@ -17,7 +24,8 @@ body{
 }
 
 .wrapper .sidebar{
-    background: rgb(144 201 87);
+   /* background: rgb(144 201 87); */ 
+    background: rgb(120 148 92);
     position: fixed;
     top: 0;
     left: 0;
@@ -38,6 +46,12 @@ body{
 }
 
 .wrapper .sidebar .profile h3{
+    color: #ffffff;
+    margin: 10px 0 5px;
+}
+
+/* 추가 했음!*/
+.wrapper .sidebar .profile .p_1{
     color: #ffffff;
     margin: 10px 0 5px;
 }
@@ -106,7 +120,8 @@ body{
 #fullscreen{
 	width: 100%;
 	height: 969px;
-	background-color: rgb(235, 234, 234);
+	/* background-color: rgb(235, 234, 234); */
+	background-color: rgb(227, 247, 213);
 }
 #screen0{
 	width: 300px;
