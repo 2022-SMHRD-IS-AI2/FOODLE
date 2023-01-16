@@ -135,7 +135,7 @@
 				<br>
 				<h3><%=name %></h3>
 				<br>
-				<tr>
+				<%-- <tr>
 					<td>성별</td>
 					<td><%=gender %></td>
 					<br>
@@ -144,7 +144,10 @@
 					<br>
 					<td>몸무게</td>
 					<td><%=weight %> kg</td>
-				</tr>
+				</tr> --%>
+				<div class = "p_1"><a>성별    <%=gender %></a></div>
+				<div class = "p_1"><a>신장    <%=height %> cm</a></div>
+				<div class = "p_1"><a>몸무게    <%=weight %> kg</a></div>
 			</div>
 			<div class="search">
 			<form action="BwChartCon">
@@ -189,15 +192,16 @@
 			        
 			          label: "일일 영양분",
 			         /*  borderColor: "#3e95cd",*/
-			          backgroundColor: 'rgba(60, 149, 205, 0.2)',
+			          backgroundColor: 'rgba(60, 149, 205, 0.7)',
 			          borderColor: 'rgb(201, 203, 207)',
 			          fill: true,
 			          borderWidth: 1
 			        },
 			        {
-			        data: [60, 20, 32, 50, 70, 90],
+			        data: [130, 55, 66.7, 40, 1.5, 0.3, 22.2, 2.2],  //여자 권장 섭취량
+			        // data: [130, 65, 66.7, 70, 1.5, 0.3, 22.2, 2.2],  //남자 권장 섭취량
 				    label: "권장 영양분",
-				    backgroundColor: 'rgba(201, 203, 207, 0.2)',
+				    backgroundColor: 'rgba(201, 203, 207, 0.7)',
 			        borderColor: 'rgba(201, 203, 207)',
 				    fill: true,
 				    borderWidth: 1
@@ -225,7 +229,7 @@
 			      labels: ["<%=daily_Cl[0][0] %>", "<%=daily_Cl[1][0] %>","<%=daily_Cl[2][0] %>","<%=daily_Cl[3][0] %>","<%=daily_Cl[4][0] %>","<%=daily_Cl[5][0] %>","<%=daily_Cl[6][0] %>"] ,
 			      datasets: [{ 
 			          data: [<%=Float.parseFloat(daily_Cl[0][1]) %>, <%=Float.parseFloat(daily_Cl[1][1]) %>, <%=Float.parseFloat(daily_Cl[2][1]) %>, <%=Float.parseFloat(daily_Cl[3][1]) %>, <%=Float.parseFloat(daily_Cl[4][1]) %>, <%=Float.parseFloat(daily_Cl[5][1]) %>, <%=Float.parseFloat(daily_Cl[6][1]) %>],
-			          label: "<%=choosenut %>",
+			          label: "<%=choosenut %>", // ***라벨명이 지정한 변수명으로 떠요! (f_ch 면 --> 탄수화물 이렇게 바꿔야해요!!)
 			          borderColor: "#3e95cd",
 			          fill: false
 			        }
@@ -307,27 +311,9 @@
 					        datasets: [{
 					            label: '검색 식품 영양 성분',
 					            data: [<%=eat_C_ch %>, <%=eat_C_pro %>, <%=eat_C_fat %>, <%=eat_C_sugar %>, <%=eat_C_sodium %>, <%=eat_C_col %>, <%=eat_C_fad %>, <%=eat_C_trans %>],
-					            backgroundColor: [
-					            	'rgba(255, 99, 132, 0.2)',
-					                'rgba(255, 159, 64, 0.2)',
-					                'rgba(255, 205, 86, 0.2)',
-					                'rgba(75, 192, 192, 0.2)',
-					                'rgba(54, 162, 235, 0.2)',
-					                'rgba(153, 102, 255, 0.2)',
-					                'rgba(95, 213, 16, 0.2)',
-					                'rgba(97, 126, 255, 0.2)',
-					              ],
-					              borderColor: [
-					                'rgb(255, 99, 132)',
-					                'rgb(255, 159, 64)',
-					                'rgb(255, 205, 86)',
-					                'rgb(75, 192, 192)',
-					                'rgb(54, 162, 235)',
-					                'rgb(153, 102, 255)',
-					                'rgb(95, 213, 16)',
-					                'rgb(97, 126, 255)'
-					            ],
-					            
+					            backgroundColor: 'rgba(60, 149, 205, 0.7)',
+						          borderColor: 'rgb(201, 203, 207)',
+						          fill: true,
 					            borderWidth: 1
 					        }]
 					    },
