@@ -77,7 +77,8 @@
             <!-- <div id="screen-1">
             </div> -->
         </div>
-        <button class="btn2" type="button"> 제출 </button>
+        <button class="btn2" type="button"> 추가 </button>
+        <button class="btn3" type="button"> 검색 </button>
         <div id="screen1">
         	<canvas id="1-1" width = "700px" height="570px"></canvas>
 			<script> 
