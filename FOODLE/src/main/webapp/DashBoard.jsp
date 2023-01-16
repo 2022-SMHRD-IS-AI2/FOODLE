@@ -179,7 +179,7 @@
 				<li><a href="main.jsp" class="active"> <span class="icon"><i
 							class="fas fa-home"></i></span> <span class="item">Home</span>
 				</a></li>
-				<li><a href="DashBoard.jsp"> <span class="icon"><i
+				<li><a href="AllChartCon"> <span class="icon"><i
 							class="fas fa-desktop"></i></span> <span class="item">Dashboard</span>
 				</a></li>
 				<li><a href="change.jsp"> <span class="icon"><i
