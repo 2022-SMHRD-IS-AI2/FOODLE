@@ -41,29 +41,29 @@
             </div>
             <div class="search">
                 <input type="text" placeholder="검색어를 입력해주세요">
-                <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/icon/search.png">
+                <a href ="search.jsp"><img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/icon/search.png"></a>
             </div>
             <ul>
                 <li>
-                    <a href="#" class="active">
+                    <a href="main.jsp" class="active">
                         <span class="icon"><i class="fas fa-home"></i></span>
                         <span class="item">Home</span>
                     </a>
                 </li>
                 <li>
-                    <a href="BwDashBoard.jsp">
+                    <a href="DashBoard.jsp">
                         <span class="icon"><i class="fas fa-desktop"></i></span>
                         <span class="item">Dashboard</span>
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="change.jsp">
                         <span class="icon"><i class="fas fa-user-friends"></i></span>
                         <span class="item">회원 정보 조회 / 수정</span>
                     </a>
                 </li>
                 <li>
-                    <a href="daily_Weight.jsp">
+                    <a href="weight.jsp">
                         <span class="icon"><i class="fas fa-chart-line"></i></span>
                         <span class="item">몸무게 기록</span>
                     </a>

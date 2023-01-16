@@ -46,25 +46,25 @@
             </div>
             <ul>
                 <li>
-                    <a href="#" class="active">
+                    <a href="main.jsp" class="active">
                         <span class="icon"><i class="fas fa-home"></i></span>
                         <span class="item">Home</span>
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="DashBoard.jsp">
                         <span class="icon"><i class="fas fa-desktop"></i></span>
                         <span class="item">Dashboard</span>
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="change.jsp">
                         <span class="icon"><i class="fas fa-user-friends"></i></span>
                         <span class="item">회원 정보 조회 / 수정</span>
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="weight.jsp">
                         <span class="icon"><i class="fas fa-chart-line"></i></span>
                         <span class="item">몸무게 기록</span>
                     </a>
