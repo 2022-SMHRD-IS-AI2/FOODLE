@@ -170,23 +170,23 @@
 			</div>
 			<div class="search">
 			<form action="BwChartCon">
-				<input type="text" name="sr" placeholder="<%=name %>"> <img
-					src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/icon/search.png">
+				<input type="text" name="sr" placeholder="<%=name %>"> 
+				<a href ="search.jsp"><img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/icon/search.png"></a>
 					<input type="submit" value="검색">
 			</form>
 			</div>
 			<ul>
-				<li><a href="#" class="active"> <span class="icon"><i
+				<li><a href="main.jsp" class="active"> <span class="icon"><i
 							class="fas fa-home"></i></span> <span class="item">Home</span>
 				</a></li>
-				<li><a href="#"> <span class="icon"><i
+				<li><a href="DashBoard.jsp"> <span class="icon"><i
 							class="fas fa-desktop"></i></span> <span class="item">Dashboard</span>
 				</a></li>
-				<li><a href="#"> <span class="icon"><i
+				<li><a href="change.jsp"> <span class="icon"><i
 							class="fas fa-user-friends"></i></span> <span class="item">회원 정보
 							조회 / 수정</span>
 				</a></li>
-				<li><a href="daily_Weight.jsp"> <span class="icon"><i
+				<li><a href="weight.jsp"> <span class="icon"><i
 							class="fas fa-chart-line"></i></span> <span class="item">몸무게 기록</span>
 				</a></li>
 			</ul>
