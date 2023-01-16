@@ -52,7 +52,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="DashBoard.jsp">
+                    <a href="AllChartCon">
                         <span class="icon"><i class="fas fa-desktop"></i></span>
                         <span class="item">Dashboard</span>
                     </a>

@@ -51,7 +51,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="DashBoard.jsp">
+                    <a href="AllChartCon">
                         <span class="icon"><i class="fas fa-desktop"></i></span>
                         <span class="item">Dashboard</span>
                     </a>
@@ -76,29 +76,23 @@
         <div id="screen0"></div>
 
         <div>
-        <table>
-        <tr class="up">
-            <th>입력 날짜</th>
-            <th>입력 체중(kg)</th>
-            <th>신장(cm)</th>
-            <th>BMI 지수</th>
-        </tr>
-        <tr class="down">
-            <td>
-                <input type="date">
-            </td>
-            <td>
-                <input type="text" placeholder="체중을 입력해주세요.">
-            </td>
-            <td>
-                <input type="text" placeholder="신장을 입력해주세요.">
-            </td>
-            <td>18.5</td>
-        </tr>
-        </table>
+       <div id="date">
+            <input type="date">
         </div>
+        <div id="text">
+            <input type="text" placeholder="체중을 입력해주세요.">
+        </div>
+                
+        <!-- <button class="btn1" type="button"><img src="./img/button1.png"></button> -->
+        <button class="btn1" type="button"> 제출 </button>
+        </div>
+
+          
+           <div id="screen1-0">
+           <h1 id = "head">2023.01.13 ~ 2023.01.20 <!-- *** 표현식으로 바꿔주세요! -->
+           				   <br>몸무게 변화</h1>
             <div id="screen1-1">
-            <canvas id="2-2" width = "1050px" height="570px"></canvas>
+            <canvas id="2-2" width = "1500px" height="600px"></canvas>
 			<script> 
 			    new Chart(document.getElementById("2-2"), {
 			    type: 'line',
@@ -121,10 +115,11 @@
 			  });
 			</script>
             </div>
-
+           
         </div>
+        </div>>
 
-    </div>
+
 
 </body>
 </html>

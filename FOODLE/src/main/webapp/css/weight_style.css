@@ -133,24 +133,44 @@ body{
 }
  table{ 
     border-collapse : collapse;
-    width: 1100px;
+    width: 1500px;
     height: 100px;
     top: 80px;
-    right: 220px;
+    right: 58px;
     position: fixed;
     background-color: none;
 } /*이중선 제거*/
- th,td{
+  /* button img{
+    width: 80px;
+    height: 80px;
+    top: 220px;
+    right: 750px;
+  } */
+  button.btn1{
+    position: absolute;
+    width: 70px;
+    height: 30px;
+    font-size: 1.5ch;
+    top: 85px;
+    right: 270px;
+    background-color: rgb(12, 117, 209);
+    color: white;
+    font-family: 'LotteMartDream';
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+  }
+ /* th,td{
    width: 200px;
    height: 83px;
    text-align: center;
    border: none;
    
    vertical-align: top;   /* 위 */
-   vertical-align: bottom;   /* 아래 */
-   vertical-align: middle;   /* 가운데 */
-}
-.up{
+   /* vertical-align: bottom;   /* 아래 */
+   /* vertical-align: middle;   가운데 */
+/* } */ 
+/* .up{
     background-color: rgb(247, 244, 224);
     font-size: 20px;
     border-radius: 10px;
@@ -161,15 +181,42 @@ body{
 .down input{
     height: 50px;
     font-size: 15px;
-    background: none;
+}  */
+#date{
+    position: fixed;
+    right: 900px;
+    top: 80px;
+    width: 500px;
+}
+#text{
+    position: fixed;
+    right: 370px;
+    top: 80px;
+    width: 500px;
 }
 
 /* 몸무게 변화 그래프 */
+#screen1-0{
+   width: 1500px;
+   height: 700px;
+   background-color: white;
+   bottom: 80px;
+   right: 58px;
+   position: fixed;
+   padding : 20px;
+   border-radius : 10px;
+}
+#head{
+    color: rgb(60, 149, 205);
+}
+
 #screen1-1{
-   width: 1100px;
+   width: 1500px;
    height: 600px;
    background-color: white;
    bottom: 80px;
-   right: 220px;
+   right: 58px;
    position: fixed;
+   padding : 20px;
+   border-radius : 10px;
 }

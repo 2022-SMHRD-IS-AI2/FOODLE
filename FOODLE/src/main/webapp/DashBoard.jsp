@@ -32,7 +32,7 @@
     String height = client.getMb_height();
     String weight = client.getMb_weight();
     String choosenut = client.getMb_fav_ingredient();
-       System.out.print(name);
+    // System.out.print(name);
     
       ChartMasterVO mvo = (ChartMasterVO)request.getAttribute("mvo");
       
@@ -118,8 +118,27 @@
     	  	eat_C_trans = Float.parseFloat(eat_C.getF_trans()); // 트랜스지방
       		
       }
-      
-       
+       // 선택 영양소 변수명 변경
+       if(client.getMb_fav_ingredient().equals("f_ch")){
+    	   choosenut = "탄수화물";
+       } else if(client.getMb_fav_ingredient().equals("f_pro")){
+    	   choosenut = "단백질";
+       } else if(client.getMb_fav_ingredient().equals("f_fat")){
+    	   choosenut = "지방";
+       } else if(client.getMb_fav_ingredient().equals("f_sugar")){
+    	   choosenut = "당류";
+       } else if(client.getMb_fav_ingredient().equals("f_sodium")){
+    	   choosenut = "나트륨";
+       } else if(client.getMb_fav_ingredient().equals("f_col")){
+    	   choosenut = "콜레스테롤";
+       } else if(client.getMb_fav_ingredient().equals("f_fad")){
+    	   choosenut = "포화지방산";
+       } else if(client.getMb_fav_ingredient().equals("f_trans")){
+    	   choosenut = "트랜스지방";
+       }
+    
+    
+    
  	// 2-3 :  검색바 관련 세팅
   
     %>
@@ -160,7 +179,7 @@
 				<li><a href="main.jsp" class="active"> <span class="icon"><i
 							class="fas fa-home"></i></span> <span class="item">Home</span>
 				</a></li>
-				<li><a href="DashBoard.jsp"> <span class="icon"><i
+				<li><a href="AllChartCon"> <span class="icon"><i
 							class="fas fa-desktop"></i></span> <span class="item">Dashboard</span>
 				</a></li>
 				<li><a href="change.jsp"> <span class="icon"><i
@@ -193,7 +212,7 @@
 			          label: "일일 영양분",
 			         /*  borderColor: "#3e95cd",*/
 			          backgroundColor: 'rgba(60, 149, 205, 0.7)',
-			          borderColor: 'rgb(201, 203, 207)',
+			          borderColor: 'rgb(60, 149, 205)',
 			          fill: true,
 			          borderWidth: 1
 			        },
