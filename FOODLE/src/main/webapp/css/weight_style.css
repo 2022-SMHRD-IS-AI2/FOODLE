@@ -65,6 +65,7 @@ body{
     border-radius: 8px;
     padding: 10px 12px;
     font-size: 14px;
+    cursor: pointer;
   }
 
 .wrapper .sidebar .profile p{
@@ -139,7 +140,7 @@ body{
     right: 750px;
   } */
   button.btn1{
-    position: absolute;
+    position: fixed;
     width: 70px;
     height: 30px;
     font-size: 1.5ch;
