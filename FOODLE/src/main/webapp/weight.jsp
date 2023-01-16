@@ -48,7 +48,7 @@
             </div>
             <ul>
                 <li>
-                    <a href="main.jsp" class="active">
+                    <a href="main.jsp">
                         <span class="icon"><i class="fas fa-home"></i></span>
                         <span class="item">Home</span>
                     </a>

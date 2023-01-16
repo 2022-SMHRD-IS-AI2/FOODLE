@@ -165,7 +165,7 @@
 			</form>
 			</div>
 			<ul>
-				<li><a href="main.jsp" class="active"> <span class="icon"><i
+				<li><a href="main.jsp"> <span class="icon"><i
 							class="fas fa-home"></i></span> <span class="item">Home</span>
 				</a></li>
 				<li><a href="change.jsp"> <span class="icon"><i
