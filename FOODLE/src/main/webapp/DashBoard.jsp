@@ -87,13 +87,13 @@
       
       if(dailyE_C != null){ // 일일섭취 영양분 풀기
     		dailyE_C_ch = Float.parseFloat(dailyE_C.getF_ch()); // 탄수화물
-    		dailyE_C_pro = Float.parseFloat(dailyE_C.getF_ch()); // 단백질
-    		dailyE_C_fat = Float.parseFloat(dailyE_C.getF_ch()); // 지방
-    		dailyE_C_sugar = Float.parseFloat(dailyE_C.getF_ch()); // 당
-    		dailyE_C_sodium = Float.parseFloat(dailyE_C.getF_ch()); // 나트륨
-    		dailyE_C_col = Float.parseFloat(dailyE_C.getF_ch()); // 콜레스테롤
-    		dailyE_C_fad = Float.parseFloat(dailyE_C.getF_ch()); // 포화지방
-    		dailyE_C_trans = Float.parseFloat(dailyE_C.getF_ch()); // 트랜스지방
+    		dailyE_C_pro = Float.parseFloat(dailyE_C.getF_pro()); // 단백질
+    		dailyE_C_fat = Float.parseFloat(dailyE_C.getF_fat()); // 지방
+    		dailyE_C_sugar = Float.parseFloat(dailyE_C.getF_sugar()); // 당
+    		dailyE_C_sodium = Float.parseFloat(dailyE_C.getF_sodium()); // 나트륨
+    		dailyE_C_col = Float.parseFloat(dailyE_C.getF_col()); // 콜레스테롤
+    		dailyE_C_fad = Float.parseFloat(dailyE_C.getF_fad()); // 포화지방
+    		dailyE_C_trans = Float.parseFloat(dailyE_C.getF_trans()); // 트랜스지방
       		
       }
     // 최근 섭취 식품 변수선언  

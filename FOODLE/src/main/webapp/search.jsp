@@ -98,8 +98,8 @@
             </div> -->
         </div>
 
-        <button class="btn3" type="button"> 검색 </button>
-        <a href="InsertFood?seq=<%=bw_name.get(0).getF_seq() %>&name=<%=bw_name.get(0).getF_name() %>"><button class="btn2" type="button"> 제출 </button></a>
+        <a><button class="btn3" type="button" > 검색 </button></a>
+        <a href="InsertFood?seq=<%=bw_name.get(0).getF_seq() %>&name=<%=bw_name.get(0).getF_name() %>"><button class="btn2" type="button"> 추가 </button></a>
 
         <div id="screen1">
         	<canvas id="1-1" width = "700px" height="570px"></canvas>

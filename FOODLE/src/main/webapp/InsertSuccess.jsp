@@ -13,7 +13,7 @@
 
 	<script>
 		alert('음식이 추가되었습니다.')
-		location.href="BwChartCon?sr="<%=f_n %>";
+		location.href="BwChartCon";
 	</script>
 
 </body>
