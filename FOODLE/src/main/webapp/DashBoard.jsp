@@ -154,24 +154,13 @@
 				<br>
 				<h3><%=name %></h3>
 				<br>
-				<%-- <tr>
-					<td>성별</td>
-					<td><%=gender %></td>
-					<br>
-					<td>키</td>
-					<td><%=height %> cm</td>
-					<br>
-					<td>몸무게</td>
-					<td><%=weight %> kg</td>
-				</tr> --%>
 				<div class = "p_1"><a>성별    <%=gender %></a></div>
 				<div class = "p_1"><a>신장    <%=height %> cm</a></div>
 				<div class = "p_1"><a>몸무게    <%=weight %> kg</a></div>
 			</div>
 			<div class="search">
 			<form action="BwChartCon">
-				<input type="text" name="sr" placeholder="<%=name %>"> 
-				<a href ="search.jsp"><img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/icon/search.png"></a>
+				<input type="text" name="sr" placeholder="검색어를 입력해주세요.">
 					<input type="submit" value="검색">
 			</form>
 			</div>
@@ -179,12 +168,12 @@
 				<li><a href="main.jsp" class="active"> <span class="icon"><i
 							class="fas fa-home"></i></span> <span class="item">Home</span>
 				</a></li>
-				<li><a href="AllChartCon"> <span class="icon"><i
-							class="fas fa-desktop"></i></span> <span class="item">Dashboard</span>
-				</a></li>
 				<li><a href="change.jsp"> <span class="icon"><i
 							class="fas fa-user-friends"></i></span> <span class="item">회원 정보
 							조회 / 수정</span>
+				</a></li>
+				<li><a href="AllChartCon"> <span class="icon"><i
+							class="fas fa-desktop"></i></span> <span class="item">Dash board</span>
 				</a></li>
 				<li><a href="weight.jsp"> <span class="icon"><i
 							class="fas fa-chart-line"></i></span> <span class="item">몸무게 기록</span>

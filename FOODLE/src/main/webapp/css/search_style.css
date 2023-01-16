@@ -66,14 +66,6 @@ body{
     padding: 10px 12px;
     font-size: 14px;
   }
-  
-  img {
-    position : absolute;
-    width: 17px;
-    top: 10px;
-    right: 12px;
-    margin: 0;
-  }
 
 .wrapper .sidebar .profile p{
     color: rgb(206, 240, 253);
@@ -142,7 +134,7 @@ body{
     /* outline: 5px;
     outline-style: double;
     outline-color: black; */
-    border: 1px solid #bbb;
+    /* border: 1px solid #bbb; */
     border-radius: 8px;
     position: fixed;
     top: 220px;
@@ -150,9 +142,10 @@ body{
 	width: 300px;
 	background-color: white;
 }
-.search {
-    position: relative;
+.search1 {
+    position: fixed;
     width: 300px;
+    right: 300px;
   }
   input {
     width: 100%;
@@ -161,12 +154,19 @@ body{
     padding: 10px 12px;
     font-size: 14px;
   }
-  img {
-    position : absolute;
-    width: 17px;
-    top: 10px;
-    right: 12px;
-    margin: 0;
+  button.btn2{
+    position: absolute;
+    width: 70px;
+    height: 30px;
+    font-size: 1.5ch;
+    top: 225px;
+    right: 200px;
+    background-color: rgb(12, 117, 209);
+    color: white;
+    font-family: 'LotteMartDream';
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
   }
 /* #screen1{
     margin-top: 250px;
@@ -185,6 +185,8 @@ body{
 	width: 750px;
 	height: 600px;
 	background-color: white;
+	padding : 20px;
+	border-radius : 10px;
 }
 /* #screen1-2{
 	width: 770px;

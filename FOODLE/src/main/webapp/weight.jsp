@@ -15,6 +15,17 @@
     <link rel="stylesheet" href="css/weight_style.css">
 </head>
 <body>
+<%
+    MemberVO client = (MemberVO)session.getAttribute("client");
+	
+    String name = client.getMb_name();
+    String gender = client.getMb_gender();
+    String height = client.getMb_height();
+    String weight = client.getMb_weight();
+    String choosenut = client.getMb_fav_ingredient();
+    // System.out.print(name);
+    
+  %>
 
 
 
@@ -26,22 +37,13 @@
             <div class="profile">
                 <br>
                 <h1>FOODER</h1> <br>
-                <h3>김진수</h3> <br>
-                <!-- <tr>
-                    <td>성별</td>
-                    <td>man</td> <br>
-                    <td>키</td>
-                    <td>185</td> <br>
-                    <td>몸무게</td>
-                    <td>90</td>
-                </tr> -->
-                <div class = "p_1"><a>성별    </a></div>
-				<div class = "p_1"><a>신장     cm</a></div>
-				<div class = "p_1"><a>몸무게    kg</a></div>
+                <h3><%=name %></h3> <br>
+                <div class = "p_1"><a>성별    <%=gender %></a></div>
+				<div class = "p_1"><a>신장    <%=height %> cm</a></div>
+				<div class = "p_1"><a>몸무게    <%=weight %> kg</a></div>
             </div>
             <div class="search">
-                <input type="text" placeholder="검색어를 입력해주세요">
-                <a href ="search.jsp"><img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/icon/search.png"></a>
+                <input type="text" placeholder="검색어를 입력해주세요.">
             </div>
             <ul>
                 <li>
@@ -51,15 +53,15 @@
                     </a>
                 </li>
                 <li>
-                    <a href="AllChartCon">
-                        <span class="icon"><i class="fas fa-desktop"></i></span>
-                        <span class="item">Dashboard</span>
-                    </a>
-                </li>
-                <li>
                     <a href="change.jsp">
                         <span class="icon"><i class="fas fa-user-friends"></i></span>
                         <span class="item">회원 정보 조회 / 수정</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="AllChartCon">
+                        <span class="icon"><i class="fas fa-desktop"></i></span>
+                        <span class="item">Dash board</span>
                     </a>
                 </li>
                 <li>
@@ -97,9 +99,10 @@
 			    new Chart(document.getElementById("2-2"), {
 			    type: 'line',
 			    data: {
-			      labels: [1,2,3,4,5,6,7,8] ,
+			      labels: ["<%-- <%=weight_Cl[0][0] %>", "<%=weight_Cl[1][0] %>","<%=weight_Cl[2][0] %>","<%=weight_Cl[3][0] %>","<%=weight_Cl[4][0] %>","<%=weight_Cl[5][0] %>","<%=weight_Cl[6][0] %>" --%>] ,
 			      datasets: [{ 
-			          data: [60, 20, 32, 50, 70, 90, 70, 88],
+			          data: [<%-- <%=Float.parseFloat(weight_Cl[0][1]) %>, <%=Float.parseFloat(weight_Cl[1][1]) %>, <%=Float.parseFloat(weight_Cl[2][1]) %>, <%=Float.parseFloat(weight_Cl[3][1]) %>, 
+			                 <%=Float.parseFloat(weight_Cl[4][1]) %>, <%=Float.parseFloat(weight_Cl[5][1]) %>, <%=Float.parseFloat(weight_Cl[6][1]) %> --%>],
 			          label: "몸무게",
 			          borderColor: "#3e95cd",
 			          fill: false
