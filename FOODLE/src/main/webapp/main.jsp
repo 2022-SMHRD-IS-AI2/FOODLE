@@ -13,13 +13,15 @@
 <body>
   <div class = "wrap">
     <img src="img/back2.jpg">
-     <a href = "login.jsp">
      <%if(session.getAttribute("client") == null) { %>
+     <a href = "login.jsp">
       <button class="btn1" type="button"> 로그인 </button></a>
      <a href="Join.jsp">
       <button class="btn2" type="button"> 회원가입 </button>
      </a>
       <%} else { %>
+      <a href = "AllChartCon">
+      <button class="btn1" type="button"> 대시보드 </button></a>
       <a href = "LogoutCon">
       <button class="btn2" type="button"> 로그아웃 </button></a>
       <%} %>

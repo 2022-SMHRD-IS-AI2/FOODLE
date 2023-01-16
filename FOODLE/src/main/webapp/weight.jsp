@@ -1,3 +1,6 @@
+<%@page import="com.smhrd.model.YgChartVO"%>
+<%@page import="java.util.List"%>
+<%@page import="com.smhrd.model.YgChartDAO"%>
 <%@page import="org.apache.ibatis.reflection.SystemMetaObject"%>
 <%@page import="com.smhrd.model.MemberVO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
@@ -23,6 +26,24 @@
     String height = client.getMb_height();
     String weight = client.getMb_weight();
     String choosenut = client.getMb_fav_ingredient();
+    // 아래부터 몸무게 차트용 데이터 불러오기
+    String mb_id = client.getMb_id(); //<- 아이디 가져옴
+	String mb_fav_ingrident = client.getMb_fav_ingredient();
+	YgChartDAO ygdao = new YgChartDAO();
+	List<YgChartVO> weight_C = ygdao.weightChart(mb_id); // vo 통해서 통으로 불러옴
+	
+	String[][] weight_Cl = {{"","0"},{"","0"},{"","0"},{"","0"},{"","0"},{"","0"},{"","0"}}; 
+	// 일간 몸무게 담을 리스트
+    
+	int cnt = 0;
+    if(weight_C != null){
+      	for(YgChartVO i : weight_C){ // 이중행렬에 일간 몸무게 담음
+    		weight_Cl[cnt][0] = i.getWeight_regdt().toString(); // 첫번째값 날짜
+    	  	weight_Cl[cnt][1] = Integer.toString(i.getCurr_weight()); // 두번째값 수치
+    	  	cnt++;
+    	 }
+     }
+    
     
   %>
 
@@ -98,9 +119,9 @@
 			    new Chart(document.getElementById("2-2"), {
 			    type: 'line',
 			    data: {
-			      labels: ["1/16", "1/17", "1/18", "1/19", "1/20", "1/21", "1/22"] , /* !! 표현식으로 바꿔주세요!!*/
+			    	 labels: ["<%=weight_Cl[0][0] %>", "<%=weight_Cl[1][0] %>","<%=weight_Cl[2][0] %>","<%=weight_Cl[3][0] %>","<%=weight_Cl[4][0] %>","<%=weight_Cl[5][0] %>","<%=weight_Cl[6][0] %>"] , 
 			      datasets: [{ 
-			          data: [50, 52, 53, 54, 55, 56, 58], /* !! 표현식으로 바꿔주세요!!*/
+			          data: [<%=Float.parseFloat(weight_Cl[0][1]) %>, <%=Float.parseFloat(weight_Cl[1][1]) %>, <%=Float.parseFloat(weight_Cl[2][1]) %>, <%=Float.parseFloat(weight_Cl[3][1]) %>, <%=Float.parseFloat(weight_Cl[4][1]) %>, <%=Float.parseFloat(weight_Cl[5][1]) %>, <%=Float.parseFloat(weight_Cl[6][1]) %>], 
 			          label: "몸무게",
 			          borderColor: "#3e95cd",
 			          fill: false

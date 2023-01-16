@@ -179,7 +179,7 @@
                     class="fas fa-user-friends"></i></span> <span class="item">회원 정보
                     조회 / 수정</span>
                 </a></li>
-                <li><a href="change.jsp"> <span class="icon"><i
+                <li><a href="QuitCon"> <span class="icon"><i
                     class="fas fa-user-friends"></i></span> <span class="item">회원탈퇴</span>
                 </a></li>
 			</ul>
