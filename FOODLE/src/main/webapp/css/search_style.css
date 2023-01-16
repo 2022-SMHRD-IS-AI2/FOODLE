@@ -214,7 +214,8 @@ body{
     right: 40px;
 	width: 690px;
 	height: 500px;
-    color: rgb(73, 72, 72);
+    /* color: rgb(73, 72, 72); */
+    color: rgb(0, 0, 0);
 	/* background-color: white; */
 }
 /* #screen2-2{
@@ -242,7 +243,8 @@ body{
     text-align: center;
     /* border: 1px solid #000; */
     font-weight: 900;
-    border: 2px solid rgb(73, 72, 72);
+    /* border: 2px solid rgb(73, 72, 72); */
+    border: 2px solid rgb(0, 0, 0);
 
     vertical-align: top;   /* 위 */
     vertical-align: bottom;   /* 아래 */
