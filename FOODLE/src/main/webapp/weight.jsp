@@ -40,8 +40,7 @@
 				<div class = "p_1"><a>몸무게    kg</a></div>
             </div>
             <div class="search">
-                <input type="text" placeholder="검색어를 입력해주세요">
-                <a href ="search.jsp"><img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/icon/search.png"></a>
+                <input type="text" placeholder="검색어를 입력해주세요.">
             </div>
             <ul>
                 <li>

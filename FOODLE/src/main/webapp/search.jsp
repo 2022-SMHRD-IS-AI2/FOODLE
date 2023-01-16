@@ -39,10 +39,9 @@
             </div>
             <div class="search">
                 <form action="BwChartCon">
- 				<input type="text" name="sr" placeholder="">
+ 				<input type="text" name="sr" placeholder="검색어를 입력해주세요.">
  				<input type="submit" value="검색">
-                <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/icon/search.png">
-                 </form>
+                </form>
             </div>
             <ul>
                 <li>
@@ -76,13 +75,13 @@
     <div id="fullscreen">
         <!-- <div id="screen0"></div> -->
         <div id="screen">
-            <div class="search">
-                <input type="text" placeholder="검색어를 입력해주세요">
-                <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/icon/search.png">
+            <div class="search1">
+                <input type="text" placeholder="검색어를 입력해주세요.">
             </div>
             <!-- <div id="screen-1">
             </div> -->
         </div>
+        <button class="btn2" type="button"> 제출 </button>
         <div id="screen1">
         	<canvas id="1-1" width = "700px" height="570px"></canvas>
 		
