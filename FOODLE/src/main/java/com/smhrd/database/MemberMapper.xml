@@ -37,4 +37,17 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		insert into TBL_USER_FOOD (f_seq, u_f_dt, mb_id) values (#{f_seq}, sysdate, #{mb_id} )
 	</insert>
 	
+	<insert id="change" parameterType="com.smhrd.model.MemberVO">
+		update TBL_MEMBER 
+            set mb_pw = #{mb_pw},
+                mb_name = #{mb_name}, 
+                mb_bloodtype = #{mb_bloodtype},
+                mb_phone = #{mb_phone},
+                mb_height = #{mb_height},
+                mb_weight = #{mb_weight},
+                mb_gender = #{mb_gender},
+                mb_fav_ingredient = #{mb_fav_ingredient}
+          where mb_id = #{mb_id}
+	</insert>
+	
 </mapper>

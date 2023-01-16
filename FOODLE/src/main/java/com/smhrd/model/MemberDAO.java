@@ -10,10 +10,10 @@ public class MemberDAO {
 	// DAO에서 호출했을 때 바로 DB와 연결할 수 있도록 SqlSessionManager사용
 		SqlSessionFactory sqlSessionFactory =  SqlSessionManager.getSqlSession();
 		// 아래 메소드들에서 사용할 수 있는 sqlSession 생성
-		SqlSession sqlSession = sqlSessionFactory.openSession(true);
+		
 		
 		public int join(MemberVO vo) {
-			
+			SqlSession sqlSession = sqlSessionFactory.openSession(true);
 			int cnt = 0;
 			
 			try { // 만약 sql문이 잘못됬다거나, url이 잘못 되었다던가 하면 세션이 잘 생성이 안될 수 있음
@@ -36,7 +36,7 @@ public class MemberDAO {
 		}
 		
 		public MemberVO login(MemberVO vo) {
-			
+			SqlSession sqlSession = sqlSessionFactory.openSession(true);
 			MemberVO loginName = null;
 			try {
 				
@@ -54,7 +54,25 @@ public class MemberDAO {
 			
 		}
 		
-		
+		public int change(MemberVO vo) {
+			SqlSession sqlSession = sqlSessionFactory.openSession(true);
+			int cnt =0 ;
+			try { // 만약 sql문이 잘못됬다거나, url이 잘못 되었다던가 하면 세션이 잘 생성이 안될 수 있음
+
+				// insert("실행할 sql 경로 정의", 넘겨 줄 값)
+				cnt = sqlSession.insert("com.smhrd.model.MemberDAO.change", vo);
+
+
+
+			} catch (Exception e) {
+				e.printStackTrace();
+			} finally {
+				sqlSession.close();
+			}
+			
+			
+			return cnt;
+		}
 		
 }
 		
