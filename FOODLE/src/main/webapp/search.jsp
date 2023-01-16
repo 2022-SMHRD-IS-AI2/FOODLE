@@ -67,30 +67,23 @@
                 </form>
             </div>
             <ul>
-                <li>
-                    <a href="main.jsp">
-                        <span class="icon"><i class="fas fa-home"></i></span>
-                        <span class="item">Home</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="change.jsp">
-                        <span class="icon"><i class="fas fa-user-friends"></i></span>
-                        <span class="item">회원 정보 조회 / 수정</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="AllChartCon">
-                        <span class="icon"><i class="fas fa-desktop"></i></span>
-                        <span class="item">Dash board</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="weight.jsp">
-                        <span class="icon"><i class="fas fa-chart-line"></i></span>
-                        <span class="item">몸무게 기록</span>
-                    </a>
-                </li>
+				<li><a href="main.jsp"> <span class="icon"><i
+							class="fas fa-home"></i></span> <span class="item">Home</span>
+				</a></li>
+				
+				<li><a href="AllChartCon"> <span class="icon"><i
+							class="fas fa-desktop"></i></span> <span class="item">Dash board</span>
+				</a></li>
+				<li><a href="weight.jsp"> <span class="icon"><i
+							class="fas fa-chart-line"></i></span> <span class="item">몸무게 기록</span>
+				</a></li>
+                <li><a href="change.jsp"> <span class="icon"><i
+                    class="fas fa-user-friends"></i></span> <span class="item">회원 정보
+                    조회 / 수정</span>
+                </a></li>
+                <li><a href="change.jsp"> <span class="icon"><i
+                    class="fas fa-user-friends"></i></span> <span class="item">회원탈퇴</span>
+                </a></li>
             </ul>
         </div>
     </div>
@@ -104,7 +97,10 @@
             <!-- <div id="screen-1">
             </div> -->
         </div>
+
+        <button class="btn3" type="button"> 검색 </button>
         <a href="InsertFood?seq=<%=bw_name.get(0).getF_seq() %>&name=<%=bw_name.get(0).getF_name() %>"><button class="btn2" type="button"> 제출 </button></a>
+
         <div id="screen1">
         	<canvas id="1-1" width = "700px" height="570px"></canvas>
 			<script> 
