@@ -1,3 +1,5 @@
+<%@page import="com.smhrd.model.BwChartVO"%>
+<%@page import="java.util.List"%>
 <%@page import="org.apache.ibatis.reflection.SystemMetaObject"%>
 <%@page import="com.smhrd.model.MemberVO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
@@ -23,7 +25,25 @@
     String height = client.getMb_height();
     String weight = client.getMb_weight();
     String choosenut = client.getMb_fav_ingredient();
-    // System.out.print(name);
+    String food_name = request.getParameter("sr");
+    
+    if(food_name == null){
+    	food_name = "";
+    }
+   
+    
+    List<BwChartVO> bw_name = (List<BwChartVO>)request.getAttribute("name");
+   // if(bw_name != null){
+			float f_ch = Float.parseFloat(bw_name.get(0).getF_ch()); // 검색식품 탄수화물
+			float f_pro = Float.parseFloat(bw_name.get(0).getF_pro()); // 검색식품 단백질
+			float f_fat = Float.parseFloat(bw_name.get(0).getF_fat()); // 검색식품 지방
+			float f_sugar = Float.parseFloat(bw_name.get(0).getF_sugar()); // 검색식품 당류
+			float f_sodium = Float.parseFloat(bw_name.get(0).getF_sodium()); // 검색식품 나트륨
+			float f_col = Float.parseFloat(bw_name.get(0).getF_col()); // 검색식품 콜레스테롤
+			float f_fad = Float.parseFloat(bw_name.get(0).getF_fad()); // 검색식품 포화지방
+			float f_trans = Float.parseFloat(bw_name.get(0).getF_trans()); // 검색식품 트랜스지방
+	
+	//	}
     %>
 
 
@@ -42,7 +62,7 @@
             </div>
             <div class="search">
                 <form action="BwChartCon">
- 				<input type="text" name="sr" placeholder="검색어를 입력해주세요.">
+ 				<input type="text" name="sr" placeholder="검색어를 입력해주세요." value="<%=food_name %>">
 				<input type="submit" value="검색">
                 </form>
             </div>
@@ -79,12 +99,12 @@
         <!-- <div id="screen0"></div> -->
         <div id="screen">
             <div class="search1">
-                <input type="text" placeholder="검색어를 입력해주세요.">
+                <input type="text" placeholder="검색어를 입력해주세요." value="<%=food_name %>">
             </div>
             <!-- <div id="screen-1">
             </div> -->
         </div>
-        <button class="btn2" type="button"> 제출 </button>
+        <a href="InsertFood?seq=<%=bw_name.get(0).getF_seq() %>&name=<%=bw_name.get(0).getF_name() %>"><button class="btn2" type="button"> 제출 </button></a>
         <div id="screen1">
         	<canvas id="1-1" width = "700px" height="570px"></canvas>
 			<script> 
@@ -95,7 +115,7 @@
 					        labels: ["탄수화물(g)", "단백질(g)", "지방(g)", "당류(g)", "나트륨(g)", "콜레스테롤(g)", "포화지방산(g)", "트랜스지방산(g)"],
 					        datasets: [{
 					            label: '검색 식품 영양 성분',
-					            data: [<%-- <%=eat_C_ch %>, <%=eat_C_pro %>, <%=eat_C_fat %>, <%=eat_C_sugar %>, <%=eat_C_sodium %>, <%=eat_C_col %>, <%=eat_C_fad %>, <%=eat_C_trans %> --%>],
+					            data: [<%=f_ch %>, <%=f_pro %>, <%=f_fat %>, <%=f_sugar %>, <%=f_sodium %>, <%=f_col %>, <%=f_fad %>, <%=f_trans %>],
 					            backgroundColor: 'rgba(60, 149, 205, 0.7)',
 						          borderColor: 'rgb(201, 203, 207)',
 						          fill: true,
@@ -126,37 +146,38 @@
             <table>
                 <tr>
                     <td colspan="2"  class="name">식품이름</td>
-                    <td colspan="2"></td>
+                    <td colspan="2"><%=bw_name.get(0).getF_name() %></td>
                 </tr>
                 <tr>
+                
                     <td  class="name">1회제공량(g)</td>
-                    <td></td>
+                    <td><%=bw_name.get(0).getF_gram() %></td>
                     <td  class="name">당류(g)</td>
-                    <td></td>
+                    <td><%=f_sugar %></td>
                 </tr>
                 <tr>
                     <td  class="name">열량(kcal)</td>
-                    <td></td>
+                    <td><%=bw_name.get(0).getF_kcal() %></td>
                     <td  class="name">나트륨(mg)</td>
-                    <td></td>
+                    <td><%=f_sodium %></td>
                 </tr>
                 <tr>
                     <td  class="name">탄수화물(g)</td>
-                    <td></td>
+                    <td><%=f_ch %></td>
                     <td  class="name">콜레스테롤(mg)</td>
-                    <td></td>
+                    <td> <%=f_col %></td>
                 </tr>
                 <tr>
                     <td  class="name">단백질(g)</td>
-                    <td></td>
+                    <td><%=f_pro %></td>
                     <td  class="name">포화지방산(g)</td>
-                    <td></td>
+                    <td><%=f_fad %></td>
                 </tr>
                 <tr>
                     <td  class="name">지방(g)</td>
-                    <td></td>
+                    <td> <%=f_fat %></td>
                     <td  class="name">트랜스지방산(g)</td>
-                    <td></td>
+                    <td><%=f_trans %></td>
                 </tr>
             </table>
             <!-- <div id="screen2-1">

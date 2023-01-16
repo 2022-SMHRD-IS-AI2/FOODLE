@@ -15,11 +15,12 @@
     <img src="img/back2.jpg">
      <a href = "login.jsp">
      <%if(session.getAttribute("client") == null) { %>
-      <button class="btn1" type="button"> 로그인 </button>
+      <button class="btn1" type="button"> 로그인 </button></a>
       <%} else { %>
-      <button class="btn1" type="button"> 로그아웃 </button>
+      <a href = "LogoutCon">
+      <button class="btn1" type="button"> 로그아웃 </button></a>
       <%} %>
-    </a>
+  
      <a href="Join.jsp">
       <button class="btn2" type="button"> 회원가입 </button>
      </a>

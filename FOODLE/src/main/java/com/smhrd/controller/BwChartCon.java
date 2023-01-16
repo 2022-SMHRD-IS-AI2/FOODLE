@@ -19,11 +19,15 @@ public class BwChartCon extends HttpServlet {
 
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("UTF-8");
-		HttpSession session = request.getSession();
-//		MemberVO client = (MemberVO)session.getAttribute("client");
+//		HttpSession session = request.getSession();
 		String sr = request.getParameter("sr");
+		System.out.println("sr");
+		if(request.getParameter("sr") == null) {
+			sr = (String)request.getAttribute("sr");
+//			System.out.println("처음에 눌일떄"+sr);
+		}
 		
-		MemberVO vo = new MemberVO();
+//		MemberVO vo = new MemberVO();
 		BwChartDAO dao = new BwChartDAO();
 		
 		List<BwChartVO> name = dao.searchFood(sr);
@@ -32,7 +36,7 @@ public class BwChartCon extends HttpServlet {
 //		System.out.println(name1);
 		
 		if(sr.equals(name1)) {
-			RequestDispatcher rd = request.getRequestDispatcher("DashBoard.jsp");
+			RequestDispatcher rd = request.getRequestDispatcher("search.jsp");
 			request.setAttribute("name", name);
 			rd.forward(request, response);
 		}else {
