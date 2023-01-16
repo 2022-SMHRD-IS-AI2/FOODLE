@@ -47,30 +47,23 @@
                 </form>
             </div>
             <ul>
-                <li>
-                    <a href="main.jsp">
-                        <span class="icon"><i class="fas fa-home"></i></span>
-                        <span class="item">Home</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="change.jsp">
-                        <span class="icon"><i class="fas fa-user-friends"></i></span>
-                        <span class="item">회원 정보 조회 / 수정</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="AllChartCon">
-                        <span class="icon"><i class="fas fa-desktop"></i></span>
-                        <span class="item">Dash board</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="weight.jsp">
-                        <span class="icon"><i class="fas fa-chart-line"></i></span>
-                        <span class="item">몸무게 기록</span>
-                    </a>
-                </li>
+				<li><a href="main.jsp"> <span class="icon"><i
+							class="fas fa-home"></i></span> <span class="item">Home</span>
+				</a></li>
+				
+				<li><a href="AllChartCon"> <span class="icon"><i
+							class="fas fa-desktop"></i></span> <span class="item">Dash board</span>
+				</a></li>
+				<li><a href="weight.jsp"> <span class="icon"><i
+							class="fas fa-chart-line"></i></span> <span class="item">몸무게 기록</span>
+				</a></li>
+                <li><a href="change.jsp"> <span class="icon"><i
+                    class="fas fa-user-friends"></i></span> <span class="item">회원 정보
+                    조회 / 수정</span>
+                </a></li>
+                <li><a href="change.jsp"> <span class="icon"><i
+                    class="fas fa-user-friends"></i></span> <span class="item">회원탈퇴</span>
+                </a></li>
             </ul>
         </div>
     </div>
