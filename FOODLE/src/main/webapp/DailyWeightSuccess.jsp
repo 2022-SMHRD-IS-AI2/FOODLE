@@ -10,7 +10,7 @@
 
 	<script>
 		alert('몸무게를 입력했습니다!')
-		location.href="DashBoard.jsp";
+		location.href="AllChartCon";
 	</script>
 
 </body>

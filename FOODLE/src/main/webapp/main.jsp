@@ -16,14 +16,14 @@
      <a href = "login.jsp">
      <%if(session.getAttribute("client") == null) { %>
       <button class="btn1" type="button"> 로그인 </button></a>
-      <%} else { %>
-      <a href = "LogoutCon">
-      <button class="btn1" type="button"> 로그아웃 </button></a>
-      <%} %>
-  
      <a href="Join.jsp">
       <button class="btn2" type="button"> 회원가입 </button>
      </a>
+      <%} else { %>
+      <a href = "LogoutCon">
+      <button class="btn2" type="button"> 로그아웃 </button></a>
+      <%} %>
+  
     
       <span class="ments1">
         지금이 아니면 만날 수 없는,

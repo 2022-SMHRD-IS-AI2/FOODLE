@@ -23,7 +23,6 @@
     String height = client.getMb_height();
     String weight = client.getMb_weight();
     String choosenut = client.getMb_fav_ingredient();
-    // System.out.print(name);
     
   %>
 
@@ -71,17 +70,23 @@
     <div id="fullscreen">
         <div id="screen0"></div>
 
+
+
+
+		<form action="DailyWeightCon" method="post">
         <div>
        <div id="date">
-            <input type="date">
+            <input type="date" name="date">
         </div>
         <div id="text">
-            <input type="text" placeholder="체중을 입력해주세요.">
+            <input type="text" placeholder="체중을 입력해주세요." name="weight">
+            <input type="submit" value="제출" class="btn1">
         </div>
                 
-        <!-- <button class="btn1" type="button"><img src="./img/button1.png"></button> -->
-        <button class="btn1" type="button"> 제출 </button>
+        <!-- <button class="btn1" type="button"><img src="./img/button1.png"></button>  여기도!!!!!!!! -->
+        <!-- <button class="btn1" type="button"> 제출 </button> -->
         </div>
+        </form>
 
           
            <div id="screen1-0">

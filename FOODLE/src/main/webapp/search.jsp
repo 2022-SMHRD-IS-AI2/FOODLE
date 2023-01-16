@@ -90,6 +90,7 @@
 
     <div id="fullscreen">
         <!-- <div id="screen0"></div> -->
+        <form action="BwChartCon">
         <div id="screen">
             <div class="search1">
                 <input type="text" placeholder="검색어를 입력해주세요." value="<%=food_name %>">
@@ -97,8 +98,9 @@
             <!-- <div id="screen-1">
             </div> -->
         </div>
-
-        <a><button class="btn3" type="button" > 검색 </button></a>
+      <a href="BwChartCon"><button class="btn3" type="button" > 검색 </button></a>
+        <!-- <input type="submit" value="검색" class="btn3" name="sr">    여기 수정해야함!!!!!!!! -->
+        </form>
         <a href="InsertFood?seq=<%=bw_name.get(0).getF_seq() %>&name=<%=bw_name.get(0).getF_name() %>"><button class="btn2" type="button"> 추가 </button></a>
 
         <div id="screen1">

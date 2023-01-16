@@ -6,6 +6,6 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 <mapper namespace="com.smhrd.model.DailyWeightDAO">
 	
 	<insert id="weight" parameterType="com.smhrd.model.DailyWeightVO">
-		insert into tbl_weight_daily (curr_weight, weight_regdt, mb_id) values (#{curr_weight}, sysdate, #{mb_id})
+		insert into tbl_weight_daily (curr_weight, weight_regdt, mb_id) values (#{curr_weight}, #{date}, #{mb_id})
 	</insert>
 </mapper>

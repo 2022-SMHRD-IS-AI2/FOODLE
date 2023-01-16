@@ -7,6 +7,7 @@
 <title>Insert title here</title>
 <%
 	String f_n = request.getParameter("name");
+	// 안쓰는 페이지!!!!!!!!!!!!!!!!!!!!!!!!!
 %>
 </head>
 <body>
