@@ -43,7 +43,7 @@
             <div class="search">
                 <form action="BwChartCon">
  				<input type="text" name="sr" placeholder="검색어를 입력해주세요.">
- 				<input type="submit" value="검색">
+				<input type="submit" value="검색">
                 </form>
             </div>
             <ul>

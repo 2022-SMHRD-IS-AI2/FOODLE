@@ -43,7 +43,8 @@
 				<div class = "p_1"><a>몸무게    <%=weight %> kg</a></div>
             </div>
             <div class="search">
-                <input type="text" placeholder="검색어를 입력해주세요.">
+                <input type="text" name="sr" placeholder="검색어를 입력해주세요.">
+					<input type="submit" value="검색">
             </div>
             <ul>
                 <li>
