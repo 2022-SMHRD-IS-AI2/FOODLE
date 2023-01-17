@@ -138,6 +138,45 @@
        }
     
     
+    for (int i = 0; i < daily_Cl.length; i++) { // 일간 선호영양소 재배열
+		for (int j = i + 1; j < daily_Cl.length; j++) {
+			if(Integer.parseInt(daily_Cl[i][1]) != 0 && Integer.parseInt(daily_Cl[j][1]) != 0) {
+			if (Integer.parseInt(daily_Cl[i][0])  > Integer.parseInt(daily_Cl[j][0])) { 
+				String[] tmp = daily_Cl[i];
+				daily_Cl[i] = daily_Cl[j];
+				daily_Cl[j] = tmp;
+			}
+			}
+		}
+	}
+    
+    for (int i = 0; i < kcal_Cl.length; i++) { // 일간 섭취 칼로리 재배열
+		for (int j = i + 1; j < kcal_Cl.length; j++) {
+			if(Integer.parseInt(kcal_Cl[i][1]) != 0 && Integer.parseInt(kcal_Cl[j][1]) != 0) {
+			if (Integer.parseInt(kcal_Cl[i][0])  > Integer.parseInt(kcal_Cl[j][0])) { // 오름차순
+				String[] tmp = kcal_Cl[i];
+				kcal_Cl[i] = kcal_Cl[j];
+				kcal_Cl[j] = tmp;
+			}
+			}
+		}
+	}
+    
+    for (int i = 0; i < weight_Cl.length; i++) { // 일간 몸무게 재배열
+		for (int j = i + 1; j < weight_Cl.length; j++) {
+			if(Integer.parseInt(weight_Cl[i][1]) != 0 && Integer.parseInt(weight_Cl[j][1]) != 0) {
+			if (Integer.parseInt(weight_Cl[i][0].substring(8))  > Integer.parseInt(weight_Cl[j][0].substring(8))) { // 오름차순 2013-01-16
+				String[] tmp = weight_Cl[i];
+				weight_Cl[i] = weight_Cl[j];
+				weight_Cl[j] = tmp;
+				System.out.println( Integer.parseInt(weight_Cl[i][0].substring(8)) );
+				
+			}
+			}
+		}
+	}
+    
+    
     
  	// 2-3 :  검색바 관련 세팅
   
@@ -199,7 +238,7 @@
 			    data: {
 			      labels: ["탄수화물(g)", "단백질(g)", "지방(g)", "당류(g)", "나트륨(g)", "콜레스테롤(g)", "포화지방산(g)", "트랜스지방산(g)" ] ,
 			      datasets: [{ 
-			           data: [<%=dailyE_C_ch %>, <%=dailyE_C_pro %>, <%=dailyE_C_fat %>, <%=dailyE_C_sugar %>, <%=dailyE_C_sodium %>, <%=dailyE_C_col %>, <%=dailyE_C_fad %>, <%=dailyE_C_trans %>], 
+			           data: [<%=dailyE_C_ch %>, <%=dailyE_C_pro %>, <%=dailyE_C_fat %>, <%=dailyE_C_sugar %>, <%=dailyE_C_sodium/1000 %>, <%=dailyE_C_col/1000 %>, <%=dailyE_C_fad %>, <%=dailyE_C_trans %>], 
 			        
 			        
 			          label: "일일 영양분",
@@ -325,7 +364,7 @@
 					        labels: ["탄수화물(g)", "단백질(g)", "지방(g)", "당류(g)", "나트륨(g)", "콜레스테롤(g)", "포화지방산(g)", "트랜스지방산(g)"],
 					        datasets: [{
 					            label: '검색 식품 영양 성분',
-					            data: [<%=eat_C_ch %>, <%=eat_C_pro %>, <%=eat_C_fat %>, <%=eat_C_sugar %>, <%=eat_C_sodium %>, <%=eat_C_col %>, <%=eat_C_fad %>, <%=eat_C_trans %>],
+					            data: [<%=eat_C_ch %>, <%=eat_C_pro %>, <%=eat_C_fat %>, <%=eat_C_sugar %>, <%=eat_C_sodium/1000 %>, <%=eat_C_col/1000 %>, <%=eat_C_fad %>, <%=eat_C_trans %>],
 					            backgroundColor: 'rgba(60, 149, 205, 0.7)',
 						          borderColor: 'rgb(201, 203, 207)',
 						          fill: true,

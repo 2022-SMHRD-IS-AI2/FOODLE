@@ -44,6 +44,21 @@
     	 }
      }
     
+    for (int i = 0; i < weight_Cl.length; i++) {
+		for (int j = i + 1; j < weight_Cl.length; j++) {
+			if(Integer.parseInt(weight_Cl[i][1]) != 0 && Integer.parseInt(weight_Cl[j][1]) != 0) {
+			if (Integer.parseInt(weight_Cl[i][0].substring(8))  > Integer.parseInt(weight_Cl[j][0].substring(8))) { // 오름차순 2013-01-16
+				String[] tmp = weight_Cl[i];
+				weight_Cl[i] = weight_Cl[j];
+				weight_Cl[j] = tmp;
+				System.out.println( Integer.parseInt(weight_Cl[i][0].substring(8)) );
+				
+			}
+			}
+		}
+	}
+    
+    
     
   %>
 

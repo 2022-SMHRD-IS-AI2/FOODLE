@@ -114,7 +114,7 @@
 					        labels: ["탄수화물(g)", "단백질(g)", "지방(g)", "당류(g)", "나트륨(g)", "콜레스테롤(g)", "포화지방산(g)", "트랜스지방산(g)"],
 					        datasets: [{
 					            label: '검색 식품 영양 성분',
-					            data: [<%=f_ch %>, <%=f_pro %>, <%=f_fat %>, <%=f_sugar %>, <%=f_sodium %>, <%=f_col %>, <%=f_fad %>, <%=f_trans %>],
+					            data: [<%=f_ch %>, <%=f_pro %>, <%=f_fat %>, <%=f_sugar %>, <%=f_sodium/1000 %>, <%=f_col/1000 %>, <%=f_fad %>, <%=f_trans %>],
 					            backgroundColor: 'rgba(60, 149, 205, 0.7)',
 						          borderColor: 'rgb(201, 203, 207)',
 						          fill: true,
@@ -157,14 +157,14 @@
                 <tr>
                     <td  class="name">열량(kcal)</td>
                     <td><%=bw_name.get(0).getF_kcal() %></td>
-                    <td  class="name">나트륨(mg)</td>
-                    <td><%=f_sodium %></td>
+                    <td  class="name">나트륨(g)</td>
+                    <td><%=f_sodium/1000 %></td>
                 </tr>
                 <tr>
                     <td  class="name">탄수화물(g)</td>
                     <td><%=f_ch %></td>
-                    <td  class="name">콜레스테롤(mg)</td>
-                    <td> <%=f_col %></td>
+                    <td  class="name">콜레스테롤(g)</td>
+                    <td> <%=f_col/1000 %></td>
                 </tr>
                 <tr>
                     <td  class="name">단백질(g)</td>
