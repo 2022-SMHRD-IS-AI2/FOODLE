@@ -27,7 +27,11 @@
                 </colgroup>
                 <tr>
                     <td>ID : </td>
-                    <td><input type="text" placeholder="아이디를 입력해주세요." name="mb_id"></td>
+                    <td>
+                        <input type="text" placeholder="아이디를 입력해주세요." name="mb_id">
+                        <button class="check1" type="button" > 중복확인 </button>
+                        <!-- <input type="button" class="check1" value="중복확인  "> -->
+                    </td>
                 </tr>
                 <tr>
                     <td>PW : </td>

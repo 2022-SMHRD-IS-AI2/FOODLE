@@ -101,7 +101,7 @@
         </div>
         <div id="text">
             <input type="text" placeholder="체중을 입력해주세요." name="weight">
-            <input type="submit" value="제출" class="btn1">
+              <input type="submit" value="제출" class="btn1">
         </div>
                 
         <!-- <button class="btn1" type="button"><img src="./img/button1.png"></button>  input 으로 수정했습니다 ! -->

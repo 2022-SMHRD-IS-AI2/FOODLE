@@ -74,6 +74,81 @@ public class MemberDAO {
 			return cnt;
 		}
 		
+		public int deletedw(String mb_id) {
+			
+			SqlSession sqlSession = sqlSessionFactory.openSession(true);
+			
+			int cnt = 0;
+			
+			try {
+				cnt = sqlSession.delete("com.smhrd.model.MemberDAO.deletedw", mb_id);
+				
+			}catch(Exception e){
+				e.printStackTrace();
+			}finally {
+				sqlSession.close();
+			}
+			
+			return cnt;
+			
+		}
+		
+		public int deleteuf(String mb_id) {
+			
+			SqlSession sqlSession = sqlSessionFactory.openSession(true);
+			
+			int cnt = 0;
+			
+			try {
+				cnt = sqlSession.delete("com.smhrd.model.MemberDAO.deleteuf", mb_id);
+				
+			}catch(Exception e){
+				e.printStackTrace();
+			}finally {
+				sqlSession.close();
+			}
+			
+			return cnt;
+			
+		}
+		
+		public int quitMember(String mb_id) {
+			
+			SqlSession sqlSession = sqlSessionFactory.openSession(true);
+			
+			int cnt = 0;
+			
+			try {
+				cnt = sqlSession.delete("com.smhrd.model.MemberDAO.quitMember", mb_id);
+				
+			}catch(Exception e){
+				e.printStackTrace();
+			}finally {
+				sqlSession.close();
+			}
+			
+			return cnt;
+			
+		}
+		
+		public int IdCheck(String mb_id) {
+			
+			SqlSession sqlSession = sqlSessionFactory.openSession(true);
+			
+			int cnt = 0;
+			
+			try {
+				cnt = sqlSession.delete("com.smhrd.model.MemberDAO.IdCheck", mb_id);
+				
+			}catch(Exception e){
+				e.printStackTrace();
+			}finally {
+				sqlSession.close();
+			}
+			
+			return cnt;
+			
+		}
 }
 		
 		

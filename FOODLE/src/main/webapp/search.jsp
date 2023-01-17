@@ -93,15 +93,16 @@
         <form action="BwChartCon">
         <div id="screen">
             <div class="search1">
-                <input type="text" placeholder="검색어를 입력해주세요." value="<%=food_name %>">
+                <input type="text" placeholder="검색어를 입력해주세요." value="<%=food_name %>" name = "sr">
             </div>
             <!-- <div id="screen-1">
             </div> -->
         </div>
-      <a href="BwChartCon"><button class="btn3" type="button" > 검색 </button></a>
-        <input type="submit" value="추가" class="btn2" name="sr">
+      <!-- <a href="BwChartCon"><button class="btn3" type="button" > 검색 </button></a> -->
+        <!-- <input type="submit" value="추가" class="btn2" name="sr"> -->
+         <input type="submit" class="btn2" name="sr" value ="검색">
         </form>
-        <!-- <a href="InsertFood?seq=<%=bw_name.get(0).getF_seq() %>&name=<%=bw_name.get(0).getF_name() %>"><button class="btn2" type="button"> 추가 </button></a> input 타입으로 수정했습니다 ! -->
+        <a href="InsertFood?seq=<%=bw_name.get(0).getF_seq() %>&name=<%=bw_name.get(0).getF_name() %>"><button class="btn3" type="button"> 추가 </button></a> 
 
         <div id="screen1">
         	<canvas id="1-1" width = "700px" height="570px"></canvas>

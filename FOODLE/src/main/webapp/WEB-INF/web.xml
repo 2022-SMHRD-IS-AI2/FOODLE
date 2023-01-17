@@ -70,6 +70,18 @@
   	<description></description>
   	<servlet-class>com.smhrd.controller.SearchCon</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>LogoutCon</servlet-name>
+  	<display-name>LogoutCon</display-name>
+  	<description></description>
+  	<servlet-class>com.smhrd.controller.LogoutCon</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>QuitCon</servlet-name>
+  	<display-name>QuitCon</display-name>
+  	<description></description>
+  	<servlet-class>com.smhrd.controller.QuitCon</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>LoginCon</servlet-name>
   	<url-pattern>/LoginCon</url-pattern>
@@ -113,5 +125,13 @@
   <servlet-mapping>
   	<servlet-name>SearchCon</servlet-name>
   	<url-pattern>/SearchCon</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>LogoutCon</servlet-name>
+  	<url-pattern>/LogoutCon</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>QuitCon</servlet-name>
+  	<url-pattern>/QuitCon</url-pattern>
   </servlet-mapping>
 </web-app>
