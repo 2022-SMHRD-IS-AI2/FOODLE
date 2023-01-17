@@ -35,7 +35,8 @@ input{border-radius:none; border: 1px solid #000;}
 
 .join_form{position: absolute; top:0; left:0; bottom:0; right:0; font-size: 17px;
     margin:auto; width:500px; max-height: 550px;
-    padding: 50px 20px; /* 나중에 지우기 border: 1px solid #dedede; */}
+    padding: 50px 20px; }
+    /* 나중에 지우기 border: 1px solid #dedede;} */
 
 
     input {
@@ -68,6 +69,16 @@ input{border-radius:none; border: 1px solid #000;}
     background: rgba(96,96,0,0.5);
     color: white;
     transition: all 0.5s;
+}
+
+.check1 {
+    text-align: center;
+    width: 85px;
+    height: 25px;
+    position: relative;
+    left: 85px;
+    border-radius: 10px;
+    border: 1px solid #000;
 }
 
 
