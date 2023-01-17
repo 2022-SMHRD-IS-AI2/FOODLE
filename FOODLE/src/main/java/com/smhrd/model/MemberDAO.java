@@ -131,7 +131,24 @@ public class MemberDAO {
 			
 		}
 		
-		
+		public int IdCheck(String mb_id) {
+			
+			SqlSession sqlSession = sqlSessionFactory.openSession(true);
+			
+			int cnt = 0;
+			
+			try {
+				cnt = sqlSession.delete("com.smhrd.model.MemberDAO.IdCheck", mb_id);
+				
+			}catch(Exception e){
+				e.printStackTrace();
+			}finally {
+				sqlSession.close();
+			}
+			
+			return cnt;
+			
+		}
 }
 		
 		

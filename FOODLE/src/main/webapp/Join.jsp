@@ -9,7 +9,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/all_style.css">
     <link rel="stylesheet" href="css/member_style.css">
-
+	
 </head>
 <body>
 	 <div class = "wrap">
