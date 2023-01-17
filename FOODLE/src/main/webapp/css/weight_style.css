@@ -139,7 +139,8 @@ body{
     top: 220px;
     right: 750px;
   } */
-  button.btn1{
+  
+  .btn1{
     position: fixed;
     width: 70px;
     height: 30px;
@@ -152,7 +153,9 @@ body{
     cursor: pointer;
     border: none;
     border-radius: 10px;
+    line-height: 0px;
   }
+
  /* th,td{
    width: 200px;
    height: 83px;

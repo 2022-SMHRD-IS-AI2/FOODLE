@@ -154,7 +154,7 @@ body{
     padding: 10px 12px;
     font-size: 14px;
   }
-  button.btn2{
+  .btn2{
     position: fixed;
     width: 70px;
     height: 30px;
@@ -167,6 +167,7 @@ body{
     cursor: pointer;
     border: none;
     border-radius: 10px;
+    line-height: 0px;
   }
   button.btn3{
     position: fixed;
