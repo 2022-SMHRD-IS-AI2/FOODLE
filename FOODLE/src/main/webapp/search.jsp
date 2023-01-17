@@ -99,7 +99,7 @@
             </div> -->
         </div>
       <a href="BwChartCon"><button class="btn3" type="button" > 검색 </button></a>
-        <!-- <input type="submit" value="검색" class="btn3" name="sr">    여기 수정해야함!!!!!!!! -->
+         <!-- <input type="submit" value="검색" class="btn3" name="sr"> -->
         </form>
         <a href="InsertFood?seq=<%=bw_name.get(0).getF_seq() %>&name=<%=bw_name.get(0).getF_name() %>"><button class="btn2" type="button"> 추가 </button></a>
 

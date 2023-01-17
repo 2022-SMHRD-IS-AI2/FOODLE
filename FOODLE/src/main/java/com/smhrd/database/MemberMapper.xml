@@ -50,4 +50,16 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
           where mb_id = #{mb_id}
 	</insert>
 	
+	<delete id="deletewd" parameterType="String" >
+		delete from tbl_weight_daily where mb_id=#{mb_id}
+	</delete>
+	
+	<delete id="deleteuf" parameterType="String" >
+		delete from tbl_user_food where mb_id=#{mb_id}
+	</delete>
+	
+	<delete id="quitMember" parameterType="String" >
+		delete from TBL_MEMBER where mb_id=#{mb_id}
+	</delete>
+	
 </mapper>
