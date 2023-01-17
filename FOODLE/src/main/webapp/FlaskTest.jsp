@@ -40,7 +40,6 @@ pageEncoding="UTF-8"%>
 				$.ajax({
 					url : 'http://222.102.104.190:8888/ex02', // 어디로?
 					type : 'get',  // Get or Post
-					// async : false
 					data : {
 						// 어떤 데이터를?
 						// key=123@data=456
