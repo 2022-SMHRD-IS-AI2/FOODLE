@@ -99,9 +99,9 @@
             </div> -->
         </div>
       <a href="BwChartCon"><button class="btn3" type="button" > 검색 </button></a>
-        <!-- <input type="submit" value="검색" class="btn3" name="sr">    여기 수정해야함!!!!!!!! -->
+        <input type="submit" value="추가" class="btn2" name="sr">
         </form>
-        <a href="InsertFood?seq=<%=bw_name.get(0).getF_seq() %>&name=<%=bw_name.get(0).getF_name() %>"><button class="btn2" type="button"> 추가 </button></a>
+        <!-- <a href="InsertFood?seq=<%=bw_name.get(0).getF_seq() %>&name=<%=bw_name.get(0).getF_name() %>"><button class="btn2" type="button"> 추가 </button></a> input 타입으로 수정했습니다 ! -->
 
         <div id="screen1">
         	<canvas id="1-1" width = "700px" height="570px"></canvas>
