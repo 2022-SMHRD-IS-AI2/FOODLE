@@ -18,7 +18,6 @@ public class QuitCon extends HttpServlet {
 		HttpSession session = request.getSession();
 		MemberVO client = (MemberVO)session.getAttribute("client");
 		String mb_id = client.getMb_id();
-		session.removeAttribute("client");
 		// DAO -> deleteMember() 만들기
 		MemberDAO dao = new MemberDAO();
 		dao.deleteuf(mb_id);
@@ -27,6 +26,7 @@ public class QuitCon extends HttpServlet {
 		// sql 작성 (MamberMapper.xml)
 		if(cnt>0) {
 			System.out.println("삭제성공");
+			session.removeAttribute("client");
 			response.sendRedirect("QuitSuccess.jsp");
 		}else {
 			System.out.println("삭제실패");
