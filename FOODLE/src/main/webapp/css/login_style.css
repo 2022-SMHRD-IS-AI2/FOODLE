@@ -3,7 +3,7 @@
 .wrap{width: 100%; height: 100vh; overflow: hidden; position: relative;}
 .wrap>img{width: 100%; height: 100vh; }
 input{border-radius:none; border:none; }
-
+button{border:none; border-radius:none;}
 #box{position: absolute; top:50%; left:50%;
     margin-left: -230px; margin-top: -197.5px; max-height: 600px; box-sizing: border-box;}
 

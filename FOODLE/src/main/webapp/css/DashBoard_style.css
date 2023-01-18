@@ -156,6 +156,13 @@ body{
 	padding : 20px;
 	border-radius : 10px;
 }
+button.btn4{
+    width: 170px;
+    padding : 20px;
+    border-radius : 10px;
+    margin-top: 38px;
+    margin-left: 280px;
+}
 /* 추천 식단 */
 #screen1-3{
     /* outline: 3px;
@@ -170,6 +177,8 @@ body{
 	padding : 20px;
 	border-radius : 10px;
 }
+
+
 /* #screen2{
     width: 770px;
     height: 948px;

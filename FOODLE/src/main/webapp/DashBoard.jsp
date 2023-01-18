@@ -229,9 +229,6 @@
                 <li><a href="QuitCon"> <span class="icon"><i
                     class="fas fa-user-friends"></i></span> <span class="item">회원탈퇴</span>
                 </a></li>
-                <li> <span class="icon"><i
-                    class="fas fa-user-friends"></i></span><button onclick="response()">여기임</button>
-                </li>
 			</ul>
 		</div>
 	</div>
@@ -287,10 +284,14 @@
 			</script>
 			</div>
 			<div id="screen1-2">
-			<!-- 1-2. 주간 관심 영양소 그래프(EX.당, 나트륨,,, 택1)-->
-			<canvas id="1-2" width = "720px" height="320px"  margin ="auto"></canvas>
+			<!-- 1-2. 추천 식단 -->
+                <button class="btn4" onclick=''> 추천 음식을 원하세요? </button>	
+			</div>
+			<div id="screen1-3">
+			<!-- 1-3. 주간 관심 영양소 그래프(EX.당, 나트륨,,, 택1)-->
+			<canvas id="1-3" width = "720px" height="150px"  margin ="auto"></canvas>
 			<script>
-		    	new Chart(document.getElementById("1-2"), {
+		    	new Chart(document.getElementById("1-3"), {
 			    type: 'line',
 			    data: {
 			      labels: ["<%=daily_Cl[0][0] %>", "<%=daily_Cl[1][0] %>","<%=daily_Cl[2][0] %>","<%=daily_Cl[3][0] %>","<%=daily_Cl[4][0] %>","<%=daily_Cl[5][0] %>","<%=daily_Cl[6][0] %>"] ,
@@ -309,6 +310,7 @@
 			      }
 			    }
 			  });
+<<<<<<< HEAD
 			</script>	
 			</div>
 			<div id="screen1-3">
@@ -318,8 +320,13 @@
 			
 			
 			
+=======
+			</script>
+>>>>>>> branch 'master1' of https://github.com/2022-SMHRD-IS-AI2/FOODLE.git
 			<!-- 1-3. 추천 식단 -->
+                <button class="btn4" onclick=''> 추천 음식을 원하세요? </button>
 			</div>
+                
 		</div>
 		<div id="screen2">
 			<div id="screen2-1">
@@ -393,11 +400,7 @@
 					    options: {
 					    	 title: {
 					    	        display: true,
-					    	        <%if(eat_C != null) { %>
 					    	        text: '최근 섭취 식품 : <%=eat_C.getF_name() %>'
-					    	        <% } else { %>
-					    	        text: '최근 섭취 식품을 추가해주세요!!'
-					    	        <% }%>
 					    	      },
 					        scales: {
 					            y: {
