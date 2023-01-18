@@ -345,24 +345,9 @@
 			      }
 			    }
 			  });
-<<<<<<< HEAD
+
 			</script>	
 			</div>
-			<div id="screen1-3">
-			
-			
-			
-			
-			
-			
-=======
-			</script>
->>>>>>> branch 'master1' of https://github.com/2022-SMHRD-IS-AI2/FOODLE.git
-			<!-- 1-3. 추천 식단 -->
-                <button class="btn4" onclick=''> 추천 음식을 원하세요? </button>
-			</div>
-                
-		</div>
 		<div id="screen2">
 			<div id="screen2-1">
 			<!-- 2-1. 주간 칼로리-->
