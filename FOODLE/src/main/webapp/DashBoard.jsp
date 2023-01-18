@@ -221,6 +221,9 @@
                 <li><a href="QuitCon"> <span class="icon"><i
                     class="fas fa-user-friends"></i></span> <span class="item">회원탈퇴</span>
                 </a></li>
+                <li> <span class="icon"><i
+                    class="fas fa-user-friends"></i></span><button onclick="response()">여기임</button>
+                </li>
 			</ul>
 		</div>
 	</div>
@@ -394,6 +397,60 @@
 			</div>
 		</div>
 	</div>
-
+	<script src="https://code.jquery.com/jquery-3.6.3.min.js" type="text/javascript"></script>
+	<script>
+		function response(){
+				console.log("불러오기")
+				/* var arr = new Array(); */
+				/* var arr = []; */
+				// ajax를 사용해서 Flask에 요청받기
+				$.ajax({
+					url : 'http://222.102.104.190:8888/ex03', // 어디로?
+					type : 'get',  // Get or Post
+					/* async : false */
+					data : {
+						// 어떤 데이터를?
+						// key=123@data=456
+						// "key" : "value"
+						"f_name" : f_name,
+						},
+					 // success값을 전역변수에 담을 수 있다.
+					success : function(res){
+						// 요청이 성공했을 때, 실행되는 콜백 함수
+						console.log(res[0]);
+						/* var arr = arr.unshift(res); // 값 가져오기
+						console.log('안녕'+ arr); */
+					},
+					error : function(e){
+						// 요청이 실패했을 때, 실행되는 콜백 함수
+						alert("error!");
+					}
+				});
+				
+			}
+		
+		
+		
+		const f_name = "<%=eat_C.getF_name() %>";
+		
+		$.ajax({
+			url : 'http://222.102.104.190:8888/ex02', // 어디로?
+			type : 'get',  // Get or Post
+			data : {
+				// 어떤 데이터를?
+				// key=123@data=456
+				// "key" : "value"
+				"f_name" : f_name,
+				},
+				success : function(res){
+					// 요청이 성공했을 때, 실행되는 콜백 함수
+					console.log("안녕"+res);
+				},
+				error : function(e){
+					// 요청이 실패했을 때, 실행되는 콜백 함수
+					alert("error!");
+				}
+			});
+	</script>
 </body>
 </html>
