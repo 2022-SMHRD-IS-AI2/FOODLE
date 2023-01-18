@@ -11,6 +11,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+
 import com.smhrd.model.BwChartDAO;
 import com.smhrd.model.BwChartVO;
 import com.smhrd.model.ChartMasterVO;
@@ -88,7 +91,19 @@ public class AllChartCon extends HttpServlet {
 		RequestDispatcher rd = request.getRequestDispatcher("DashBoard.jsp");
 		request.setAttribute("mvo", mvo);
 		rd.forward(request, response);
+		
+//========================= 뉴우스 영역 ==================================
 
+		String url = "https://search.naver.com/search.naver?where=news&ie=utf8&sm=nws_hty&query=%ED%83%84%EC%88%98%ED%99%94%EB%AC%BC";
+		Document doc = Jsoup.connect(url).get();
+		
+		String a = doc.text();
+		
+		System.out.println(a);
+		
+		
+		
+		
 	}
 
 }

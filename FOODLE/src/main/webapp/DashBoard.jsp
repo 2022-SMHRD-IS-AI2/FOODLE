@@ -374,7 +374,11 @@
 					    options: {
 					    	 title: {
 					    	        display: true,
+					    	        <%if(eat_C != null) { %>
 					    	        text: '최근 섭취 식품 : <%=eat_C.getF_name() %>'
+					    	        <% } else { %>
+					    	        text: '최근 섭취 식품을 추가해주세요!!'
+					    	        <% }%>
 					    	      },
 					        scales: {
 					            y: {
