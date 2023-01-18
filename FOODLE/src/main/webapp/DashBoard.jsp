@@ -1,3 +1,5 @@
+<%@page import="com.smhrd.model.NewsVO"%>
+<%@page import="org.jsoup.select.Elements"%>
 <%@page import="java.time.LocalDate"%>
 <%@page import="com.smhrd.model.DailyEatVO"%>
 <%@page import="com.smhrd.model.DailyChooseVO"%>
@@ -41,6 +43,7 @@
       List<DailyChartVO> kcal_C = mvo.getDailykcal(); // 일간 섭취 칼로리
       BwChartVO eat_C = mvo.getEat_food(); // 최근 섭취한 식품
       List<YgChartVO> weight_C = mvo.getWeight(); // 몸무게
+      NewsVO nvo = mvo.getNvo(); // 뉴스 크롤링한 데이터
       
       String[][] daily_Cl = {{"","0"},{"","0"},{"","0"},{"","0"},{"","0"},{"","0"},{"","0"}}; // 일간 선호영양소 담을 리스트
       String[][] kcal_Cl = {{"","0"},{"","0"},{"","0"},{"","0"},{"","0"},{"","0"},{"","0"}}; // 일간 섭취 칼로리 담을 리스트
@@ -176,6 +179,11 @@
 		}
 	}
     
+    // 뉴스 크롤링 데이터 풀기
+    
+    String title = nvo.getTitle().toString();
+    String text = nvo.getText().html();
+    String img = nvo.getThumb().attr("data-lazysrc");
     
     
  	// 2-3 :  검색바 관련 세팅
@@ -227,6 +235,8 @@
 			</ul>
 		</div>
 	</div>
+	
+	
 
 	<div id="fullscreen">
 		<div id="screen0"></div>
@@ -302,6 +312,12 @@
 			</script>	
 			</div>
 			<div id="screen1-3">
+			
+			
+			
+			
+			
+			
 			<!-- 1-3. 추천 식단 -->
 			</div>
 		</div>
@@ -394,6 +410,15 @@
 				</div>
 			<div id="screen2-4">
 			<!-- 2-4. 건강 뉴스-->
+			<%=title %>
+			<%=text %>
+			<img src="<%=img %>" width="132" height="90">
+			
+			
+			
+			
+			
+			
 			</div>
 		</div>
 	</div>
@@ -428,6 +453,8 @@
 				});
 				
 			}
+		
+		
 		
 		
 		

@@ -61,7 +61,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
              select f_seq
                          from TBL_USER_FOOD
                         where mb_id=#{mb_id}
-                          and to_char(u_f_dt,'yymmdd') = to_char(sysdate,'yymmdd')                      
+                          and to_char(u_f_dt,'yymmdd') = to_char(sysdate,'yymmdd')
         ) B 
  	WHERE A.F_SEQ = B.F_SEQ 
    </select> <!-- 일일영양소! -->

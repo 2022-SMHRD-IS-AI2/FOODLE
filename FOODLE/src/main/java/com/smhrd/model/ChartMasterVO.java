@@ -2,6 +2,8 @@ package com.smhrd.model;
 
 import java.util.List;
 
+import org.jsoup.select.Elements;
+
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -20,5 +22,6 @@ public class ChartMasterVO {
 	private List<DailyChartVO> dailykcal;
 	private List<DailyChooseVO> dailyc;
 	private DailyEatVO dailyeat;
+	private NewsVO nvo;
 
 }
