@@ -170,6 +170,14 @@ body{
 	padding : 20px;
 	border-radius : 10px;
 }
+
+button.btn4{
+    width: 170px;
+    padding : 20px;
+    border-radius : 10px;
+    margin-top: 38px;
+    margin-left: 280px;
+}
 /* #screen2{
     width: 770px;
     height: 948px;

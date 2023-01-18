@@ -303,7 +303,9 @@
 			</div>
 			<div id="screen1-3">
 			<!-- 1-3. 추천 식단 -->
+                <button class="btn4" onclick=''> 추천 음식을 원하세요? </button>
 			</div>
+                
 		</div>
 		<div id="screen2">
 			<div id="screen2-1">
@@ -377,11 +379,7 @@
 					    options: {
 					    	 title: {
 					    	        display: true,
-					    	        <%if(eat_C != null) { %>
 					    	        text: '최근 섭취 식품 : <%=eat_C.getF_name() %>'
-					    	        <% } else { %>
-					    	        text: '최근 섭취 식품을 추가해주세요!!'
-					    	        <% }%>
 					    	      },
 					        scales: {
 					            y: {
