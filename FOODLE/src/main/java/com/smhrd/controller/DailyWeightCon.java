@@ -17,7 +17,7 @@ public class DailyWeightCon extends HttpServlet {
 		
 		request.setCharacterEncoding("utf-8");
 		
-		int curr_weight = Integer.parseInt(request.getParameter("weight")); // 몸무게 받음
+		Float curr_weight = Float.parseFloat(request.getParameter("weight")); // 몸무게 받음
 		String date = request.getParameter("date"); // 해당 날짜 받음
 		System.out.println(date);
 		

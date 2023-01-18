@@ -138,7 +138,7 @@
        }
     
     
-      for (int i = 0; i < daily_Cl.length; i++) { // 일간 선호영양소 재배열
+    for (int i = 0; i < daily_Cl.length; i++) { // 일간 선호영양소 재배열
 		for (int j = i + 1; j < daily_Cl.length; j++) {
 			if(Integer.parseInt(daily_Cl[i][1]) != 0 && Integer.parseInt(daily_Cl[j][1]) != 0) {
 			if (Integer.parseInt(daily_Cl[i][0])  > Integer.parseInt(daily_Cl[j][0])) { 

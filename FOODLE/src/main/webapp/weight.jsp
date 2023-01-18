@@ -44,6 +44,37 @@
     	 }
      }
     
+    for (int i = 0; i < weight_Cl.length; i++) {
+		for (int j = i + 1; j < weight_Cl.length; j++) {
+			if(Integer.parseInt(weight_Cl[i][1]) != 0 && Integer.parseInt(weight_Cl[j][1]) != 0) {
+			if (Integer.parseInt(weight_Cl[i][0].substring(8))  > Integer.parseInt(weight_Cl[j][0].substring(8))) { // 오름차순 2013-01-16
+				String[] tmp = weight_Cl[i];
+				weight_Cl[i] = weight_Cl[j];
+				weight_Cl[j] = tmp;
+				System.out.println( Integer.parseInt(weight_Cl[i][0].substring(8)) );
+				
+			}
+			}
+		}
+	}
+    
+    
+    String first_date = weight_Cl[0][0];
+    String last_date = weight_Cl[6][0];
+    int temp = 0;
+    
+    for(int i = 0; i < weight_Cl.length; i++){
+    	if(Integer.parseInt(weight_Cl[i][1]) != 0){
+    		if(Integer.parseInt(weight_Cl[i][0].substring(8)) > temp) {
+			    last_date = weight_Cl[i][0];
+			    temp = Integer.parseInt(weight_Cl[i][0].substring(8));
+    		}
+    		
+    	}
+    	
+    }
+    
+    
     
   %>
 
@@ -111,7 +142,7 @@
 
           
            <div id="screen1-0">
-           <h1 id = "head">2023.01.16 ~ 2023.01.22 <!-- *** 표현식으로 바꿔주세요! -->
+           <h1 id = "head"><%=first_date %> ~ <%=last_date %> <!-- *** 표현식으로 바꿔주세요! -->
            				   <br>몸무게 변화</h1>
             <div id="screen1-1">
             <canvas id="2-2" width = "1500px" height="600px"></canvas>
