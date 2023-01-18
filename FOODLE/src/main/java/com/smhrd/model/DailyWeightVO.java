@@ -19,7 +19,7 @@ public class DailyWeightVO {
 	
 	
 	@NonNull
-	private int curr_weight;
+	private Float curr_weight;
 	private String mb_id;
 	private String date;
 	

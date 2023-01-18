@@ -374,7 +374,7 @@
 					    options: {
 					    	 title: {
 					    	        display: true,
-					    	        text: '검색 식품 영양 성분'
+					    	        text: '최근 섭취 식품 : <%=eat_C.getF_name() %>'
 					    	      },
 					        scales: {
 					            y: {

@@ -22,7 +22,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         select * from tbl_weight_daily
        where mb_id=#{mb_id} 
        and WEIGHT_REGDT between sysdate-7 and sysdate 
-       order by WEIGHT_REGDT desc;         
+       order by WEIGHT_REGDT desc;
     </select>
     
     <select id="d_f_seq" parameterType="String" resultType="com.smhrd.model.YgChartVO">
