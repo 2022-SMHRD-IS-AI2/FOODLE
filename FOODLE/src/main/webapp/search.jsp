@@ -93,17 +93,18 @@
         <form action="BwChartCon">
         <div id="screen">
             <div class="search1">
-                <input type="text" placeholder="검색어를 입력해주세요." value="<%=food_name %>" name = "sr">
+                <input type="text" placeholder="검색어를 입력해주세요." value="<%=food_name %>" name = "sr" id="food">
             </div>
             <!-- <div id="screen-1">
             </div> -->
         </div>
       <!-- <a href="BwChartCon"><button class="btn3" type="button" > 검색 </button></a> -->
-        <!-- <input type="submit" value="추가" class="btn2" name="sr"> -->
          <input type="submit" class="btn2" name="sr" value ="검색">
+       <a href="InsertFood?seq=<%=bw_name.get(0).getF_seq() %>&name=<%=bw_name.get(0).getF_name() %>"><button class="btn3" onclick='request()'> 추가 </button></a> 
         </form>
-        <a href="InsertFood?seq=<%=bw_name.get(0).getF_seq() %>&name=<%=bw_name.get(0).getF_name() %>"><button class="btn3" type="button"> 추가 </button></a> 
-
+        <%-- <form id="form" action="InsertFood?seq=<%=bw_name.get(0).getF_seq() %>&name=<%=bw_name.get(0).getF_name() %>"> --%>
+       <!--  <input type="submit" value="추가" class="btn3" name="sr"> -->
+		<!-- </form> -->
         <div id="screen1">
         	<canvas id="1-1" width = "700px" height="570px"></canvas>
 			<script> 
@@ -189,6 +190,55 @@
             </div> -->
         </div>
     </div>
-
+	<script src="https://code.jquery.com/jquery-3.6.3.min.js" type="text/javascript"></script>
+	<script>
+			function request(){
+			var f_name = $('#food').val();
+				
+					// ajax를 사용해서 Flask에 요청보내기
+				$.ajax({
+					url : 'http://222.102.104.190:8888/ex02', // 어디로?
+					type : 'get',  // Get or Post
+					data : {
+						// 어떤 데이터를?
+						// key=123@data=456
+						// "key" : "value"
+						"f_name" : f_name,
+						},
+						success : function(res){
+							// 요청이 성공했을 때, 실행되는 콜백 함수
+							console.log(res);
+						},
+						error : function(e){
+							// 요청이 실패했을 때, 실행되는 콜백 함수
+							alert("error!");
+						}
+					});
+				
+		}
+			
+	</script>
+	<!-- <script src="https://code.jquery.com/jquery-3.6.3.min.js" type="text/javascript"></script> -->
+ 	<script>
+	function response(){
+		console.log("불러오기")
+		var food = []
+		// ajax를 사용해서 Flask에 요청받기
+		$.ajax({
+			url : 'http://222.102.104.190:8888/ex03', // 어디로?
+			type : 'get',  // Get or Post
+			async: false // success값을 전역변수에 담을 수 있다.
+			success : function(res){
+				// 요청이 성공했을 때, 실행되는 콜백 함수
+				food += res[0]; // 값 가져오기
+			},
+			error : function(e){
+				// 요청이 실패했을 때, 실행되는 콜백 함수
+				alert("error!");
+			}
+		});
+		
+	}
+	</script>
 </body>
 </html>

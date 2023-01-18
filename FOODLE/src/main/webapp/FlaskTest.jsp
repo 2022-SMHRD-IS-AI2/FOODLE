@@ -30,6 +30,7 @@ pageEncoding="UTF-8"%>
 	<form>
 		<input type="text" id="srh">
 		<button onclick="request()">데이터 블러오기</button>
+		<button onclick="response()">추천음식</button>
 	</form>
 	
 	<script src="https://code.jquery.com/jquery-3.6.3.min.js" type="text/javascript"></script>
@@ -58,34 +59,29 @@ pageEncoding="UTF-8"%>
 				
 		}
 	
+	</script>
 	
+	<script src="https://code.jquery.com/jquery-3.6.3.min.js" type="text/javascript"></script>
+	<script>
+	function response(){
+		console.log("불러오기")
 		
-		/* function response(){
-			console.log("불러오기")
-			
-			// ajax를 사용해서 Flask에 요청받기
-			$.ajax({
-				url : 'http://222.102.104.190:8888/ex03', // 어디로?
-				type : 'get',  // Get or Post
-				async: false // success값을 전역변수에 담을 수 있다.
-				data : {
-					// 어떤 데이터를?
-					// key=123@data=456
-					// "key" : "value"
-				},
-				success : function(res){
-					// 요청이 성공했을 때, 실행되는 콜백 함수
-					console.log(res[0].f_name); // 값 가져오기
-				},
-				error : function(e){
-					// 요청이 실패했을 때, 실행되는 콜백 함수
-					alert("error!");
-				}
-			});
-			
-		} */
-	
-	
+		// ajax를 사용해서 Flask에 요청받기
+		$.ajax({
+			url : 'http://222.102.104.190:8888/ex03', // 어디로?
+			type : 'get',  // Get or Post
+			async: false // success값을 전역변수에 담을 수 있다.
+			success : function(res){
+				// 요청이 성공했을 때, 실행되는 콜백 함수
+				console.log(res[0].f_name); // 값 가져오기
+			},
+			error : function(e){
+				// 요청이 실패했을 때, 실행되는 콜백 함수
+				alert("error!");
+			}
+		});
+		
+	} 
 	</script>
 </body>
 </html>
