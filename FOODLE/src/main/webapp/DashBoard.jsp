@@ -283,9 +283,44 @@
 			  });
 			</script>
 			</div>
+			<div id="screen1-2_0">
+			<!-- <button class="btn4" onclick=''> 추천 음식을 원하세요? </button> --> <!-- 여기에 버튼 넣으려면  css에서 버튼 크기 수정해야함 -->
 			<div id="screen1-2">
 			<!-- 1-2. 추천 식단 -->
-                <button class="btn4" onclick=''> 추천 음식을 원하세요? </button>	
+             <!-- <button class="btn4" onclick=''> 추천 음식을 원하세요? </button> --> <!-- 버튼!! -->
+			<canvas id="1-2" width = "720px" height="330px"  margin ="auto"></canvas>
+               <script> 
+			    new Chart(document.getElementById("1-2"), {
+			    type: 'radar',
+			    data: {
+			      labels: ["탄수화물(g)", "단백질(g)", "지방(g)", "당류(g)", "나트륨(g)", "콜레스테롤(g)", "포화지방산(g)", "트랜스지방산(g)" ] ,
+			      datasets: [{ 
+			    	  label: "일일 영양분",
+			          data: [63,55,35,29,76,52,93,68],
+			          backgroundColor: 'rgba(255, 99, 132, 0.2)',
+			          borderColor: 'rgb(255, 99, 132)',
+			          fill: true,
+				      borderWidth: 1
+			          } /*, {
+			        	label: "권장 영양분",
+			        	data: [28, 48, 40, 19, 96, 27, 100,52],
+			            backgroundColor: 'rgba(54, 162, 235, 0.2)',
+			            borderColor: 'rgb(54, 162, 235)',
+			            
+			            fill: true,
+			            borderWidth: 1
+		                } */
+		             ]
+			    	},
+			      options: {
+			      title: {
+			      display: true,
+			      text: '추천 음식'
+			      }
+			    }
+			  });
+			</script>
+			</div>
 			</div>
 			<div id="screen1-3">
 			<!-- 1-3. 주간 관심 영양소 그래프(EX.당, 나트륨,,, 택1)-->
