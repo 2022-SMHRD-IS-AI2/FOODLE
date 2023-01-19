@@ -17,9 +17,9 @@
     font-family: 'LINESeedKR-Bd';
 }
 button{border:none; border-radius:none;}
-body{
+/* body{
     background: #f5f6fa;
-}
+} */
 
 .wrapper .sidebar{
     /* background: rgb(144 201 87);  */
@@ -109,7 +109,7 @@ body{
 
 #fullscreen{
 	width: 100%;
-	height: 969px;
+	height: 1079px;
 	/* background-color: rgb(235, 234, 234); */
    background-color: rgb(220, 230, 216);
 }
@@ -137,7 +137,7 @@ body{
     /* border: 1px solid #bbb; */
     border-radius: 8px;
     position: fixed;
-    top: 220px;
+    top: 280px;
     right: 230px;
 	width: 300px;
 	background-color: white;
@@ -159,7 +159,7 @@ body{
     width: 70px;
     height: 30px;
     font-size: 1.5ch;
-    top: 225px;
+    top: 285px;
     right: 230px;
     background-color: rgb(12, 117, 209);
     color: white;
@@ -174,7 +174,7 @@ body{
     width: 70px;
     height: 30px;
     font-size: 1.5ch;
-    top: 225px;
+    top: 285px;
     right: 150px;
     /* background-color: rgb(12, 117, 209); */
     color: black;
@@ -195,7 +195,7 @@ body{
     outline-style: double;
     outline-color: black; */
     position: fixed;
-    top: 200px;
+    top: 280px;
     right: 780px;
 	width: 750px;
 	height: 600px;
@@ -226,7 +226,7 @@ body{
     outline-style: double;
     outline-color: black; */
     position: fixed;
-    top: 300px;
+    top: 380px;
     right: 40px;
 	width: 690px;
 	height: 500px;
