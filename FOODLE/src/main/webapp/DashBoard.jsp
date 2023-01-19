@@ -303,263 +303,258 @@
             var resCol;
             var resFad;
             var resTrans;
-			
-			function response(){ 
-				console.log("불러오기")
-				
-				// ajax를 사용해서 Flask에 요청받기
-				$.ajax({
-					url : 'http://222.102.104.190:8888/ex03', // 어디로?
-					type : 'get',  // Get or Post
-					/* async : false */  // success값을 전역변수에 담을 수 있다.
-					data : {
-						// 어떤 데이터를?
-						// key=123@data=456
-						// "key" : "value"
-						"f_name" : f_name,
-						},
-					
-					success : function(res){
-						// 요청이 성공했을 때, 실행되는 콜백 함수
-							resName = res[0].F_NAME
-							resCh = parseInt(res[0].F_CH)
-							resPro = parseInt(res[0].F_PRO)
-							resFat = parseInt(res[0].F_FAT)
-							resSugar = parseInt(res[0].F_SUGAR)
-							resSodium = parseInt(res[0].F_SODIUM)/1000
-							resCol = parseInt(res[0].F_COL)/1000
-							resFad = parseInt(res[0].F_FAD)
-							resTrans = parseInt(res[0].F_TRANS)
-							console.log(resFad) 
-							
-							new Chart(document.getElementById("1-2"), {
-							    type: 'radar',
-							    data: {
-							      labels: ["탄수화물(g)", "단백질(g)", "지방(g)", "당류(g)", "나트륨(g)", "콜레스테롤(g)", "포화지방산(g)", "트랜스지방산(g)" ] ,
-							      datasets: [{ 
-							    	  label: "resName",
-							          data: [resCh, resPro, resFat, resSugar, resSodium, resCol, resFad, resTrans],
-							          backgroundColor: 'rgba(255, 99, 132, 0.2)',
-							          borderColor: 'rgb(255, 99, 132)',
-							          fill: true,
-								      borderWidth: 1
-							          } /*, {
-							        	label: "권장 영양분",
-							        	data: [28, 48, 40, 19, 96, 27, 100,52],
-							            backgroundColor: 'rgba(54, 162, 235, 0.2)',
-							            borderColor: 'rgb(54, 162, 235)',
-							            
-							            fill: true,
-							            borderWidth: 1
-						                } */
-						             ]
-							    	},
-							      options: {
-							      title: {
-							      display: true,
-							      text: '추천 음식'
-							      }
-							    }
-							  });
-						/* var arr = arr.unshift(res); // 값 가져오기
-						console.log('안녕'+ arr); */
-					},
-					error : function(e){
-						// 요청이 실패했을 때, 실행되는 콜백 함수
-						alert("error!");
-					}
-				});
-				
-			}  
-				
-			
-			
-			    new Chart(document.getElementById("1-2"), {
-			    type: 'radar',
-			    data: {
-			      labels: ["탄수화물(g)", "단백질(g)", "지방(g)", "당류(g)", "나트륨(g)", "콜레스테롤(g)", "포화지방산(g)", "트랜스지방산(g)" ] ,
-			      datasets: [{ 
-			    	  label: "일일 영양분",
-			          data: [resCh, resPro, resFat, resSugar, resSodium, resCol, resFad, resTrans],
-			          backgroundColor: 'rgba(255, 99, 132, 0.2)',
-			          borderColor: 'rgb(255, 99, 132)',
-			          fill: true,
-				      borderWidth: 1
-			          } /*, {
-			        	label: "권장 영양분",
-			        	data: [28, 48, 40, 19, 96, 27, 100,52],
-			            backgroundColor: 'rgba(54, 162, 235, 0.2)',
-			            borderColor: 'rgb(54, 162, 235)',
-			            
-			            fill: true,
-			            borderWidth: 1
-		                } */
-		             ]
-			    	},
-			      options: {
-			      title: {
-			      display: true,
-			      text: '추천 음식'
-			      }
-			    }
-			  });
-			   
-			
-				
-				 
-			</script>
-			</div>
-			</div>
-			<div id="screen1-3">
-			<!-- 1-3. 주간 관심 영양소 그래프(EX.당, 나트륨,,, 택1)-->
-			<canvas id="1-3" width = "720px" height="150px"  margin ="auto"></canvas>
-			<script>
-		    	new Chart(document.getElementById("1-3"), {
-			    type: 'line',
-			    data: {
-			      labels: ["<%=daily_Cl[0][0] %>", "<%=daily_Cl[1][0] %>","<%=daily_Cl[2][0] %>","<%=daily_Cl[3][0] %>","<%=daily_Cl[4][0] %>","<%=daily_Cl[5][0] %>","<%=daily_Cl[6][0] %>"] ,
-			      datasets: [{ 
-			          data: [<%=Float.parseFloat(daily_Cl[0][1]) %>, <%=Float.parseFloat(daily_Cl[1][1]) %>, <%=Float.parseFloat(daily_Cl[2][1]) %>, <%=Float.parseFloat(daily_Cl[3][1]) %>, <%=Float.parseFloat(daily_Cl[4][1]) %>, <%=Float.parseFloat(daily_Cl[5][1]) %>, <%=Float.parseFloat(daily_Cl[6][1]) %>],
-			          label: "<%=choosenut %>", // ***라벨명이 지정한 변수명으로 떠요! (f_ch 면 --> 탄수화물 이렇게 바꿔야해요!!)
-			          borderColor: "#3e95cd",
-			          fill: false
-			        }
-			      ]
-			    },
-			    options: {
-			      title: {
-			        display: true,
-			        text: '주간 관심 영양소 그래프'
-			      }
-			    }
-			  });
+		         
+         function response(){ 
+            console.log("불러오기")
+            
+            // ajax를 사용해서 Flask에 요청받기
+            $.ajax({
+               url : 'http://222.102.104.190:8888/ex03', // 어디로?
+               type : 'get',  // Get or Post
+               /* async : false */  // success값을 전역변수에 담을 수 있다.
+               data : {
+                  // 어떤 데이터를?
+                  // key=123@data=456
+                  // "key" : "value"
+                  "f_name" : f_name,
+                  },
+               
+               success : function(res){
+                  // 요청이 성공했을 때, 실행되는 콜백 함수
+                     resName = res[0].F_NAME
+                     resCh = parseInt(res[0].F_CH)
+                     resPro = parseInt(res[0].F_PRO)
+                     resFat = parseInt(res[0].F_FAT)
+                     resSugar = parseInt(res[0].F_SUGAR)
+                     resSodium = parseInt(res[0].F_SODIUM)/1000
+                     resCol = parseInt(res[0].F_COL)/1000
+                     resFad = parseInt(res[0].F_FAD)
+                     resTrans = parseInt(res[0].F_TRANS)
+                     console.log(resFad) 
+                     
+                     new Chart(document.getElementById("1-2"), {
+                         type: 'radar',
+                         data: {
+                           labels: ["탄수화물(g)", "단백질(g)", "지방(g)", "당류(g)", "나트륨(g)", "콜레스테롤(g)", "포화지방산(g)", "트랜스지방산(g)" ] ,
+                           datasets: [{ 
+                              label: resName,
+                               data: [resCh, resPro, resFat, resSugar, resSodium, resCol, resFad, resTrans],
+                               backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                               borderColor: 'rgb(255, 99, 132)',
+                               fill: true,
+                              borderWidth: 1
+                               } /*, {
+                                label: "권장 영양분",
+                                data: [28, 48, 40, 19, 96, 27, 100,52],
+                                 backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                                 borderColor: 'rgb(54, 162, 235)',
+                                 
+                                 fill: true,
+                                 borderWidth: 1
+                                  } */
+                               ]
+                            },
+                           options: {
+                           title: {
+                           display: true,
+                           text: '추천 음식'
+                           }
+                         }
+                       });
+                  /* var arr = arr.unshift(res); // 값 가져오기
+                  console.log('안녕'+ arr); */
+               },
+               error : function(e){
+                  // 요청이 실패했을 때, 실행되는 콜백 함수
+                  alert("error!");
+               }
+            });
+            
+         }  
+            
+             new Chart(document.getElementById("1-2"), {
+             type: 'radar',
+             data: {
+               labels: ["탄수화물(g)", "단백질(g)", "지방(g)", "당류(g)", "나트륨(g)", "콜레스테롤(g)", "포화지방산(g)", "트랜스지방산(g)" ] ,
+               datasets: [{ 
+                  label: "일일 영양분",
+                   data: [resCh, resPro, resFat, resSugar, resSodium, resCol, resFad, resTrans],
+                   backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                   borderColor: 'rgb(255, 99, 132)',
+                   fill: true,
+                  borderWidth: 1
+                   } /*, {
+                    label: "권장 영양분",
+                    data: [28, 48, 40, 19, 96, 27, 100,52],
+                     backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                     borderColor: 'rgb(54, 162, 235)',
+                     
+                     fill: true,
+                     borderWidth: 1
+                      } */
+                   ]
+                },
+               options: {
+               title: {
+               display: true,
+               text: '추천 음식'
+               }
+             }
+           });
+         </script>
+         </div>
+         
+         </div>
+         <div id="screen1-3">
+         <!-- 1-3. 주간 관심 영양소 그래프(EX.당, 나트륨,,, 택1)-->
+         <canvas id="1-3" width = "720px" height="150px"  margin ="auto"></canvas>
+         <script>
+             new Chart(document.getElementById("1-3"), {
+             type: 'line',
+             data: {
+               labels: ["<%=daily_Cl[0][0] %>", "<%=daily_Cl[1][0] %>","<%=daily_Cl[2][0] %>","<%=daily_Cl[3][0] %>","<%=daily_Cl[4][0] %>","<%=daily_Cl[5][0] %>","<%=daily_Cl[6][0] %>"] ,
+               datasets: [{ 
+                   data: [<%=Float.parseFloat(daily_Cl[0][1]) %>, <%=Float.parseFloat(daily_Cl[1][1]) %>, <%=Float.parseFloat(daily_Cl[2][1]) %>, <%=Float.parseFloat(daily_Cl[3][1]) %>, <%=Float.parseFloat(daily_Cl[4][1]) %>, <%=Float.parseFloat(daily_Cl[5][1]) %>, <%=Float.parseFloat(daily_Cl[6][1]) %>],
+                   label: "<%=choosenut %>", // ***라벨명이 지정한 변수명으로 떠요! (f_ch 면 --> 탄수화물 이렇게 바꿔야해요!!)
+                   borderColor: "#3e95cd",
+                   fill: false
+                 }
+               ]
+             },
+             options: {
+               title: {
+                 display: true,
+                 text: '주간 관심 영양소 그래프'
+               }
+             }
+           });
 
-			</script>	
-			</div>
-		<div id="screen2">
-			<div id="screen2-1">
-			<!-- 2-1. 주간 칼로리-->
-			<canvas id="2-1" width = "720px" height="150px"  margin ="auto"></canvas>
-			<script>
-		    	new Chart(document.getElementById("2-1"), {
-			    type: 'line',
-			    data: {
-			      labels: ["<%=kcal_Cl[0][0] %>", "<%=kcal_Cl[1][0] %>","<%=kcal_Cl[2][0] %>","<%=kcal_Cl[3][0] %>","<%=kcal_Cl[4][0] %>","<%=kcal_Cl[5][0] %>","<%=kcal_Cl[6][0] %>"] ,
-			      datasets: [{ 
-			          data: [<%=Float.parseFloat(kcal_Cl[0][1]) %>, <%=Float.parseFloat(kcal_Cl[1][1]) %>, <%=Float.parseFloat(kcal_Cl[2][1]) %>, <%=Float.parseFloat(kcal_Cl[3][1]) %>, <%=Float.parseFloat(kcal_Cl[4][1]) %>, <%=Float.parseFloat(kcal_Cl[5][1]) %>, <%=Float.parseFloat(kcal_Cl[6][1]) %>],
-			          label: "칼로리",
-			           borderColor: "#3e95cd",
-			          fill: false
-			        }
-			      ]
-			    },
-			    options: {
-			      title: {
-			        display: true,
-			        text: '주간 칼로리 그래프'
-			      }
-			    }
-			  });
-			</script>	
-			</div>
-			<div id="screen2-2">
-			<!-- 2-2. 주간 몸무게-->
-			<canvas id="2-2" width = "720px" height="150px"  margin ="auto"></canvas>
-			<script> 
-			    new Chart(document.getElementById("2-2"), {
-			    type: 'line',
-			    data: {
-			      labels: ["<%=weight_Cl[0][0] %>", "<%=weight_Cl[1][0] %>","<%=weight_Cl[2][0] %>","<%=weight_Cl[3][0] %>","<%=weight_Cl[4][0] %>","<%=weight_Cl[5][0] %>","<%=weight_Cl[6][0] %>"] ,
-			      datasets: [{ 
-			          data: [<%=Float.parseFloat(weight_Cl[0][1]) %>, <%=Float.parseFloat(weight_Cl[1][1]) %>, <%=Float.parseFloat(weight_Cl[2][1]) %>, <%=Float.parseFloat(weight_Cl[3][1]) %>, <%=Float.parseFloat(weight_Cl[4][1]) %>, <%=Float.parseFloat(weight_Cl[5][1]) %>, <%=Float.parseFloat(weight_Cl[6][1]) %>],
-			          label: "몸무게",
-			          borderColor: "#3e95cd",
-			          fill: false
-			        }
-			      ]
-			    },
-			    options: {
-			      title: {
-			        display: true,
-			        text: '주간 몸무게 그래프'
-			      }
-			    }
-			  });
-			</script>
-			</div>
-			<div id="screen2-3">
-				<!-- 2-3. 검색 식품 영양분-->
-				<canvas id="2-3" width = "720px" height="320px"  margin ="auto"></canvas>
-					<script> 
-						const ctx = document.getElementById("2-3").getContext('2d');
-						const myChart = new Chart(ctx, {
-					    type: 'bar',
-					    data: {
-					        labels: ["탄수화물(g)", "단백질(g)", "지방(g)", "당류(g)", "나트륨(g)", "콜레스테롤(g)", "포화지방산(g)", "트랜스지방산(g)"],
-					        datasets: [{
-					            label: '검색 식품 영양 성분',
-					            data: [<%=eat_C_ch %>, <%=eat_C_pro %>, <%=eat_C_fat %>, <%=eat_C_sugar %>, <%=eat_C_sodium/1000 %>, <%=eat_C_col/1000 %>, <%=eat_C_fad %>, <%=eat_C_trans %>],
-					            backgroundColor: 'rgba(60, 149, 205, 0.7)',
-						          borderColor: 'rgb(201, 203, 207)',
-						          fill: true,
-					            borderWidth: 1
-					        }]
-					    },
-					    options: {
-					    	 title: {
-					    	        display: true,
-					    	        text: '최근 섭취 식품 : <%=eat_C.getF_name() %>'
-					    	      },
-					        scales: {
-					            y: {
-					                beginAtZero: true
-					            }
-					        }
-					    }
-					});
-					</script>
-				</div>
-			<div id="screen2-4">
-			<!-- 2-4. 건강 뉴스-->
-			<%=title %>
-			<%=text %>
-			<img src="<%=img %>" width="132" height="90">
-			
-			
-			
-			
-			
-			
-			</div>
-		</div>
-	</div>
-	<script src="https://code.jquery.com/jquery-3.6.3.min.js" type="text/javascript"></script>
-	<script>
-		
-		
-		
-		
-		
-		const f_name = "<%=eat_C.getF_name() %>";
-		
-		$.ajax({
-			url : 'http://222.102.104.190:8888/ex02', // 어디로?
-			type : 'get',  // Get or Post
-			data : {
-				// 어떤 데이터를?
-				// key=123@data=456
-				// "key" : "value"
-				"f_name" : f_name,
-				},
-				success : function(res){
-					// 요청이 성공했을 때, 실행되는 콜백 함수
-					console.log("안녕"+res);
-				},
-				error : function(e){
-					// 요청이 실패했을 때, 실행되는 콜백 함수
-					alert("error!");
-				}
-			});
-	</script>
+         </script>   
+         </div>
+      <div id="screen2">
+         <div id="screen2-1">
+         <!-- 2-1. 주간 칼로리-->
+         <canvas id="2-1" width = "720px" height="150px"  margin ="auto"></canvas>
+         <script>
+             new Chart(document.getElementById("2-1"), {
+             type: 'line',
+             data: {
+               labels: ["<%=kcal_Cl[0][0] %>", "<%=kcal_Cl[1][0] %>","<%=kcal_Cl[2][0] %>","<%=kcal_Cl[3][0] %>","<%=kcal_Cl[4][0] %>","<%=kcal_Cl[5][0] %>","<%=kcal_Cl[6][0] %>"] ,
+               datasets: [{ 
+                   data: [<%=Float.parseFloat(kcal_Cl[0][1]) %>, <%=Float.parseFloat(kcal_Cl[1][1]) %>, <%=Float.parseFloat(kcal_Cl[2][1]) %>, <%=Float.parseFloat(kcal_Cl[3][1]) %>, <%=Float.parseFloat(kcal_Cl[4][1]) %>, <%=Float.parseFloat(kcal_Cl[5][1]) %>, <%=Float.parseFloat(kcal_Cl[6][1]) %>],
+                   label: "칼로리",
+                    borderColor: "#3e95cd",
+                   fill: false
+                 }
+               ]
+             },
+             options: {
+               title: {
+                 display: true,
+                 text: '주간 칼로리 그래프'
+               }
+             }
+           });
+         </script>   
+         </div>
+         <div id="screen2-2">
+         <!-- 2-2. 주간 몸무게-->
+         <canvas id="2-2" width = "720px" height="150px"  margin ="auto"></canvas>
+         <script> 
+             new Chart(document.getElementById("2-2"), {
+             type: 'line',
+             data: {
+               labels: ["<%=weight_Cl[0][0] %>", "<%=weight_Cl[1][0] %>","<%=weight_Cl[2][0] %>","<%=weight_Cl[3][0] %>","<%=weight_Cl[4][0] %>","<%=weight_Cl[5][0] %>","<%=weight_Cl[6][0] %>"] ,
+               datasets: [{ 
+                   data: [<%=Float.parseFloat(weight_Cl[0][1]) %>, <%=Float.parseFloat(weight_Cl[1][1]) %>, <%=Float.parseFloat(weight_Cl[2][1]) %>, <%=Float.parseFloat(weight_Cl[3][1]) %>, <%=Float.parseFloat(weight_Cl[4][1]) %>, <%=Float.parseFloat(weight_Cl[5][1]) %>, <%=Float.parseFloat(weight_Cl[6][1]) %>],
+                   label: "몸무게",
+                   borderColor: "#3e95cd",
+                   fill: false
+                 }
+               ]
+             },
+             options: {
+               title: {
+                 display: true,
+                 text: '주간 몸무게 그래프'
+               }
+             }
+           });
+         </script>
+         </div>
+         <div id="screen2-3">
+            <!-- 2-3. 검색 식품 영양분-->
+            <canvas id="2-3" width = "720px" height="320px"  margin ="auto"></canvas>
+               <script> 
+                  const ctx = document.getElementById("2-3").getContext('2d');
+                  const myChart = new Chart(ctx, {
+                   type: 'bar',
+                   data: {
+                       labels: ["탄수화물(g)", "단백질(g)", "지방(g)", "당류(g)", "나트륨(g)", "콜레스테롤(g)", "포화지방산(g)", "트랜스지방산(g)"],
+                       datasets: [{
+                           label: '<%=eat_C.getF_name() %>',
+                           data: [<%=eat_C_ch %>, <%=eat_C_pro %>, <%=eat_C_fat %>, <%=eat_C_sugar %>, <%=eat_C_sodium/1000 %>, <%=eat_C_col/1000 %>, <%=eat_C_fad %>, <%=eat_C_trans %>],
+                           backgroundColor: 'rgba(60, 149, 205, 0.7)',
+                            borderColor: 'rgb(201, 203, 207)',
+                            fill: true,
+                           borderWidth: 1
+                       }]
+                   },
+                   options: {
+                       title: {
+                              display: true,
+                              text: '최근 섭취 식품'
+                            },
+                       scales: {
+                           y: {
+                               beginAtZero: true
+                           }
+                       }
+                   }
+               });
+               </script>
+            </div>
+         <div id="screen2-4">
+         <!-- 2-4. 건강 뉴스-->
+         <%=title %>
+         <%=text %>
+         <img src="<%=img %>" width="132" height="90">
+         
+         
+         
+         
+         
+         
+         </div>
+      </div>
+   </div>
+   <script src="https://code.jquery.com/jquery-3.6.3.min.js" type="text/javascript"></script>
+   <script>
+      
+      
+      
+      
+      
+      const f_name = "<%=eat_C.getF_name() %>";
+      
+      $.ajax({
+         url : 'http://222.102.104.190:8888/ex02', // 어디로?
+         type : 'get',  // Get or Post
+         data : {
+            // 어떤 데이터를?
+            // key=123@data=456
+            // "key" : "value"
+            "f_name" : f_name,
+            },
+            success : function(res){
+               // 요청이 성공했을 때, 실행되는 콜백 함수
+               console.log("안녕"+res);
+            },
+            error : function(e){
+               // 요청이 실패했을 때, 실행되는 콜백 함수
+               alert("error!");
+            }
+         });
+   </script>
 </body>
 </html>
