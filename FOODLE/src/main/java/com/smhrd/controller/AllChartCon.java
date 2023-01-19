@@ -71,19 +71,19 @@ public class AllChartCon extends HttpServlet {
 		List<DailyChartVO> dailyKcal = bwdao.dailyKcal(mb_id); // 여기 일별 칼로리 섭취량에 대한 리스트
 //		보원차트DAO -> 푸드매퍼
 
-		System.out.println("일간 칼로리임");
+//		System.out.println("일간 칼로리임");
 //========================= 일간 당나지(선택한 영양소) ==================================
 
 		System.out.println(mb_fav_ingrident);
 		ChooseNutVO choosevo = new ChooseNutVO(mb_fav_ingrident, mb_id);
 
-		System.out.println(choosevo.getMb_fav_ingredient());
+//		System.out.println(choosevo.getMb_fav_ingredient());
 
 		List<DailyChooseVO> dailyc = bwdao.chooseNut(choosevo);
 		// 보원차트DAO로 가서 푸드매퍼로 감
 		// System.out.println(dailyc.get(0).getF_choosenut());
 
-		System.out.println("일간당나지임");
+//		System.out.println("일간당나지임");
 //========================= 일일섭취영양분 ==================================	
 
 		DailyEatVO dailyeat = food_dao.dailyeat(mb_id);
@@ -91,9 +91,35 @@ public class AllChartCon extends HttpServlet {
 		
 //========================= 뉴우스 영역 ==================================
 
-		String url = "https://search.naver.com/search.naver?where=news&ie=utf8&sm=nws_hty&query=탄수화물";
+		String url = "https://search.naver.com/search.naver?where=news&ie=utf8&sm=nws_hty&query=";
+		String favorite = client.getMb_fav_ingredient();
 		
-		Document doc = Jsoup.connect(url).get();
+		
+		// 선택 영양소 변수명 변경
+		 if(client.getMb_fav_ingredient().equals("f_ch")){
+			 favorite = "탄수화물";
+	       } else if(client.getMb_fav_ingredient().equals("f_pro")){
+	    	   favorite = "단백질";
+	       } else if(client.getMb_fav_ingredient().equals("f_fat")){
+	    	   favorite = "지방";
+	       } else if(client.getMb_fav_ingredient().equals("f_sugar")){
+	    	   favorite = "당류";
+	       } else if(client.getMb_fav_ingredient().equals("f_sodium")){
+	    	   favorite = "나트륨";
+	       } else if(client.getMb_fav_ingredient().equals("f_col")){
+	    	   favorite = "콜레스테롤";
+	       } else if(client.getMb_fav_ingredient().equals("f_fad")){
+	    	   favorite = "포화지방산";
+	       } else if(client.getMb_fav_ingredient().equals("f_trans")){
+	    	   favorite = "트랜스지방";
+	       }
+		
+		
+		
+		
+		System.out.println(favorite);
+		
+		Document doc = Jsoup.connect(url + favorite).get();
 		
 		
 //		String a = doc.html();

@@ -100,8 +100,8 @@
         </div>
       <!-- <a href="BwChartCon"><button class="btn3" type="button" > 검색 </button></a> -->
          <input type="submit" class="btn2" name="sr" value ="검색">
-       <a href="InsertFood?seq=<%=bw_name.get(0).getF_seq() %>&name=<%=bw_name.get(0).getF_name() %>"><button class="btn3" onclick='request()'> 추가 </button></a> 
         </form>
+       <a href="InsertFood?seq=<%=bw_name.get(0).getF_seq() %>&name=<%=bw_name.get(0).getF_name() %>"><button class="btn3" onclick='request()'> 추가 </button></a> 
         <%-- <form id="form" action="InsertFood?seq=<%=bw_name.get(0).getF_seq() %>&name=<%=bw_name.get(0).getF_name() %>"> --%>
        <!--  <input type="submit" value="추가" class="btn3" name="sr"> -->
 		<!-- </form> -->
