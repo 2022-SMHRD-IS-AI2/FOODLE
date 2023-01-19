@@ -1,3 +1,5 @@
+
+
 @charset "UTF-8";
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
@@ -111,22 +113,22 @@ body{
 /*  */
 
 #fullscreen{
-	width: 100%;
-	height: 969px;
-	/* background-color: rgb(227, 247, 213); */
-	background-color: rgb(220, 230, 216);
+   width: 100%;
+   height: 969px;
+   /* background-color: rgb(227, 247, 213); */
+   background-color: rgb(220, 230, 216);
 }
 #screen0{
-	width: 300px;
-	height: 969px;
-	background-color: black;
-	float: left;
+   width: 300px;
+   height: 969px;
+   background-color: black;
+   float: left;
 }
 /* #screen1{
-	width: 200px;
-	height: 600px;
-	background-color: black;
-	float: left;
+   width: 200px;
+   height: 600px;
+   background-color: black;
+   float: left;
 } */
 /* 일일 영양분 */
 #screen1-1{
@@ -136,11 +138,11 @@ body{
     position: fixed;
     top: 18px;
     right: 800px;
-	width: 750px;
-	height: 380px;
-	background-color: white;
-	padding : 20px;
-	border-radius : 10px;
+   width: 750px;
+   height: 380px;
+   background-color: white;
+   padding : 20px;
+   border-radius : 10px;
 }
 /* 추천 식단 */
 #screen1-2_0{
@@ -150,11 +152,11 @@ body{
     position: fixed;
     top: 410px;
     right: 800px;
-	width: 750px;
-	height: 350px;
-	background-color: white;
-	padding : 20px;
-	border-radius : 10px;
+   width: 750px;
+   height: 350px;
+   background-color: white;
+   padding: 15px;
+   border-radius : 10px;
 }
 
 #screen1-2{
@@ -162,20 +164,19 @@ body{
     outline-style: double;
     outline-color: black; */
     position: fixed;
-    top: 410px;
+    top: 450px;
     right: 800px;
-	width: 750px;
-	height: 330px;
-	background-color: white;
-	padding : 20px;
-	border-radius : 10px;
+   width: 750px;
+   height: 300px;
+   background-color: white;
+   border-radius : 10px;
 }
+
 button.btn4{
-    width: 170px;
-    padding : 20px;
+    width: 180px;
     border-radius : 10px;
-    margin-top: 38px;
-    margin-left: 280px;
+    margin-left: 10px;
+    cursor: pointer;
 }
 /*  주간(당/나트륨..) */
 #screen1-3{
@@ -185,19 +186,19 @@ button.btn4{
     position: fixed;
     top: 773px;
     right: 800px;
-	width: 750px;
-	height: 180px;
-	background-color: white;
-	padding : 20px;
-	border-radius : 10px;
+   width: 750px;
+   height: 180px;
+   background-color: white;
+   padding : 20px;
+   border-radius : 10px;
 }
 
 
 /* #screen2{
     width: 770px;
     height: 948px;
-	background-color: black;
-	float: left;
+   background-color: black;
+   float: left;
     position: absolute;
     top: 0; right: 0;
 } */
@@ -210,11 +211,11 @@ button.btn4{
     position: fixed;
     top: 20px;
     right: 22px;
-	width: 750px;
-	height: 180px;
-	background-color: white;
-	padding : 20px;
-	border-radius : 10px;
+   width: 750px;
+   height: 180px;
+   background-color: white;
+   padding : 20px;
+   border-radius : 10px;
 }
 /* 몸무게(주간) */
 #screen2-2{
@@ -224,11 +225,11 @@ button.btn4{
     position: fixed;
     top: 215px;
     right: 22px;
-	width: 750px;
-	height: 180px;
-	background-color: white;
-	padding : 20px;
-	border-radius : 10px;
+   width: 750px;
+   height: 180px;
+   background-color: white;
+   padding : 20px;
+   border-radius : 10px;
 }
 /* 검색 식품 영양분 */
 /* 2-3 위 여백 10 */
@@ -239,11 +240,11 @@ button.btn4{
     position: fixed;
     top: 410px;
     right: 22px;
-	width: 750px;
-	height: 350px;
-	background-color: white;
-	padding : 20px;
-	border-radius : 10px;
+   width: 750px;
+   height: 350px;
+   background-color: white;
+   padding : 20px;
+   border-radius : 10px;
 }
 /* 건강 뉴스 */
 /* 2-4 위 아래 여백 10씩 */
@@ -254,14 +255,42 @@ button.btn4{
     position: fixed;
     top: 773px;
     right: 22px;
-	width: 750px;
-	height: 180px;
-	background-color: white;
-	padding : 20px;
-	border-radius : 10px;
+   width: 750px;
+   height: 180px;
+   background-color: white;
+   padding : 20px;
+   border-radius : 10px;
 }
-
-
+.news_tit{
+   font-size: 25px;
+}
+.dsc_wrap{
+   font-size: 15px;
+   position: fixed;
+   width: 500px;
+   height: 20px;
+   margin-left: 220px; 
+}
+/* .api_txt_lines dsc_txt_wrap{
+   font-size: 15px;
+    position: fixed;
+   width: 150px;
+   height: 20px; 
+   margin-right: 20px;
+} */ 
+/* .thumb api_get{
+   position: fixed;
+   width: 132px;
+   height: 90px;
+   right: 10px;
+} */
+#screen2-4 img{
+   position: fixed;
+   width: 200px;
+   height: 120px;
+   right: 550px; 
+   bottom: 23px; 
+}
 
 
 
