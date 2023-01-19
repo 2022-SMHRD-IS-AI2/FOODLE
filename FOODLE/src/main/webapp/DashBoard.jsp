@@ -1,6 +1,3 @@
-dashboard jsp
-
-
 <%@page import="com.smhrd.model.NewsVO"%>
 <%@page import="org.jsoup.select.Elements"%>
 <%@page import="java.time.LocalDate"%>
@@ -304,74 +301,84 @@ dashboard jsp
             var resCol;
             var resFad;
             var resTrans;
-         
+            let a = 0;
          function response(){ 
             console.log("불러오기")
             
-            // ajax를 사용해서 Flask에 요청받기
-            $.ajax({
-               url : 'http://222.102.104.190:8888/ex03', // 어디로?
-               type : 'get',  // Get or Post
-               /* async : false */  // success값을 전역변수에 담을 수 있다.
-               data : {
-                  // 어떤 데이터를?
-                  // key=123@data=456
-                  // "key" : "value"
-                  "f_name" : f_name,
-                  },
-               
-               success : function(res){
-                  // 요청이 성공했을 때, 실행되는 콜백 함수
-                     resName = res[0].F_NAME
-                     resCh = parseInt(res[0].F_CH)
-                     resPro = parseInt(res[0].F_PRO)
-                     resFat = parseInt(res[0].F_FAT)
-                     resSugar = parseInt(res[0].F_SUGAR)
-                     resSodium = parseInt(res[0].F_SODIUM)/1000
-                     resCol = parseInt(res[0].F_COL)/1000
-                     resFad = parseInt(res[0].F_FAD)
-                     resTrans = parseInt(res[0].F_TRANS)
-                     console.log(resFad) 
-                     
-                     new Chart(document.getElementById("1-2"), {
-                         type: 'radar',
-                         data: {
-                           labels: ["탄수화물(g)", "단백질(g)", "지방(g)", "당류(g)", "나트륨(g)", "콜레스테롤(g)", "포화지방산(g)", "트랜스지방산(g)" ] ,
-                           datasets: [{ 
-                              label: resName,
-                               data: [resCh, resPro, resFat, resSugar, resSodium, resCol, resFad, resTrans],
-                               backgroundColor: 'rgba(255, 99, 132, 0.2)',
-                               borderColor: 'rgb(255, 99, 132)',
-                               fill: true,
-                              borderWidth: 1
-                               } /*, {
-                                label: "권장 영양분",
-                                data: [28, 48, 40, 19, 96, 27, 100,52],
-                                 backgroundColor: 'rgba(54, 162, 235, 0.2)',
-                                 borderColor: 'rgb(54, 162, 235)',
-                                 
-                                 fill: true,
-                                 borderWidth: 1
-                                  } */
-                               ]
-                            },
-                           options: {
-                           title: {
-                           display: true,
-                           text: '추천 음식'
-                           }
-                         }
-                       });
-                  /* var arr = arr.unshift(res); // 값 가져오기
-                  console.log('안녕'+ arr); */
-               },
-               error : function(e){
-                  // 요청이 실패했을 때, 실행되는 콜백 함수
-                  alert("error!");
-               }
-            });
             
-         }  
+            
+           
+            // ajax를 사용해서 Flask에 요청받기
+          /*   if('.btn4'.click){ */
+            	
+	            $.ajax({
+	            	
+	               url : 'http://222.102.104.190:8888/ex03', // 어디로?
+	               type : 'get',  // Get or Post
+	               /* async : false */  // success값을 전역변수에 담을 수 있다.
+	               data : {
+	                  // 어떤 데이터를?
+	                  // key=123@data=456
+	                  // "key" : "value"
+	                  "f_name" : f_name,
+	                  },
+	               
+	               success : function(res){
+	                  // 요청이 성공했을 때, 실행되는 콜백 함수
+	                  
+	                     resName = res[a].F_NAME
+	                     resCh = parseInt(res[a].F_CH)
+	                     resPro = parseInt(res[a].F_PRO)
+	                     resFat = parseInt(res[a].F_FAT)
+	                     resSugar = parseInt(res[a].F_SUGAR)
+	                     resSodium = parseInt(res[a].F_SODIUM)/1000
+	                     resCol = parseInt(res[a].F_COL)/1000
+	                     resFad = parseInt(res[a].F_FAD)
+	                     resTrans = parseInt(res[a].F_TRANS)
+	                     console.log(resFad) 
+	                      a = a+1;
+	                     new Chart(document.getElementById("1-2"), {
+	                         type: 'radar',
+	                         data: {
+	                           labels: ["탄수화물(g)", "단백질(g)", "지방(g)", "당류(g)", "나트륨(g)", "콜레스테롤(g)", "포화지방산(g)", "트랜스지방산(g)" ] ,
+	                           datasets: [{ 
+	                              label: resName,
+	                               data: [resCh, resPro, resFat, resSugar, resSodium, resCol, resFad, resTrans],
+	                               backgroundColor: 'rgba(255, 99, 132, 0.2)',
+	                               borderColor: 'rgb(255, 99, 132)',
+	                               fill: true,
+	                              borderWidth: 1
+	                               } /*, {
+	                                label: "권장 영양분",
+	                                data: [28, 48, 40, 19, 96, 27, 100,52],
+	                                 backgroundColor: 'rgba(54, 162, 235, 0.2)',
+	                                 borderColor: 'rgb(54, 162, 235)',
+	                                 
+	                                 fill: true,
+	                                 borderWidth: 1
+	                                  } */
+	                               ]
+	                            },
+	                           options: {
+	                           title: {
+	                           display: true,
+	                           text: '추천 음식'
+	                           }
+	                         }
+	                       });
+	                  /* var arr = arr.unshift(res); // 값 가져오기
+	                  console.log('안녕'+ arr); */
+	               },
+	               error : function(e){
+	                  // 요청이 실패했을 때, 실행되는 콜백 함수
+	                  alert("error!");
+	               }
+	            });
+	            
+            }
+           
+            
+          
             
              new Chart(document.getElementById("1-2"), {
              type: 'radar',

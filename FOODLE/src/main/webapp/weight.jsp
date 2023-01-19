@@ -93,9 +93,12 @@
 				<div class = "p_1"><a>신장    <%=height %> cm</a></div>
 				<div class = "p_1"><a>몸무게    <%=weight %> kg</a></div>
             </div>
+            
             <div class="search">
-                <input type="text" name="sr" placeholder="검색어를 입력해주세요.">
+            	<form action="BwChartCon">
+            		<input type="text" name="sr" placeholder="검색어를 입력해주세요.">
 					<input type="submit" value="검색">
+        		</form>
             </div>
             <ul>
 				<li><a href="main.jsp"> <span class="icon"><i
