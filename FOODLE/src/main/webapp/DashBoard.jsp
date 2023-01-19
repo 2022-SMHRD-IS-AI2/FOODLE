@@ -1,3 +1,5 @@
+<%@page import="com.smhrd.model.NewsVO"%>
+<%@page import="org.jsoup.select.Elements"%>
 <%@page import="java.time.LocalDate"%>
 <%@page import="com.smhrd.model.DailyEatVO"%>
 <%@page import="com.smhrd.model.DailyChooseVO"%>
@@ -41,6 +43,7 @@
       List<DailyChartVO> kcal_C = mvo.getDailykcal(); // 일간 섭취 칼로리
       BwChartVO eat_C = mvo.getEat_food(); // 최근 섭취한 식품
       List<YgChartVO> weight_C = mvo.getWeight(); // 몸무게
+      NewsVO nvo = mvo.getNvo(); // 뉴스 크롤링한 데이터
       
       String[][] daily_Cl = {{"","0"},{"","0"},{"","0"},{"","0"},{"","0"},{"","0"},{"","0"}}; // 일간 선호영양소 담을 리스트
       String[][] kcal_Cl = {{"","0"},{"","0"},{"","0"},{"","0"},{"","0"},{"","0"},{"","0"}}; // 일간 섭취 칼로리 담을 리스트
@@ -221,9 +224,6 @@
                 <li><a href="QuitCon"> <span class="icon"><i
                     class="fas fa-user-friends"></i></span> <span class="item">회원탈퇴</span>
                 </a></li>
-                <li> <span class="icon"><i
-                    class="fas fa-user-friends"></i></span><button onclick="response()">여기임</button>
-                </li>
 			</ul>
 		</div>
 	</div>
@@ -276,11 +276,50 @@
 			  });
 			</script>
 			</div>
-			<div id="screen1-2">
-			<!-- 1-2. 주간 관심 영양소 그래프(EX.당, 나트륨,,, 택1)-->
-			<canvas id="1-2" width = "720px" height="320px"  margin ="auto"></canvas>
+			<div id="screen1-2_0">
+			<!-- <button class="btn4" onclick=''> 추천 음식을 원하세요? </button> --> <!-- 여기에 버튼 넣으려면  css에서 버튼 크기 수정해야함 -->
+			<canvas id="1-2" width = "720px" height="320px"  margin ="auto"></canvas>			
+			<!-- 1-2. 추천 식단 -->
+             <!-- <button class="btn4" onclick=''> 추천 음식을 원하세요? </button> --> <!-- 버튼!! -->
+			<canvas id="1-2" width = "720px" height="330px"  margin ="auto"></canvas>
+               <script> 
+			    new Chart(document.getElementById("1-2"), {
+			    type: 'radar',
+			    data: {
+			      labels: ["탄수화물(g)", "단백질(g)", "지방(g)", "당류(g)", "나트륨(g)", "콜레스테롤(g)", "포화지방산(g)", "트랜스지방산(g)" ] ,
+			      datasets: [{ 
+			    	  label: "일일 영양분",
+			          data: [63,55,35,29,76,52,93,68],
+			          backgroundColor: 'rgba(255, 99, 132, 0.2)',
+			          borderColor: 'rgb(255, 99, 132)',
+			          fill: true,
+				      borderWidth: 1
+			          } /*, {
+			        	label: "권장 영양분",
+			        	data: [28, 48, 40, 19, 96, 27, 100,52],
+			            backgroundColor: 'rgba(54, 162, 235, 0.2)',
+			            borderColor: 'rgb(54, 162, 235)',
+			            
+			            fill: true,
+			            borderWidth: 1
+		                } */
+		             ]
+			    	},
+			      options: {
+			      title: {
+			      display: true,
+			      text: '추천 음식'
+			      }
+			    }
+			  });
+			</script>
+			</div>
+			</div>
+			<div id="screen1-3">
+			<!-- 1-3. 주간 관심 영양소 그래프(EX.당, 나트륨,,, 택1)-->
+			<canvas id="1-3" width = "720px" height="150px"  margin ="auto"></canvas>
 			<script>
-		    	new Chart(document.getElementById("1-2"), {
+		    	new Chart(document.getElementById("1-3"), {
 			    type: 'line',
 			    data: {
 			      labels: ["<%=daily_Cl[0][0] %>", "<%=daily_Cl[1][0] %>","<%=daily_Cl[2][0] %>","<%=daily_Cl[3][0] %>","<%=daily_Cl[4][0] %>","<%=daily_Cl[5][0] %>","<%=daily_Cl[6][0] %>"] ,
@@ -299,12 +338,9 @@
 			      }
 			    }
 			  });
+			  
 			</script>	
 			</div>
-			<div id="screen1-3">
-			<!-- 1-3. 추천 식단 -->
-			</div>
-		</div>
 		<div id="screen2">
 			<div id="screen2-1">
 			<!-- 2-1. 주간 칼로리-->
@@ -394,12 +430,23 @@
 				</div>
 			<div id="screen2-4">
 			<!-- 2-4. 건강 뉴스-->
+			<%=title %>
+			<%=text %>
+			<img src="<%=img %>" width="132" height="90">
+			
+			
+			
+			
+			
+			
 			</div>
 		</div>
 	</div>
 	<script src="https://code.jquery.com/jquery-3.6.3.min.js" type="text/javascript"></script>
 	<script>
+		var arr = [];
 		function response(){
+			
 				console.log("불러오기")
 				/* var arr = new Array(); */
 				/* var arr = []; */
@@ -407,17 +454,18 @@
 				$.ajax({
 					url : 'http://222.102.104.190:8888/ex03', // 어디로?
 					type : 'get',  // Get or Post
-					/* async : false */
+					/* async : false  */ // success값을 전역변수에 담을 수 있다.
 					data : {
 						// 어떤 데이터를?
 						// key=123@data=456
 						// "key" : "value"
 						"f_name" : f_name,
 						},
-					 // success값을 전역변수에 담을 수 있다.
+					
 					success : function(res){
 						// 요청이 성공했을 때, 실행되는 콜백 함수
-						console.log(res[0]);
+						arr.push(res[0]);
+						console.log(arr)
 						/* var arr = arr.unshift(res); // 값 가져오기
 						console.log('안녕'+ arr); */
 					},
