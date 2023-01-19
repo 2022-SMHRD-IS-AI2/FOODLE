@@ -1,4 +1,3 @@
-<%@page import="com.smhrd.model.NewsVO"%>
 <%@page import="org.jsoup.select.Elements"%>
 <%@page import="java.time.LocalDate"%>
 <%@page import="com.smhrd.model.DailyEatVO"%>
@@ -43,7 +42,6 @@
       List<DailyChartVO> kcal_C = mvo.getDailykcal(); // 일간 섭취 칼로리
       BwChartVO eat_C = mvo.getEat_food(); // 최근 섭취한 식품
       List<YgChartVO> weight_C = mvo.getWeight(); // 몸무게
-      NewsVO nvo = mvo.getNvo(); // 뉴스 크롤링한 데이터
       
       String[][] daily_Cl = {{"","0"},{"","0"},{"","0"},{"","0"},{"","0"},{"","0"},{"","0"}}; // 일간 선호영양소 담을 리스트
       String[][] kcal_Cl = {{"","0"},{"","0"},{"","0"},{"","0"},{"","0"},{"","0"},{"","0"}}; // 일간 섭취 칼로리 담을 리스트
@@ -179,6 +177,9 @@
 		}
 	}
     
+    // 뉴스 크롤링 데이터 풀기
+    
+   
     
     
  	// 2-3 :  검색바 관련 세팅
@@ -278,7 +279,7 @@
 			</div>
 			<div id="screen1-2_0">
 			<!-- <button class="btn4" onclick=''> 추천 음식을 원하세요? </button> --> <!-- 여기에 버튼 넣으려면  css에서 버튼 크기 수정해야함 -->
-			<canvas id="1-2" width = "720px" height="320px"  margin ="auto"></canvas>			
+			<div id="screen1-2">
 			<!-- 1-2. 추천 식단 -->
              <!-- <button class="btn4" onclick=''> 추천 음식을 원하세요? </button> --> <!-- 버튼!! -->
 			<canvas id="1-2" width = "720px" height="330px"  margin ="auto"></canvas>
@@ -339,6 +340,7 @@
 			    }
 			  });
 			  
+
 			</script>	
 			</div>
 		<div id="screen2">
@@ -430,9 +432,6 @@
 				</div>
 			<div id="screen2-4">
 			<!-- 2-4. 건강 뉴스-->
-			<%=title %>
-			<%=text %>
-			<img src="<%=img %>" width="132" height="90">
 			
 			
 			
