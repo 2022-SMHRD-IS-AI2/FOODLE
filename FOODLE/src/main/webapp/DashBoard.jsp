@@ -337,7 +337,7 @@
 							    data: {
 							      labels: ["탄수화물(g)", "단백질(g)", "지방(g)", "당류(g)", "나트륨(g)", "콜레스테롤(g)", "포화지방산(g)", "트랜스지방산(g)" ] ,
 							      datasets: [{ 
-							    	  label: "일일 영양분",
+							    	  label: "resName",
 							          data: [resCh, resPro, resFat, resSugar, resSodium, resCol, resFad, resTrans],
 							          backgroundColor: 'rgba(255, 99, 132, 0.2)',
 							          borderColor: 'rgb(255, 99, 132)',
