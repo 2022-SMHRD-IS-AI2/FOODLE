@@ -13,6 +13,7 @@ import javax.servlet.http.HttpSession;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
+import org.jsoup.select.Elements;
 
 import com.smhrd.model.BwChartDAO;
 import com.smhrd.model.BwChartVO;
@@ -24,6 +25,7 @@ import com.smhrd.model.DailyEatVO;
 import com.smhrd.model.FoodDAO;
 import com.smhrd.model.FoodVO;
 import com.smhrd.model.MemberVO;
+import com.smhrd.model.NewsVO;
 import com.smhrd.model.YgChartDAO;
 import com.smhrd.model.YgChartVO;
 
@@ -86,22 +88,28 @@ public class AllChartCon extends HttpServlet {
 
 		DailyEatVO dailyeat = food_dao.dailyeat(mb_id);
 
-		ChartMasterVO mvo = new ChartMasterVO(weight, eat_food, dailyKcal, dailyc, dailyeat);
-
-		RequestDispatcher rd = request.getRequestDispatcher("DashBoard.jsp");
-		request.setAttribute("mvo", mvo);
-		rd.forward(request, response);
 		
 //========================= 뉴우스 영역 ==================================
 
-		String url = "https://search.naver.com/search.naver?where=news&ie=utf8&sm=nws_hty&query=%ED%83%84%EC%88%98%ED%99%94%EB%AC%BC";
+		String url = "https://search.naver.com/search.naver?where=news&ie=utf8&sm=nws_hty&query=탄수화물";
+		
 		Document doc = Jsoup.connect(url).get();
 		
-		String a = doc.text();
 		
-		System.out.println(a);
+//		String a = doc.html();
 		
+		Elements title = doc.select("#sp_nws1 a.news_tit");
+		Elements text = doc.select("#sp_nws1 div.news_dsc");
+		Elements thumb = doc.select("#sp_nws1 a.dsc_thumb>img");
 		
+		NewsVO nvo = new NewsVO(title, text, thumb);
+		
+		ChartMasterVO mvo = new ChartMasterVO(weight, eat_food, dailyKcal, dailyc, dailyeat, nvo); // 모은 데이터 전부 담기
+//========================= 보내기 ==================================		
+		
+		RequestDispatcher rd = request.getRequestDispatcher("DashBoard.jsp");
+		request.setAttribute("mvo", mvo);
+		rd.forward(request, response);
 		
 		
 	}

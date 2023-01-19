@@ -142,8 +142,8 @@ body{
 	padding : 20px;
 	border-radius : 10px;
 }
-/* 주간(당/나트륨/지방) */
-#screen1-2{
+/* 추천 식단 */
+#screen1-2_0{
     /* outline: 3px;
     outline-style: double;
     outline-color: black; */
@@ -156,7 +156,28 @@ body{
 	padding : 20px;
 	border-radius : 10px;
 }
-/* 추천 식단 */
+
+#screen1-2{
+    /* outline: 3px;
+    outline-style: double;
+    outline-color: black; */
+    position: fixed;
+    top: 410px;
+    right: 800px;
+	width: 750px;
+	height: 330px;
+	background-color: white;
+	padding : 20px;
+	border-radius : 10px;
+}
+button.btn4{
+    width: 170px;
+    padding : 20px;
+    border-radius : 10px;
+    margin-top: 38px;
+    margin-left: 280px;
+}
+/*  주간(당/나트륨..) */
 #screen1-3{
     /* outline: 3px;
     outline-style: double;
@@ -170,6 +191,8 @@ body{
 	padding : 20px;
 	border-radius : 10px;
 }
+
+
 /* #screen2{
     width: 770px;
     height: 948px;

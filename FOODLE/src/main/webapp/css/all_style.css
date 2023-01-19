@@ -2,7 +2,6 @@
 * {margin:0; padding:0;}
 li{list-style: none;}
 a{color: inherit; text-decoration: none;} 
-button{border:none; border-radius:none;}
 input{border-radius:none; border:none; }
 input:focus{outline:none;}  
 
