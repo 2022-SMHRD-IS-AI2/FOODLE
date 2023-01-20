@@ -22,7 +22,11 @@
 
 /* body{
     background: #f5f6fa;
+<<<<<<< HEAD
      height: 969px; 
+=======
+    height: 100%;
+>>>>>>> branch 'master1' of https://github.com/2022-SMHRD-IS-AI2/FOODLE.git
 } */
 
 .wrapper .sidebar{
@@ -114,7 +118,10 @@
 
 #fullscreen{
    width: 100%;
-    height: 1079px;
+
+
+   height: 1079px;
+
    /* background-color: rgb(227, 247, 213); */
    background-color: rgb(220, 230, 216);
 }
@@ -136,7 +143,7 @@
     outline-style: double;
     outline-color: black; */
     position: fixed;
-    top: 18px;
+    top: 70px;
     right: 800px;
    width: 750px;
    height: 380px;
@@ -150,7 +157,7 @@
     outline-style: double;
     outline-color: black; */
     position: fixed;
-    top: 410px;
+    top: 470px;
     right: 800px;
    width: 750px;
    height: 350px;
@@ -164,7 +171,7 @@
     outline-style: double;
     outline-color: black; */
     position: fixed;
-    top: 450px;
+    top: 510px;
     right: 800px;
    width: 750px;
    height: 300px;
@@ -184,7 +191,7 @@ button.btn4{
     outline-style: double;
     outline-color: black; */
     position: fixed;
-    top: 773px;
+    top: 840px;
     right: 800px;
    width: 750px;
    height: 180px;
@@ -209,7 +216,7 @@ button.btn4{
     outline-style: double;
     outline-color: black; */
     position: fixed;
-    top: 20px;
+    top: 70px;
     right: 22px;
    width: 750px;
    height: 180px;
@@ -223,7 +230,7 @@ button.btn4{
     outline-style: double;
     outline-color: black; */
     position: fixed;
-    top: 215px;
+    top: 270px;
     right: 22px;
    width: 750px;
    height: 180px;
@@ -238,7 +245,7 @@ button.btn4{
     outline-style: double;
     outline-color: black; */
     position: fixed;
-    top: 410px;
+    top: 470px;
     right: 22px;
    width: 750px;
    height: 350px;
@@ -253,7 +260,7 @@ button.btn4{
     outline-style: double;
     outline-color: black; */
     position: fixed;
-    top: 773px;
+    top: 840px;
     right: 22px;
    width: 750px;
    height: 180px;
@@ -285,11 +292,12 @@ button.btn4{
    right: 10px;
 } */
 #screen2-4 img{
-   position: fixed;
+   position: absolute;
    width: 200px;
    height: 120px;
-   right: 550px; 
-   bottom: 134px; 
+
+   right: 520px; 
+   bottom: 8px; 
 }
 
 

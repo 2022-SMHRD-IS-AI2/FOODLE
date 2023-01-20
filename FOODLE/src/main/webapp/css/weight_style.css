@@ -17,9 +17,9 @@
     font-family: 'LINESeedKR-Bd';
 }
 button{border:none; border-radius:none;}
-body{
+/* body{
     background: #f5f6fa;
-}
+} */
 
 .wrapper .sidebar{
 	/* background: rgb(144 201 87);  */
@@ -110,7 +110,7 @@ body{
 
 #fullscreen{
    width: 100%;
-   height: 969px;
+   height: 1079px;
    /* background-color: rgb(227, 247, 213); */
 	background-color: rgb(220, 230, 216);
 }
@@ -145,7 +145,7 @@ body{
     width: 70px;
     height: 30px;
     font-size: 1.5ch;
-    top: 85px;
+    top: 185px;
     right: 270px;
     background-color: rgb(12, 117, 209);
     color: white;
@@ -181,13 +181,13 @@ body{
 #date{
     position: fixed;
     right: 900px;
-    top: 80px;
+    top: 180px;
     width: 500px;
 }
 #text{
     position: fixed;
     right: 370px;
-    top: 80px;
+    top: 180px;
     width: 500px;
 }
 
