@@ -11,6 +11,7 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor // final or @NonNull 파라미터만 받는 생성자
 @NoArgsConstructor
 @Getter // getter메소드
+
 public class MemberVO {
 	
 //	final 써도 됨

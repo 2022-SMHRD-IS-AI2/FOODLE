@@ -240,7 +240,7 @@
       <div id="screen0"></div>
       <div id="screen1">
          <!-- 1. 일일영양분(내가먹은거/권장영양분)-->
-         <div id="screen1-1"> 
+         <div id="screen1-1">
          <canvas id="1-1" width = "700px" height="350px" margin ="auto"></canvas>
       
          <script> 
@@ -310,7 +310,7 @@
            
             // ajax를 사용해서 Flask에 요청받기
           /*   if('.btn4'.click){ */
-            	
+   ///========================================================== 차트 
 	            $.ajax({
 	            	
 	               url : 'http://222.102.104.190:8888/ex03', // 어디로?
